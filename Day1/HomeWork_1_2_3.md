@@ -4,10 +4,11 @@
 - Web Mobile : Done.
 - Web Desktop : Done.
 - Android : Error compile!!!
+Deploy web desktop : https://zoharr07.github.io/Deploy_CocosWebTest/
 
 // Ex2 : cài đặt Module Lodash trong thư mục ./Build_Web_Desktop_Android_AddLodash/packages : Done.
 
-//  Ex3 Tìm hiểu các thông số trên Helo project:
+// Ex3 Tìm hiểu các thông số trên Helo project:
 
 - Frame Time - Khoảng thời gian mà một khung hình được kết xuất ra màn hình.
 
@@ -20,6 +21,3 @@
 - Renderer - là thời gian vẽ một hình ảnh hai chiều hoặc ba chiều, cung cấp quyền truy cập vào các APIs, và có thể dùng sau đó.
 
 - WebGL - là một API JavaScript thực hiện nhiệm vụ hiển thị/tương tác đồ họa 2D và 3D có thể khởi chạy trong bất kỳ trình duyệt web tương thích nào mà không cần sử dụng các plug-in hỗ trợ. Đồng thời, WebGL được tích hợp tương thích với các tiêu chuẩn web khác, cho phép GPU sử dụng vật lý, xử lý hình ảnh/hiệu ứng như một phần của canvas trang web.
-
-
-
