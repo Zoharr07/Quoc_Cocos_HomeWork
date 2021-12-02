@@ -2,6 +2,7 @@
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
     "host": "",
+    "packageName": "helloworld",
     "pathPattern": "",
     "recordPath": "",
     "scheme": "https",
@@ -29,7 +30,7 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.helloworld",
+  "packageName": "helloworld",
   "qqplay": {
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait",

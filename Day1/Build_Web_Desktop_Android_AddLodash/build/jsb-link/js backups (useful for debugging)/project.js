@@ -1,31 +1,31 @@
-window.__require = function e(r, t, n) {
-function o(i, u) {
-if (!t[i]) {
-if (!r[i]) {
-var c = i.split("/");
-c = c[c.length - 1];
-if (!r[c]) {
-var f = "function" == typeof __require && __require;
-if (!u && f) return f(c, !0);
-if (l) return l(c, !0);
-throw new Error("Cannot find module '" + i + "'");
+window.__require = function e(t, r, n) {
+function o(l, i) {
+if (!r[l]) {
+if (!t[l]) {
+var u = l.split("/");
+u = u[u.length - 1];
+if (!t[u]) {
+var _ = "function" == typeof __require && __require;
+if (!i && _) return _(u, !0);
+if (c) return c(u, !0);
+throw new Error("Cannot find module '" + l + "'");
 }
 }
-var s = t[i] = {
+var s = r[l] = {
 exports: {}
 };
-r[i][0].call(s.exports, function(e) {
-return o(r[i][1][e] || e);
-}, s, s.exports, e, r, t, n);
+t[l][0].call(s.exports, function(e) {
+return o(t[l][1][e] || e);
+}, s, s.exports, e, t, r, n);
 }
-return t[i].exports;
+return r[l].exports;
 }
-for (var l = "function" == typeof __require && __require, i = 0; i < n.length; i++) o(n[i]);
+for (var c = "function" == typeof __require && __require, l = 0; l < n.length; l++) o(n[l]);
 return o;
 }({
-HelloWorld: [ function(e, r, t) {
+HelloWorld: [ function(e, t, r) {
 "use strict";
-cc._RF.push(r, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
+cc._RF.push(t, "280c3rsZJJKnZ9RqbALVwtK", "HelloWorld");
 cc.Class({
 extends: cc.Component,
 properties: {
@@ -41,5 +41,11 @@ this.label.string = this.text;
 update: function(e) {}
 });
 cc._RF.pop();
+}, {} ],
+"use_v2.1-2.2.1_cc.Toggle_event": [ function(e, t, r) {
+"use strict";
+cc._RF.push(t, "2316fvohllDcLxlUk+vJuNw", "use_v2.1-2.2.1_cc.Toggle_event");
+cc.Toggle && (cc.Toggle._triggerEventInScript_isChecked = !0);
+cc._RF.pop();
 }, {} ]
-}, {}, [ "HelloWorld" ]);
+}, {}, [ "HelloWorld", "use_v2.1-2.2.1_cc.Toggle_event" ]);
