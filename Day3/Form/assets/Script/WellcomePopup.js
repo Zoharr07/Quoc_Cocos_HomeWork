@@ -6,7 +6,6 @@ cc.Class({
 
     properties: {
         formMenu: cc.Node,
-        wellcomePopup: cc.Node,
         userName: cc.Label,
 
         control: {
@@ -22,24 +21,25 @@ cc.Class({
     },
 
     start() {
-
+        this.userName.string = "";
     },
-
     onEnable() {
-        if (this.control.userArg.length != 0) {
-            this.userName.string = this.control.userArg[this.control.userArg.length - 1][2];
-        } else this.userName.string = "";
-        cc.log("ddd")
-        cc.log(this.control.userArg[this.control.userArg.length - 1])
+        //let userNameStr = this.control.userArg[this.control.userArg.length - 1][2];
+        // if (this.control.userArg.length != null) {
+        //     this.userName.string = this.control.userArg[this.control.userArg.length - 1][2]
+        // } else this.userName.string = ""
+        this.userName.string = "";
+        cc.log(userNameStr)
+        cc.log("enable msg")
     },
 
     backSignUpBtn() {
         this.formMenu.active = true;
-        this.wellcomePopup.active = false;
+        this.node.active = false;
     },
 
     exitBtn() {
-        this.wellcomePopup.active = false;
+        this.node.active = false;
     }
     // update (dt) {},
 });
