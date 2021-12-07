@@ -12,6 +12,7 @@ cc.Class({
 
     onLoad() {
         this.node.validateEmail = this.validateEmail.bind(this);
+        this.node.resetEmail = this.resetEmail.bind(this);
         this._turnOffErrorBox();
     },
 
@@ -54,4 +55,8 @@ cc.Class({
     validateEmail() {
         return this.emailFlag;
     },
+    resetEmail() {
+        this.emailFlag = false;
+        this.inputEmailBox.string = "";
+    }
 });

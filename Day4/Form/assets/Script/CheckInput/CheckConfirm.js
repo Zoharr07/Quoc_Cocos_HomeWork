@@ -12,7 +12,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.node.validatePassConfirm = this.validatePassConfirm.bind(this)
+        this.node.validatePassConfirm = this.validatePassConfirm.bind(this);
+        this.node.resetConfirm = this.resetConfirm.bind(this);
         this._turnOffErrorBox();
     },
 
@@ -37,7 +38,13 @@ cc.Class({
         this.passwordErrorBox.string = "";
         this.passwordErrorBox.active = false;
     },
+
     validatePassConfirm() {
         return this.confirmFlag;
+    },
+
+    resetConfirm() {
+        this.confirmFlag = false;
+        this.confirmPassBox.string = "";
     }
 });

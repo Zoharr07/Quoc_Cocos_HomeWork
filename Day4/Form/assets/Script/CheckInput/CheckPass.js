@@ -12,6 +12,7 @@ cc.Class({
 
     onLoad() {
         this.node.validatePass = this.validatePass.bind(this);
+        this.node.resetPass = this.resetPass.bind(this);
         this._turnOffErrorBox();
     },
 
@@ -55,4 +56,8 @@ cc.Class({
     validatePass() {
         return this.passFlag;
     },
+    resetPass() {
+        this.passFlag = false;
+        this.inputPassBox.string = "";
+    }
 });

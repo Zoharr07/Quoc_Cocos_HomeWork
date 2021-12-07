@@ -12,6 +12,7 @@ cc.Class({
 
     onLoad() {
         this.node.validateFullName = this.validateFullName.bind(this);
+        this.node.resetName = this.resetName.bind(this);
         this._turnOffErrorBox();
     },
 
@@ -56,4 +57,8 @@ cc.Class({
     validateFullName() {
         return this.nameFlag;
     },
+    resetName() {
+        this.nameFlag = false;
+        this.inputNameBox.string = "";
+    }
 });
