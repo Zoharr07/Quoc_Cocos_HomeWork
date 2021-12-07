@@ -51,12 +51,13 @@ cc.Class({
     addBtn() {
         let newUser = [this.nameInput.string, this.emailInput.string, this.userNameInput.string, this.passInput.string];
         this.userArg.push(newUser);
+        cc.log("add new user");
+        cc.log(this.userArg);
         this._resetInput();
         this.wellcomePopup.active = true;
         this.mainForm.active = false;
 
-        cc.log("add new user");
-        cc.log(this.userArg);
+
     },
 
     _resetInput() {

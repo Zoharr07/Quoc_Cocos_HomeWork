@@ -1,36 +1,31 @@
 
-var Controller = require("FormController");
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
         formMenu: cc.Node,
-        userName: cc.Label,
+        userLbl: cc.Label,
+        mainNode: cc.Node,
 
-        control: {
-            type: cc.Node,
-            default: null,
-        }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.control = this.getComponent(Controller);
+        this.node.active = false;
     },
 
     start() {
-        this.userName.string = "";
+
     },
     onEnable() {
-        //let userNameStr = this.control.userArg[this.control.userArg.length - 1][2];
-        // if (this.control.userArg.length != null) {
+        let userArg = this.mainNode.getUserArg();
+        // if (userArg.length != null) {
         //     this.userName.string = this.control.userArg[this.control.userArg.length - 1][2]
         // } else this.userName.string = ""
-        this.userName.string = "";
-        cc.log(userNameStr)
-        cc.log("enable msg")
+        this.userLbl.string = userArg[userArg.length - 1][2].toString();
+
+        cc.log(this.userLbl.string)
     },
 
     backSignUpBtn() {

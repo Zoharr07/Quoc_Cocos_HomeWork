@@ -5062,7 +5062,7 @@
         "__id__": 141
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [
       {
@@ -5964,9 +5964,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 237,
-      "g": 241,
-      "b": 130,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
@@ -5981,7 +5981,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -373.311,
+      "x": -478.781,
       "y": 25.409,
       "z": 0
     },
@@ -6039,8 +6039,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -117.27,
+      "x": 18.18,
+      "y": -130.322,
       "z": 0
     },
     "_scale": {
@@ -6105,8 +6105,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "User Name Input",
-    "_N$string": "User Name Input",
+    "_string": "User Name",
+    "_N$string": "User Name",
     "_fontSize": 80,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -6164,10 +6164,12 @@
     "formMenu": {
       "__id__": 19
     },
-    "userName": {
+    "userLbl": {
       "__id__": 144
     },
-    "control": null,
+    "mainNode": {
+      "__id__": 10
+    },
     "_id": "8fDJcViX9AoomfPc/sD8J3"
   },
   {
