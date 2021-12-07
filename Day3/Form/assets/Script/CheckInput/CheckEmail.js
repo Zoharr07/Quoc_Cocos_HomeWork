@@ -1,4 +1,3 @@
-var Controller = require("FormController");
 
 cc.Class({
     extends: cc.Component,
@@ -6,42 +5,39 @@ cc.Class({
     properties: {
         inputEmailBox: cc.EditBox,
         mailErrorBox: cc.Label,
-        control: {
-            type: cc.Node,
-            default: null,
-        }
+        emailFlag: false,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad() {
+        this.node.validateEmail = this.validateEmail.bind(this);
+        this._turnOffErrorBox();
+    },
 
     start() {
-        this.turnOffErrorBox();
-        this.control = this.getComponent(Controller);
     },
     // update (dt) {},
-
 
     checkEmail() {
         if (this.inputEmailBox.string === "") {
             this.mailErrorBox.active = true;
             this.mailErrorBox.string = "Your Email can't be null, please check again!!!";
-            this.control.emailFlag = false;
+            this.emailFlag = false;
             return
         } else { }
         if (this._checkSpecialChar(this.inputEmailBox.string)) {
             this.mailErrorBox.string = 'Email you entered wrong, please check again!!!';
             this.mailErrorBox.active = true;
-            this.control.emailFlag = false;
+            this.emailFlag = false;
         } else {
-            this.turnOffErrorBox();
-            this.control.emailFlag = true;
+            this._turnOffErrorBox();
+            this.emailFlag = true;
         }
-
+        cc.log('email check', this.emailFlag)
     },
 
-    turnOffErrorBox() {
+    _turnOffErrorBox() {
         this.mailErrorBox.string = '';
         this.mailErrorBox.active = false;
     },
@@ -53,5 +49,9 @@ cc.Class({
         } else {
             return false;
         }
+    },
+
+    validateEmail() {
+        return this.emailFlag;
     },
 });

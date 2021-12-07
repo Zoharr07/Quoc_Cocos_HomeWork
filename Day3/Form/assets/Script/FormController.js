@@ -15,7 +15,7 @@ cc.Class({
 
         nameFlag: false,
         emailFlag: false,
-        useNameFlag: false,
+        userNameFlag: false,
         passFlag: false,
         confirmFlag: false,
 
@@ -26,7 +26,7 @@ cc.Class({
 
     onLoad() {
         this.mainForm.active = false;
-        this.wellcomePopup.active = false;
+        this.node.getUserArg = this.getUserArg.bind(this)
     },
 
     start() {
@@ -35,7 +35,7 @@ cc.Class({
     },
 
     update(dt) {
-        if (this.nameFlag && this.emailFlag && this.useNameFlag && this.passFlag && this.confirmFlag) {
+        if (this.checkFlag()) {
             this.addButton.interactable = true;
         } else this.addButton.interactable = false;
     },
@@ -56,7 +56,6 @@ cc.Class({
         this.mainForm.active = false;
 
         cc.log("add new user");
-
         cc.log(this.userArg);
     },
 
@@ -66,11 +65,19 @@ cc.Class({
         this.userNameInput.string = "";
         this.passInput.string = "";
         this.passConfirmInput.string = "";
-        this.nameFlag = false;
-        this.emailFlag = false;
-        this.useNameFlag = false;
-        this.passFlag = false;
-        this.confirmFlag = false;
+
         this.addButton.interactable = false;
-    }
+    },
+
+    checkFlag() {
+        let flag = false;
+        if (this.node.validatePassConfirm() == true && this.node.validateEmail() == true && this.node.validateFullName() == true && this.node.validatePass() == true && this.node.validateUserName() == true) {
+            flag = true;
+        }
+        cc.log(flag, this.node.validateFullName(), this.node.validateEmail(), this.node.validateUserName(), this.node.validatePass(), this.node.validatePassConfirm())
+        return flag;
+    },
+    getUserArg() {
+        return this.userArg;
+    },
 });

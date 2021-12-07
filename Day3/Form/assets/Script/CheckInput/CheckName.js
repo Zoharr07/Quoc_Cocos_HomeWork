@@ -1,4 +1,3 @@
-var Controller = require("FormController");
 
 cc.Class({
     extends: cc.Component,
@@ -6,21 +5,18 @@ cc.Class({
     properties: {
         inputNameBox: cc.EditBox,
         nameErrorBox: cc.Label,
-        control: {
-            type: cc.Node,
-            default: null,
-        }
+        nameFlag: false,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-
+        this.node.validateFullName = this.validateFullName.bind(this);
+        this._turnOffErrorBox();
     },
 
     start() {
-        this.turnOffErrorBox();
-        this.control = this.getComponent(Controller);
+
     },
     // update (dt) {},
 
@@ -29,20 +25,21 @@ cc.Class({
         if (this.inputNameBox.string === "") {
             this.nameErrorBox.active = true;
             this.nameErrorBox.string = "Yourname can't be null, please check again!!!";
-            this.control.nameFlag = false;
+            this.nameFlag = false;
             return
         } else { }
         if (this._checkSpecialChar(this.inputNameBox.string)) {
             this.nameErrorBox.string = 'You input special char, please check again!!!';
             this.nameErrorBox.active = true;
-            this.control.nameFlag = false;
+            this.nameFlag = false;
         } else {
-            this.turnOffErrorBox();
-            this.control.nameFlag = true
+            this._turnOffErrorBox();
+            this.nameFlag = true
         }
+        cc.log('fullname check', this.nameFlag)
     },
 
-    turnOffErrorBox() {
+    _turnOffErrorBox() {
         this.nameErrorBox.string = '';
         this.nameErrorBox.active = false;
     },
@@ -54,5 +51,9 @@ cc.Class({
         } else {
             return false;
         }
+    },
+
+    validateFullName() {
+        return this.nameFlag;
     },
 });

@@ -1,4 +1,3 @@
-var Controller = require("FormController");
 
 cc.Class({
     extends: cc.Component,
@@ -7,17 +6,14 @@ cc.Class({
         passwordErrorBox: cc.Label,
         inputPassBox: cc.EditBox,
         confirmPassBox: cc.EditBox,
-        control: {
-            type: cc.Node,
-            default: null,
-        }
+        confirmFlag: false,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.turnOffErrorBox();
-        this.control = this.getComponent(Controller);
+        this.node.validatePassConfirm = this.validatePassConfirm.bind(this)
+        this._turnOffErrorBox();
     },
 
     start() {
@@ -27,18 +23,21 @@ cc.Class({
     // update (dt) {},
     checkConfirmPass() {
         if (this.inputPassBox.string === this.confirmPassBox.string) {
-            this.turnOffErrorBox();
-            this.control.confirmFlag = true;
+            this._turnOffErrorBox();
+            this.confirmFlag = true;
         } else {
             this.passwordErrorBox.string = 'Passwords confirm wrong, please check again!!!';
             this.passwordErrorBox.active = true;
-            this.control.confirmFlag = false;
+            this.confirmFlag = false;
         }
+        cc.log('confirm pass', this.confirmFlag)
     },
 
-    turnOffErrorBox() {
+    _turnOffErrorBox() {
         this.passwordErrorBox.string = "";
         this.passwordErrorBox.active = false;
-
     },
+    validatePassConfirm() {
+        return this.confirmFlag;
+    }
 });

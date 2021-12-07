@@ -1,4 +1,3 @@
-var Controller = require("FormController");
 
 cc.Class({
     extends: cc.Component,
@@ -6,19 +5,18 @@ cc.Class({
     properties: {
         inputPassBox: cc.EditBox,
         passErrorBox: cc.Label,
-        control: {
-            type: cc.Node,
-            default: null,
-        }
+        passFlag: false,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad() {
+        this.node.validatePass = this.validatePass.bind(this);
+        this._turnOffErrorBox();
+    },
 
     start() {
-        this.turnOffErrorBox();
-        this.control = this.getComponent(Controller);
+
     },
     // update (dt) {},
 
@@ -26,20 +24,21 @@ cc.Class({
         if (this.inputPassBox.string === "") {
             this.passErrorBox.active = true;
             this.passErrorBox.string = "Passwords can't be null, please check again!!!";
-            this.control.passFlag = false;
+            this.passFlag = false;
             return
         } else { }
         if (this._checkSpecialChar(this.inputPassBox.string)) {
             this.passErrorBox.string = "Passwords can't using special char, please check again!!!";
             this.passErrorBox.active = true;
-            this.control.passFlag = false;
+            this.passFlag = false;
         } else {
-            this.turnOffErrorBox();
-            this.control.passFlag = true;
+            this._turnOffErrorBox();
+            this.passFlag = true;
         }
+        cc.log('pass ', this.passFlag)
     },
 
-    turnOffErrorBox() {
+    _turnOffErrorBox() {
         this.passErrorBox.string = '';
         this.passErrorBox.active = false;
     },
@@ -51,5 +50,9 @@ cc.Class({
         } else {
             return false;
         }
+    },
+
+    validatePass() {
+        return this.passFlag;
     },
 });
