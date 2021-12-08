@@ -1,0 +1,69 @@
+2021-12-08T15:59:41.279Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-08T15:59:42.489Z - normal: Initializing Asset Database
+2021-12-08T15:59:42.493Z - normal: checking language setting...
+2021-12-08T15:59:42.493Z - normal: Language: en
+2021-12-08T15:59:43.900Z - success: preview server running at http://localhost:7456
+2021-12-08T15:59:43.903Z - success: protocol editor-framework registered
+2021-12-08T15:59:43.903Z - success: protocol app registered
+2021-12-08T15:59:43.903Z - success: protocol theme registered
+2021-12-08T15:59:43.903Z - success: protocol packages registered
+2021-12-08T15:59:43.903Z - success: protocol uuid registerred
+2021-12-08T15:59:43.903Z - success: protocol db registerred
+2021-12-08T15:59:43.904Z - success: protocol thumbnail registerred
+2021-12-08T15:59:43.904Z - success: protocol unpack registerred
+2021-12-08T15:59:43.904Z - success: protocol disable-commonjs registerred
+2021-12-08T15:59:45.695Z - normal: connected!
+2021-12-08T15:59:45.700Z - normal: Check project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Day5\EvensPractice
+2021-12-08T15:59:45.721Z - normal: Initializing project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Day5\EvensPractice
+2021-12-08T15:59:46.393Z - normal: Initializing Cocos2d
+2021-12-08T15:59:52.436Z - normal: Initializing engine extends
+2021-12-08T15:59:52.486Z - success: alipay-adapter loaded
+2021-12-08T15:59:52.503Z - success: asset-db-debugger loaded
+2021-12-08T15:59:52.509Z - success: baidu-adapter loaded
+2021-12-08T15:59:52.516Z - success: color-picker loaded
+2021-12-08T15:59:52.744Z - success: fb-audience-network loaded
+2021-12-08T15:59:52.836Z - success: fb-live-stream loaded
+2021-12-08T15:59:52.855Z - success: google-play-instant loaded
+2021-12-08T15:59:52.897Z - success: huawei-runtime loaded
+2021-12-08T15:59:53.991Z - success: cpk-publish loaded
+2021-12-08T15:59:53.998Z - success: jsb-adapter loaded
+2021-12-08T15:59:54.031Z - success: oppo-runtime loaded
+2021-12-08T15:59:54.045Z - success: package-manager loaded
+2021-12-08T15:59:54.559Z - success: qqplay-adapter loaded
+2021-12-08T15:59:54.601Z - success: runtime-dev-tools loaded
+2021-12-08T15:59:54.658Z - success: sdkbox loaded
+2021-12-08T15:59:54.711Z - success: tester loaded
+2021-12-08T15:59:54.751Z - success: ui-kit-preview-extra loaded
+2021-12-08T15:59:54.776Z - success: ui-kit-preview loaded
+2021-12-08T15:59:54.781Z - success: ui-kit loaded
+2021-12-08T15:59:54.861Z - success: vivo-runtime loaded
+2021-12-08T15:59:54.871Z - success: weapp-adapter loaded
+2021-12-08T15:59:54.882Z - success: xiaomi-adapter loaded
+2021-12-08T15:59:54.889Z - success: alipay-minigame loaded
+2021-12-08T15:59:55.002Z - success: assets loaded
+2021-12-08T15:59:55.005Z - success: builder loaded
+2021-12-08T15:59:55.455Z - success: cocos-services loaded
+2021-12-08T15:59:55.464Z - success: console loaded
+2021-12-08T15:59:55.517Z - success: fb-instant-games loaded
+2021-12-08T15:59:55.522Z - success: game-window loaded
+2021-12-08T15:59:55.523Z - success: google-instant-games loaded
+2021-12-08T15:59:55.530Z - success: hierarchy loaded
+2021-12-08T15:59:55.535Z - success: inspector loaded
+2021-12-08T15:59:55.537Z - success: keystore loaded
+2021-12-08T15:59:55.543Z - success: node-library loaded
+2021-12-08T15:59:55.544Z - success: package-asset loaded
+2021-12-08T15:59:55.547Z - success: preferences loaded
+2021-12-08T15:59:55.549Z - success: project-exporter loaded
+2021-12-08T15:59:55.551Z - success: project-importer loaded
+2021-12-08T15:59:55.555Z - success: project-settings loaded
+2021-12-08T15:59:55.560Z - success: scene loaded
+2021-12-08T15:59:55.562Z - success: simulator-debugger loaded
+2021-12-08T15:59:55.565Z - success: sprite-editor loaded
+2021-12-08T15:59:55.569Z - success: store loaded
+2021-12-08T15:59:55.577Z - success: timeline loaded
+2021-12-08T15:59:55.589Z - success: xiaomi-runtime loaded
+2021-12-08T16:00:00.103Z - info: Cocos Services load base data!
+2021-12-08T16:00:09.337Z - normal: Loading packages
+2021-12-08T16:00:09.348Z - normal: Watching packages
+2021-12-08T16:00:10.144Z - normal: Run Application
+2021-12-08T16:02:23.455Z - info: shutdown preview server
