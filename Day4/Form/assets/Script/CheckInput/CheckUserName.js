@@ -12,6 +12,7 @@ cc.Class({
 
     onLoad() {
         this.node.validateUserName = this.validateUserName.bind(this);
+        this.node.resetUserName = this.resetUserName.bind(this);
         this._turnOffErrorBox();
     },
 
@@ -70,4 +71,9 @@ cc.Class({
     validateUserName() {
         return this.userNameFlag;
     },
+
+    resetUserName() {
+        this.userNameFlag = false;
+        this.inputUserNameBox.string = "";
+    }
 });

@@ -3,7 +3,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        mainForm: cc.Node,
+        accountPopup: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -17,13 +17,7 @@ cc.Class({
     },
 
     // update (dt) {},
-
     exitBtn() {
         this.node.active = false;
-    },
-
-    backSignupBtn() {
-        this.node.active = false;
-        this.mainForm.active = true;
-    },
+    }
 });
