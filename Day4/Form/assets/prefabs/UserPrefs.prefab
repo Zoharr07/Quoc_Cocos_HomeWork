@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "User",
+    "_name": "UserPrefs",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -35,23 +35,26 @@
     "_components": [
       {
         "__id__": 14
+      },
+      {
+        "__id__": 15
       }
     ],
     "_prefab": {
-      "__id__": 15
+      "__id__": 16
     },
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 250,
-      "b": 250,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 570,
-      "height": 20
+      "height": 16
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -61,7 +64,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -10,
+      "y": -8,
       "z": 0
     },
     "_scale": {
@@ -84,7 +87,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "UserName",
+    "_name": "FullName",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -110,7 +113,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 60.68,
+      "width": 155,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -120,8 +123,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -241.612,
-      "y": 0,
+      "x": -88.197,
+      "y": 1.032,
       "z": 0
     },
     "_scale": {
@@ -156,11 +159,11 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "User Name",
-    "_N$string": "User Name",
+    "_string": "Full Name",
+    "_N$string": "Full Name",
     "_fontSize": 12,
     "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -168,7 +171,7 @@
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 1,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -178,14 +181,14 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ae454849-5c18-4f07-8c4f-5163d93615f0"
+      "__uuid__": "0b739c5b-d9b0-4561-9ec9-b9882797a7c9"
     },
-    "fileId": "2a8YMFR8JPpoBHR1E/N1ed",
+    "fileId": "e0bc0ANxhFmIA4r/75bHos",
     "sync": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "Full Name",
+    "_name": "Email",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -211,7 +214,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 54.68,
+      "width": 180,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -221,8 +224,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -138.095,
-      "y": 0,
+      "x": 84.093,
+      "y": 1.032,
       "z": 0
     },
     "_scale": {
@@ -257,11 +260,11 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "Full Name",
-    "_N$string": "Full Name",
+    "_string": "Email",
+    "_N$string": "Email",
     "_fontSize": 12,
     "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -269,7 +272,7 @@
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 1,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -279,14 +282,14 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ae454849-5c18-4f07-8c4f-5163d93615f0"
+      "__uuid__": "0b739c5b-d9b0-4561-9ec9-b9882797a7c9"
     },
-    "fileId": "a1wazlM2lNXqlye85ON/rU",
+    "fileId": "d6H8K/VOxHV6+nrKyrCq4b",
     "sync": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "Email",
+    "_name": "UserName",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -312,7 +315,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 30.01,
+      "width": 100,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -322,8 +325,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 2.993,
-      "y": 0,
+      "x": -221.567,
+      "y": 1.032,
       "z": 0
     },
     "_scale": {
@@ -358,11 +361,11 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "Email",
-    "_N$string": "Email",
+    "_string": "User Name",
+    "_N$string": "User Name",
     "_fontSize": 12,
     "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
@@ -370,7 +373,7 @@
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 1,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -380,9 +383,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ae454849-5c18-4f07-8c4f-5163d93615f0"
+      "__uuid__": "0b739c5b-d9b0-4561-9ec9-b9882797a7c9"
     },
-    "fileId": "3fj62L4CpL3LG7Jglx02By",
+    "fileId": "bbbpTnUa9D26k/pMVV/nf0",
     "sync": false
   },
   {
@@ -413,7 +416,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 58.69,
+      "width": 170,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -423,8 +426,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 223.417,
-      "y": 0,
+      "x": 269.197,
+      "y": 1.032,
       "z": 0
     },
     "_scale": {
@@ -463,15 +466,15 @@
     "_N$string": "Passwords",
     "_fontSize": 12,
     "_lineHeight": 40,
-    "_enableWrapText": true,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_N$horizontalAlign": 1,
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 1,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -481,9 +484,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ae454849-5c18-4f07-8c4f-5163d93615f0"
+      "__uuid__": "0b739c5b-d9b0-4561-9ec9-b9882797a7c9"
     },
-    "fileId": "5emh8QzcdIXJCECUY5zFsY",
+    "fileId": "6d7/7uwjBIuY21WkPs+prO",
     "sync": false
   },
   {
@@ -519,14 +522,39 @@
     "_id": ""
   },
   {
+    "__type__": "5dcf1bWNnFKi59w1SBJsUjG",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "fullName": {
+      "__id__": 3
+    },
+    "email": {
+      "__id__": 6
+    },
+    "account": {
+      "__id__": 9
+    },
+    "passwords": {
+      "__id__": 12
+    },
+    "userPrefs": {
+      "__id__": 1
+    },
+    "_id": ""
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ae454849-5c18-4f07-8c4f-5163d93615f0"
+      "__uuid__": "0b739c5b-d9b0-4561-9ec9-b9882797a7c9"
     },
-    "fileId": "caPgj0evdH6bT+9O6ATeqM",
+    "fileId": "d3I1/1Z3hPV5RSTmFe8kDB",
     "sync": false
   }
 ]

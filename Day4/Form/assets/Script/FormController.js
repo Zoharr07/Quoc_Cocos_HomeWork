@@ -8,6 +8,8 @@ cc.Class({
         wellcomePopup: cc.Node,
         accountList: cc.Node,
 
+        userPrefabs: cc.Prefab,
+        accountScrollView: cc.ScrollView,
         popupNameLbl: cc.Label,
 
         nameInput: cc.EditBox,
@@ -30,6 +32,8 @@ cc.Class({
     onLoad() {
         this.node.getUserArg = this.getUserArg.bind(this)
         this.mainForm.active = false;
+        this.wellcomePopup.active = false;
+        this.accountList.active = false;
     },
 
     start() {
@@ -37,9 +41,7 @@ cc.Class({
     },
 
     update(dt) {
-        if (this._checkFlag()) {
-            this.addButton.interactable = true;
-        } else this.addButton.interactable = false;
+
     },
 
     loadFormBtn() {
@@ -56,12 +58,17 @@ cc.Class({
     },
 
     addBtn() {
-        let newUser = [this.nameInput.string, this.emailInput.string, this.userNameInput.string, this.passInput.string];
+        if (!this._checkFlag()) return
+        let newUser = cc.instantiate(this.userPrefabs);
+        //ewUser.node.changeUserData(this.nameInput.string, this.emailInput.string, this.userNameInput.string, this.passInput.string);
+        newUser.parent = this.accountScrollView.content;
+        this.popupNameLbl.string = this.userNameInput.string;
+        cc.log(newUser);
         this.userArg.push(newUser);
-        cc.log("add new user");
         cc.log(this.userArg);
+
         this._resetInput();
-        this.popupNameLbl.string = this.userArg[this.userArg.length - 1][2];
+
         this.wellcomePopup.active = true;
         this.mainForm.active = false;
     },
@@ -73,7 +80,7 @@ cc.Class({
         this.node.resetPass();
         this.node.resetConfirm();
 
-        this.addButton.interactable = false;
+        //this.addButton.interactable = false;
     },
 
     _checkFlag() {

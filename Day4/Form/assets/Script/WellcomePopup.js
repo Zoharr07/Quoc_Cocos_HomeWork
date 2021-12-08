@@ -9,7 +9,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.node.active = false;
+
     },
 
     start() {
