@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pokemon-transparent-10",
+    "texture": "33c4d20e-54a8-45e8-a83c-26c3bd90e1ef",
+    "atlas": "",
+    "rect": [
+      11,
+      18,
+      922,
+      829
+    ],
+    "offset": [
+      2,
+      -8
+    ],
+    "originalSize": [
+      940,
+      849
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
