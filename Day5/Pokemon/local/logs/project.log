@@ -1,220 +1,69 @@
-2021-12-09T06:48:23.954Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-09T06:48:23.990Z - normal: Initializing Asset Database
-2021-12-09T06:48:23.992Z - normal: checking language setting...
-2021-12-09T06:48:23.992Z - normal: Language: en
-2021-12-09T06:48:24.407Z - success: preview server running at http://localhost:7456
-2021-12-09T06:48:24.419Z - success: protocol editor-framework registered
-2021-12-09T06:48:24.419Z - success: protocol app registered
-2021-12-09T06:48:24.419Z - success: protocol theme registered
-2021-12-09T06:48:24.419Z - success: protocol packages registered
-2021-12-09T06:48:24.420Z - success: protocol uuid registerred
-2021-12-09T06:48:24.420Z - success: protocol db registerred
-2021-12-09T06:48:24.420Z - success: protocol thumbnail registerred
-2021-12-09T06:48:24.420Z - success: protocol unpack registerred
-2021-12-09T06:48:24.420Z - success: protocol disable-commonjs registerred
-2021-12-09T06:48:25.608Z - normal: connected!
-2021-12-09T06:48:25.610Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon
-2021-12-09T06:48:25.611Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon
-2021-12-09T06:48:25.837Z - normal: Initializing Cocos2d
-2021-12-09T06:48:26.227Z - normal: Initializing engine extends
-2021-12-09T06:48:26.243Z - success: alipay-adapter loaded
-2021-12-09T06:48:26.249Z - success: asset-db-debugger loaded
-2021-12-09T06:48:26.251Z - success: baidu-adapter loaded
-2021-12-09T06:48:26.254Z - success: color-picker loaded
-2021-12-09T06:48:26.341Z - success: fb-audience-network loaded
-2021-12-09T06:48:26.377Z - success: fb-live-stream loaded
-2021-12-09T06:48:26.379Z - success: google-play-instant loaded
-2021-12-09T06:48:26.382Z - success: huawei-runtime loaded
-2021-12-09T06:48:26.511Z - success: cpk-publish loaded
-2021-12-09T06:48:26.512Z - success: jsb-adapter loaded
-2021-12-09T06:48:26.514Z - success: oppo-runtime loaded
-2021-12-09T06:48:26.517Z - success: package-manager loaded
-2021-12-09T06:48:26.583Z - success: qqplay-adapter loaded
-2021-12-09T06:48:26.583Z - success: runtime-dev-tools loaded
-2021-12-09T06:48:26.603Z - success: sdkbox loaded
-2021-12-09T06:48:26.606Z - success: tester loaded
-2021-12-09T06:48:26.608Z - success: ui-kit-preview-extra loaded
-2021-12-09T06:48:26.610Z - success: ui-kit-preview loaded
-2021-12-09T06:48:26.612Z - success: ui-kit loaded
-2021-12-09T06:48:26.616Z - success: vivo-runtime loaded
-2021-12-09T06:48:26.616Z - success: weapp-adapter loaded
-2021-12-09T06:48:26.617Z - success: xiaomi-adapter loaded
-2021-12-09T06:48:26.618Z - success: alipay-minigame loaded
-2021-12-09T06:48:26.646Z - success: assets loaded
-2021-12-09T06:48:26.648Z - success: builder loaded
-2021-12-09T06:48:26.801Z - success: cocos-services loaded
-2021-12-09T06:48:26.807Z - success: console loaded
-2021-12-09T06:48:26.834Z - success: fb-instant-games loaded
-2021-12-09T06:48:26.838Z - success: game-window loaded
-2021-12-09T06:48:26.839Z - success: google-instant-games loaded
-2021-12-09T06:48:26.842Z - success: hierarchy loaded
-2021-12-09T06:48:26.846Z - success: inspector loaded
-2021-12-09T06:48:26.848Z - success: keystore loaded
-2021-12-09T06:48:26.851Z - success: node-library loaded
-2021-12-09T06:48:26.853Z - success: package-asset loaded
-2021-12-09T06:48:26.854Z - success: preferences loaded
-2021-12-09T06:48:26.856Z - success: project-exporter loaded
-2021-12-09T06:48:26.859Z - success: project-importer loaded
-2021-12-09T06:48:26.861Z - success: project-settings loaded
-2021-12-09T06:48:26.865Z - success: scene loaded
-2021-12-09T06:48:26.865Z - success: simulator-debugger loaded
-2021-12-09T06:48:26.866Z - success: sprite-editor loaded
-2021-12-09T06:48:26.870Z - success: store loaded
-2021-12-09T06:48:26.874Z - success: timeline loaded
-2021-12-09T06:48:26.877Z - success: xiaomi-runtime loaded
-2021-12-09T06:48:27.473Z - normal: Loading packages
-2021-12-09T06:48:27.478Z - normal: Watching packages
-2021-12-09T06:48:27.545Z - normal: Run Application
-2021-12-09T06:48:35.315Z - info: Cocos Services load base data!
-2021-12-09T08:53:45.038Z - error: Can not declare ButtonController.jumpBtn method, it is already defined in the properties of ButtonController.
-    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
-    at Object.exports.doValidateMethodWithProps_DEV (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:248:24)
-    at Object.exports.validateMethodWithProps (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:263:26)
-    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:695:33)
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:8:4)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:49:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:56:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:59:3)
-    at Module._compile (module.js:571:32)
-2021-12-09T08:57:05.466Z - error: Can not declare ButtonController.jumpBtn method, it is already defined in the properties of ButtonController.
-    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
-    at Object.exports.doValidateMethodWithProps_DEV (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:248:24)
-    at Object.exports.validateMethodWithProps (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:263:26)
-    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:695:33)
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:8:4)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:49:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:56:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:59:3)
-    at Module._compile (module.js:571:32)
-2021-12-09T08:58:09.110Z - error: Can not declare ButtonController.jumpBtn method, it is already defined in the properties of ButtonController.
-    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
-    at Object.exports.doValidateMethodWithProps_DEV (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:248:24)
-    at Object.exports.validateMethodWithProps (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:263:26)
-    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:695:33)
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:8:4)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:49:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:56:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/temp/quick-scripts/assets/Scripts/ButtonController.js:59:3)
-    at Module._compile (module.js:571:32)
-2021-12-09T10:27:00.001Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/assets/Scripts/KeyboardController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/assets/Scripts/KeyboardController.js: Unsyntactic break (24:8)
-  22 |                 console.log('Press left key');
-  23 |         }
-> 24 |         break;
-     |         ^
-  25 |     },
-  26 | });
-  27 | 
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp$1.parseBreakContinueStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1970:44)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1830:19)
-    at Parser.pp$1.parseBlockBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2268:21)
-    at Parser.pp$1.parseBlock (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2247:8)
-    at Parser.pp$3.parseFunctionBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4235:22)
-    at Parser.pp$3.parseMethod (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4180:8)
-    at Parser.pp$3.parseObjectMethod (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4097:10)
-    at Parser.pp$3.parseObjPropValue (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4140:19)
-    at Parser.pp$3.parseObj (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4048:10)
-2021-12-09T10:28:26.541Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/assets/Scripts/KeyboardController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/assets/Scripts/KeyboardController.js: Unsyntactic break (24:8)
-  22 |                 console.log('Press left key');
-  23 |         }
-> 24 |         break;
-     |         ^
-  25 |         cc.log(this)
-  26 |     },
-  27 | });
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp$1.parseBreakContinueStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1970:44)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1830:19)
-    at Parser.pp$1.parseBlockBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2268:21)
-    at Parser.pp$1.parseBlock (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:2247:8)
-    at Parser.pp$3.parseFunctionBody (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4235:22)
-    at Parser.pp$3.parseMethod (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4180:8)
-    at Parser.pp$3.parseObjectMethod (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4097:10)
-    at Parser.pp$3.parseObjPropValue (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4140:19)
-    at Parser.pp$3.parseObj (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4048:10)
-2021-12-09T10:56:53.746Z - normal: Start building with options : {
-  "actualPlatform": "web-desktop",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build",
-  "debug": false,
-  "dest": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build/web-desktop",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.Pokemon",
-  "platform": "web-desktop",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "268121af-b4b2-43fd-b983-8ab0d9430ccd"
-  ],
-  "sourceMaps": false,
-  "startScene": "268121af-b4b2-43fd-b983-8ab0d9430ccd",
-  "template": "link",
-  "title": "Pokemon",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "b039b266-5765-43",
-  "zipCompressJs": true,
-  "project": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon",
-  "projectName": "Pokemon",
-  "debugBuildWorker": false
-}
-2021-12-09T10:56:53.750Z - normal: Building /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon
-2021-12-09T10:56:53.750Z - normal: Destination /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build/web-desktop
-2021-12-09T10:56:53.862Z - normal: Delete /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build/web-desktop/subpackages/**/*,/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build/web-desktop/**/*
-2021-12-09T10:56:55.288Z - normal: Start building assets
-2021-12-09T10:56:55.289Z - normal: Start spawn build-worker
-2021-12-09T10:56:55.827Z - normal: Finish spawn build-worker
-2021-12-09T10:56:55.828Z - normal: Start init build-worker
-2021-12-09T10:56:58.109Z - normal: Finish init build-worker
-2021-12-09T10:56:58.109Z - normal: Start build-assets in worker
-2021-12-09T10:56:58.325Z - normal: Finish build-assets in worker
-2021-12-09T10:56:58.327Z - normal: Finish building assets
-2021-12-09T10:56:58.332Z - normal: Start building plugin scripts
-2021-12-09T10:56:58.377Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-09T10:56:58.386Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-desktop/template/index.html
-2021-12-09T10:56:58.398Z - normal: Built to "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon/build/web-desktop" successfully
+2021-12-10T06:41:51.413Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-10T06:41:51.455Z - normal: Initializing Asset Database
+2021-12-10T06:41:51.457Z - normal: checking language setting...
+2021-12-10T06:41:51.457Z - normal: Language: en
+2021-12-10T06:41:52.086Z - success: preview server running at http://localhost:7456
+2021-12-10T06:41:52.096Z - success: protocol editor-framework registered
+2021-12-10T06:41:52.096Z - success: protocol app registered
+2021-12-10T06:41:52.097Z - success: protocol theme registered
+2021-12-10T06:41:52.097Z - success: protocol packages registered
+2021-12-10T06:41:52.097Z - success: protocol uuid registerred
+2021-12-10T06:41:52.097Z - success: protocol db registerred
+2021-12-10T06:41:52.097Z - success: protocol thumbnail registerred
+2021-12-10T06:41:52.097Z - success: protocol unpack registerred
+2021-12-10T06:41:52.097Z - success: protocol disable-commonjs registerred
+2021-12-10T06:41:52.751Z - normal: connected!
+2021-12-10T06:41:52.752Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon
+2021-12-10T06:41:52.754Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day5/Pokemon
+2021-12-10T06:41:53.048Z - normal: Initializing Cocos2d
+2021-12-10T06:41:53.559Z - normal: Initializing engine extends
+2021-12-10T06:41:53.607Z - success: alipay-adapter loaded
+2021-12-10T06:41:53.614Z - success: asset-db-debugger loaded
+2021-12-10T06:41:53.616Z - success: baidu-adapter loaded
+2021-12-10T06:41:53.619Z - success: color-picker loaded
+2021-12-10T06:41:53.737Z - success: fb-audience-network loaded
+2021-12-10T06:41:53.779Z - success: fb-live-stream loaded
+2021-12-10T06:41:53.781Z - success: google-play-instant loaded
+2021-12-10T06:41:53.785Z - success: huawei-runtime loaded
+2021-12-10T06:41:53.956Z - success: cpk-publish loaded
+2021-12-10T06:41:53.956Z - success: jsb-adapter loaded
+2021-12-10T06:41:53.960Z - success: oppo-runtime loaded
+2021-12-10T06:41:53.963Z - success: package-manager loaded
+2021-12-10T06:41:54.051Z - success: qqplay-adapter loaded
+2021-12-10T06:41:54.053Z - success: runtime-dev-tools loaded
+2021-12-10T06:41:54.076Z - success: sdkbox loaded
+2021-12-10T06:41:54.080Z - success: tester loaded
+2021-12-10T06:41:54.082Z - success: ui-kit-preview-extra loaded
+2021-12-10T06:41:54.085Z - success: ui-kit-preview loaded
+2021-12-10T06:41:54.087Z - success: ui-kit loaded
+2021-12-10T06:41:54.091Z - success: vivo-runtime loaded
+2021-12-10T06:41:54.092Z - success: weapp-adapter loaded
+2021-12-10T06:41:54.092Z - success: xiaomi-adapter loaded
+2021-12-10T06:41:54.094Z - success: alipay-minigame loaded
+2021-12-10T06:41:54.125Z - success: assets loaded
+2021-12-10T06:41:54.128Z - success: builder loaded
+2021-12-10T06:41:54.327Z - success: cocos-services loaded
+2021-12-10T06:41:54.333Z - success: console loaded
+2021-12-10T06:41:54.358Z - success: fb-instant-games loaded
+2021-12-10T06:41:54.362Z - success: game-window loaded
+2021-12-10T06:41:54.362Z - success: google-instant-games loaded
+2021-12-10T06:41:54.366Z - success: hierarchy loaded
+2021-12-10T06:41:54.369Z - success: inspector loaded
+2021-12-10T06:41:54.370Z - success: keystore loaded
+2021-12-10T06:41:54.374Z - success: node-library loaded
+2021-12-10T06:41:54.375Z - success: package-asset loaded
+2021-12-10T06:41:54.376Z - success: preferences loaded
+2021-12-10T06:41:54.378Z - success: project-exporter loaded
+2021-12-10T06:41:54.382Z - success: project-importer loaded
+2021-12-10T06:41:54.384Z - success: project-settings loaded
+2021-12-10T06:41:54.388Z - success: scene loaded
+2021-12-10T06:41:54.389Z - success: simulator-debugger loaded
+2021-12-10T06:41:54.390Z - success: sprite-editor loaded
+2021-12-10T06:41:54.394Z - success: store loaded
+2021-12-10T06:41:54.398Z - success: timeline loaded
+2021-12-10T06:41:54.401Z - success: xiaomi-runtime loaded
+2021-12-10T06:41:58.233Z - normal: Loading packages
+2021-12-10T06:41:58.236Z - normal: Watching packages
+2021-12-10T06:41:58.308Z - normal: Run Application
+2021-12-10T06:42:01.152Z - info: Cocos Services load base data!
+2021-12-10T06:49:17.557Z - info: shutdown preview server

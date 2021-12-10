@@ -1,33 +1,26 @@
-let emiter = require('Events');
-
-cc.Class({
-    extends: cc.Component,
-
-    properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start() {
-
-    },
-
-    // update (dt) {},
-});
+const EvenEmiter = require('Events');
+class Emitter {
+    constructor() {
+        this._emitter = new EvenEmiter();
+        this._emitter.setMaxListeners(100);
+    }
+    emit(...args) {
+        this._emitter.emit(...args);
+    }
+    addEvent(event, callback) {
+        this._emitter.on(event, callback);
+    }
+    addOneEvent(event, callback) {
+        this._emitter.once(event, callback);
+    }
+    removeEvent(event, callback) {
+        this._emitter.removeListener(event, callback);
+    }
+    destroy() {
+        this._emitter.removeAllListeners();
+        this._emitter = null;
+        Emitter.instance = null;
+    }
+}
+Emitter.instance = null;
+module.exports = Emitter;

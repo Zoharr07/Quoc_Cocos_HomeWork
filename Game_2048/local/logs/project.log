@@ -66,3 +66,39 @@
 2021-12-10T03:45:30.566Z - normal: Watching packages
 2021-12-10T03:45:30.637Z - normal: Run Application
 2021-12-10T03:45:32.650Z - info: Cocos Services load base data!
+2021-12-10T04:44:21.653Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js: Unexpected token (6:23)
+  4 | 
+  5 |     properties: {
+> 6 |         _boardPosition =[],
+    |                        ^
+  7 |     },
+  8 | 
+  9 |     // LIFE-CYCLE CALLBACKS:
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3370:10)
+    at Parser.pp$3.parseExprListItem (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4312:16)
+    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3573:20)
+    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
+2021-12-10T04:44:30.240Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js: Unexpected token (6:23)
+  4 | 
+  5 |     properties: {
+> 6 |         _boardPosition =[],
+    |                        ^
+  7 |     },
+  8 | 
+  9 |     // LIFE-CYCLE CALLBACKS:
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3370:10)
+    at Parser.pp$3.parseExprListItem (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4312:16)
+    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3573:20)
+    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)

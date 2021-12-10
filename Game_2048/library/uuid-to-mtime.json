@@ -70,8 +70,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1639108841536,
-    "meta": 1639108841541,
+    "asset": 1639118075565,
+    "meta": 1639118075569,
     "relativePath": "Scene/helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -494,19 +494,29 @@
     "meta": 1639106248235,
     "relativePath": "model/primitives.fbx"
   },
-  "76bc3935-536e-455f-a41b-587574805e25": {
-    "asset": 1639108141149,
-    "meta": 1639108147577,
-    "relativePath": "Script/BackgroundControl.js"
-  },
   "6e305747-17a0-48b3-91e0-b44ff5fc536e": {
     "asset": 1639108409882,
     "meta": 1639108409885,
     "relativePath": "Script/Events"
   },
   "4a5ab2d4-d3d1-4dcd-9445-3e0696df6c27": {
-    "asset": 1639108826431,
-    "meta": 1639108838270,
+    "asset": 1639110125768,
+    "meta": 1639110453656,
     "relativePath": "Script/Events/Emitter.js"
+  },
+  "a9b47273-8b2b-46eb-9954-443320acb082": {
+    "asset": 1639110262894,
+    "meta": 1639110453659,
+    "relativePath": "Script/Events/EventController.js"
+  },
+  "35fcb708-7268-472f-969e-9230ded812ea": {
+    "asset": 1639117552091,
+    "meta": 1639117624351,
+    "relativePath": "Script/GameController.js"
+  },
+  "76bc3935-536e-455f-a41b-587574805e25": {
+    "asset": 1639118066240,
+    "meta": 1639118067807,
+    "relativePath": "Script/BackgroundControl.js"
   }
 }
