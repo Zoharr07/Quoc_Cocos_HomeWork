@@ -17,7 +17,6 @@ cc.Class({
             const { data } = event;
             cc.log(data.name);
         });
-        //this.spAnim.setMix('idle', 'walk', 0.1);
         this.spAnim.setMix('jump', 'idle', 0.2);
     },
 
