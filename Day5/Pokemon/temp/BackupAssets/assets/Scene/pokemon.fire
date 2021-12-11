@@ -341,8 +341,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 491.232,
-      "y": 238.772,
+      "x": 455,
+      "y": 160,
       "z": 0
     },
     "_scale": {
@@ -436,7 +436,7 @@
     ],
     "paused": false,
     "defaultSkin": "",
-    "defaultAnimation": "",
+    "defaultAnimation": "idle",
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "loop": true,
@@ -447,7 +447,7 @@
     "_frameCache": null,
     "_curFrame": null,
     "_skeletonCache": null,
-    "_animationName": "",
+    "_animationName": "idle",
     "_animationQueue": [],
     "_headAniInfo": null,
     "_playTimes": 0,
@@ -1942,11 +1942,12 @@
       "__id__": 6
     },
     "_enabled": true,
-    "frameAnim": 40,
     "char": {
       "__id__": 7
     },
-    "_counter": 0,
+    "spAnim": {
+      "__id__": 9
+    },
     "_id": "7aqrJJLdpBDLKlcxCGyDvh"
   },
   {

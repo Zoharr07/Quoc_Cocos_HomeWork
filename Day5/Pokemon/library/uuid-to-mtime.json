@@ -425,13 +425,13 @@
     "relativePath": "Texture/pokemon-transparent-10.png"
   },
   "f5f98363-563b-45a6-8ed1-63a1dad8547a": {
-    "asset": 1638514584641,
+    "asset": 1639132030422,
     "meta": 1638514569788,
     "relativePath": "Texture"
   },
   "268121af-b4b2-43fd-b983-8ab0d9430ccd": {
-    "asset": 1639133848450,
-    "meta": 1639133848459,
+    "asset": 1639190390953,
+    "meta": 1639190390962,
     "relativePath": "Scene/pokemon.fire"
   },
   "80d26fdd-019a-4c32-b187-e16371f1a9a0": {
@@ -480,8 +480,8 @@
     "relativePath": "Texture/export_37/spineboy-pro_3.7_output.png"
   },
   "9a27165a-817b-4bea-a8be-48432bf30b44": {
-    "asset": 1639133845667,
-    "meta": 1639133848128,
+    "asset": 1639191584814,
+    "meta": 1639191585996,
     "relativePath": "Scripts/CharController.js"
   }
 }
