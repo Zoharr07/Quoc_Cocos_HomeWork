@@ -6,25 +6,40 @@ cc.Class({
         leftBtn: cc.Button,
         rightBtn: cc.Button,
         jumpBtn: cc.Button,
+        resetBtn: cc.Button,
+        ccCheckBox: cc.Toggle,
+        tweenCheckBox: cc.Toggle,
     },
 
     onLoad() {
-        Emiter.instance.addEvent('setbutton', this._setBtnInteracctable.bind(this))
+        Emiter.instance.addEvent('setbutton', this._setBtnInteracctable.bind(this));
+
+        this.ccCheckBox.node.on('toggle', () => { Emiter.instance.emit("changeAction", 'CCAction'); });
+        this.tweenCheckBox.node.on('toggle', () => { Emiter.instance.emit("changeAction", 'TweenAction'); });
+
+        this.leftBtn.node.on('click', this._goLeftBtnFunc, this);
+        this.rightBtn.node.on('click', this._goRightBtnFunc, this);
+        this.jumpBtn.node.on('click', this._jumpBtnFunc, this);
+        this.resetBtn.node.on('click', this._resetCharBtnFunc, this);
+    },
+    start() {
+        this.ccCheckBox.isChecked = true;
+        Emiter.instance.emit("changeAction", 'CCAction');
     },
 
-    goLeftBtnFunc() {
+    _goLeftBtnFunc() {
         Emiter.instance.emit('goleft');
     },
 
-    goRightBtnFunc() {
+    _goRightBtnFunc() {
         Emiter.instance.emit('goright');
     },
 
-    jumpBtnFunc() {
+    _jumpBtnFunc() {
         Emiter.instance.emit('jump');
     },
 
-    resetCharBtnFunc() {
+    _resetCharBtnFunc() {
         Emiter.instance.emit('reset');
     },
 
