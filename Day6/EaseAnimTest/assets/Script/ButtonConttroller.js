@@ -47,9 +47,9 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.easeInShineBtn.node.on('click', () => { this.node.emit('easeInShine'); });
-        this.easeOutShineBtn.node.on('click', () => { this.node.emit('easeOutShine'); });
-        this.easeInOutShineBtn.node.on('click', () => { this.node.emit('easeInOutShine'); });
+        this.easeInShineBtn.node.on('click', () => { this.node.emit('easeInSine'); });
+        this.easeOutShineBtn.node.on('click', () => { this.node.emit('easeOutSine'); });
+        this.easeInOutShineBtn.node.on('click', () => { this.node.emit('easeInOutSine'); });
 
         this.easeInQuadBtn.node.on('click', () => { this.node.emit('easeInQuad'); });
         this.easeOutQuadBtn.node.on('click', () => { this.node.emit('easeOutQuad'); });
