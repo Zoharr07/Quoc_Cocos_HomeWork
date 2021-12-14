@@ -13,12 +13,12 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "UnitBG",
+    "_name": "UnitBG copy",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -31,8 +31,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 185,
-      "g": 154,
-      "b": 133,
+      "g": 187,
+      "b": 128,
       "a": 255
     },
     "_contentSize": {
@@ -47,8 +47,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 250,
-      "y": 796.088,
+      "x": 100,
+      "y": 310,
       "z": 0
     },
     "_scale": {

@@ -1,104 +1,162 @@
-2021-12-10T03:45:27.494Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-10T03:45:27.535Z - normal: Initializing Asset Database
-2021-12-10T03:45:27.537Z - normal: checking language setting...
-2021-12-10T03:45:27.537Z - normal: Language: en
-2021-12-10T03:45:28.027Z - success: preview server running at http://localhost:7456
-2021-12-10T03:45:28.041Z - success: protocol editor-framework registered
-2021-12-10T03:45:28.041Z - success: protocol app registered
-2021-12-10T03:45:28.042Z - success: protocol theme registered
-2021-12-10T03:45:28.042Z - success: protocol packages registered
-2021-12-10T03:45:28.042Z - success: protocol uuid registerred
-2021-12-10T03:45:28.042Z - success: protocol db registerred
-2021-12-10T03:45:28.042Z - success: protocol thumbnail registerred
-2021-12-10T03:45:28.042Z - success: protocol unpack registerred
-2021-12-10T03:45:28.042Z - success: protocol disable-commonjs registerred
-2021-12-10T03:45:28.415Z - normal: connected!
-2021-12-10T03:45:28.417Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-10T03:45:28.419Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-10T03:45:28.673Z - normal: Initializing Cocos2d
-2021-12-10T03:45:29.141Z - normal: Initializing engine extends
-2021-12-10T03:45:29.159Z - success: alipay-adapter loaded
-2021-12-10T03:45:29.167Z - success: asset-db-debugger loaded
-2021-12-10T03:45:29.173Z - success: baidu-adapter loaded
-2021-12-10T03:45:29.182Z - success: color-picker loaded
-2021-12-10T03:45:29.278Z - success: fb-audience-network loaded
-2021-12-10T03:45:29.313Z - success: fb-live-stream loaded
-2021-12-10T03:45:29.315Z - success: google-play-instant loaded
-2021-12-10T03:45:29.318Z - success: huawei-runtime loaded
-2021-12-10T03:45:29.484Z - success: cpk-publish loaded
-2021-12-10T03:45:29.485Z - success: jsb-adapter loaded
-2021-12-10T03:45:29.487Z - success: oppo-runtime loaded
-2021-12-10T03:45:29.490Z - success: package-manager loaded
-2021-12-10T03:45:29.562Z - success: qqplay-adapter loaded
-2021-12-10T03:45:29.563Z - success: runtime-dev-tools loaded
-2021-12-10T03:45:29.585Z - success: sdkbox loaded
-2021-12-10T03:45:29.590Z - success: tester loaded
-2021-12-10T03:45:29.592Z - success: ui-kit-preview-extra loaded
-2021-12-10T03:45:29.593Z - success: ui-kit-preview loaded
-2021-12-10T03:45:29.596Z - success: ui-kit loaded
-2021-12-10T03:45:29.605Z - success: vivo-runtime loaded
-2021-12-10T03:45:29.605Z - success: weapp-adapter loaded
-2021-12-10T03:45:29.606Z - success: xiaomi-adapter loaded
-2021-12-10T03:45:29.608Z - success: alipay-minigame loaded
-2021-12-10T03:45:29.640Z - success: assets loaded
-2021-12-10T03:45:29.643Z - success: builder loaded
-2021-12-10T03:45:29.810Z - success: cocos-services loaded
-2021-12-10T03:45:29.815Z - success: console loaded
-2021-12-10T03:45:29.840Z - success: fb-instant-games loaded
-2021-12-10T03:45:29.843Z - success: game-window loaded
-2021-12-10T03:45:29.844Z - success: google-instant-games loaded
-2021-12-10T03:45:29.847Z - success: hierarchy loaded
-2021-12-10T03:45:29.850Z - success: inspector loaded
-2021-12-10T03:45:29.851Z - success: keystore loaded
-2021-12-10T03:45:29.855Z - success: node-library loaded
-2021-12-10T03:45:29.856Z - success: package-asset loaded
-2021-12-10T03:45:29.857Z - success: preferences loaded
-2021-12-10T03:45:29.859Z - success: project-exporter loaded
-2021-12-10T03:45:29.863Z - success: project-importer loaded
-2021-12-10T03:45:29.865Z - success: project-settings loaded
-2021-12-10T03:45:29.869Z - success: scene loaded
-2021-12-10T03:45:29.870Z - success: simulator-debugger loaded
-2021-12-10T03:45:29.872Z - success: sprite-editor loaded
-2021-12-10T03:45:29.875Z - success: store loaded
-2021-12-10T03:45:29.879Z - success: timeline loaded
-2021-12-10T03:45:29.882Z - success: xiaomi-runtime loaded
-2021-12-10T03:45:30.562Z - normal: Loading packages
-2021-12-10T03:45:30.566Z - normal: Watching packages
-2021-12-10T03:45:30.637Z - normal: Run Application
-2021-12-10T03:45:32.650Z - info: Cocos Services load base data!
-2021-12-10T04:44:21.653Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js: Unexpected token (6:23)
-  4 | 
-  5 |     properties: {
-> 6 |         _boardPosition =[],
-    |                        ^
-  7 |     },
-  8 | 
-  9 |     // LIFE-CYCLE CALLBACKS:
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3370:10)
-    at Parser.pp$3.parseExprListItem (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4312:16)
-    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3573:20)
-    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-2021-12-10T04:44:30.240Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/GameController.js: Unexpected token (6:23)
-  4 | 
-  5 |     properties: {
-> 6 |         _boardPosition =[],
-    |                        ^
-  7 |     },
-  8 | 
-  9 |     // LIFE-CYCLE CALLBACKS:
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3370:10)
-    at Parser.pp$3.parseExprListItem (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4312:16)
-    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3573:20)
-    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
+2021-12-14T02:48:43.423Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-14T02:48:43.492Z - normal: Initializing Asset Database
+2021-12-14T02:48:43.495Z - normal: checking language setting...
+2021-12-14T02:48:43.495Z - normal: Language: en
+2021-12-14T02:48:44.477Z - success: preview server running at http://localhost:7456
+2021-12-14T02:48:44.504Z - success: protocol editor-framework registered
+2021-12-14T02:48:44.505Z - success: protocol app registered
+2021-12-14T02:48:44.505Z - success: protocol theme registered
+2021-12-14T02:48:44.505Z - success: protocol packages registered
+2021-12-14T02:48:44.505Z - success: protocol uuid registerred
+2021-12-14T02:48:44.505Z - success: protocol db registerred
+2021-12-14T02:48:44.505Z - success: protocol thumbnail registerred
+2021-12-14T02:48:44.506Z - success: protocol unpack registerred
+2021-12-14T02:48:44.506Z - success: protocol disable-commonjs registerred
+2021-12-14T02:48:46.120Z - normal: connected!
+2021-12-14T02:48:46.122Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-14T02:48:46.124Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-14T02:48:46.685Z - normal: Initializing Cocos2d
+2021-12-14T02:48:47.793Z - normal: Initializing engine extends
+2021-12-14T02:48:47.840Z - success: alipay-adapter loaded
+2021-12-14T02:48:47.849Z - success: asset-db-debugger loaded
+2021-12-14T02:48:47.850Z - success: baidu-adapter loaded
+2021-12-14T02:48:47.851Z - success: color-picker loaded
+2021-12-14T02:48:48.053Z - success: fb-audience-network loaded
+2021-12-14T02:48:48.133Z - success: fb-live-stream loaded
+2021-12-14T02:48:48.138Z - success: google-play-instant loaded
+2021-12-14T02:48:48.144Z - success: huawei-runtime loaded
+2021-12-14T02:48:48.565Z - success: cpk-publish loaded
+2021-12-14T02:48:48.566Z - success: jsb-adapter loaded
+2021-12-14T02:48:48.575Z - success: oppo-runtime loaded
+2021-12-14T02:48:48.584Z - success: package-manager loaded
+2021-12-14T02:48:48.784Z - success: qqplay-adapter loaded
+2021-12-14T02:48:48.787Z - success: runtime-dev-tools loaded
+2021-12-14T02:48:48.834Z - success: sdkbox loaded
+2021-12-14T02:48:48.845Z - success: tester loaded
+2021-12-14T02:48:48.850Z - success: ui-kit-preview-extra loaded
+2021-12-14T02:48:48.856Z - success: ui-kit-preview loaded
+2021-12-14T02:48:48.860Z - success: ui-kit loaded
+2021-12-14T02:48:48.868Z - success: vivo-runtime loaded
+2021-12-14T02:48:48.870Z - success: weapp-adapter loaded
+2021-12-14T02:48:48.871Z - success: xiaomi-adapter loaded
+2021-12-14T02:48:48.875Z - success: alipay-minigame loaded
+2021-12-14T02:48:48.939Z - success: assets loaded
+2021-12-14T02:48:48.944Z - success: builder loaded
+2021-12-14T02:48:49.349Z - success: cocos-services loaded
+2021-12-14T02:48:49.358Z - success: console loaded
+2021-12-14T02:48:49.411Z - success: fb-instant-games loaded
+2021-12-14T02:48:49.422Z - success: game-window loaded
+2021-12-14T02:48:49.423Z - success: google-instant-games loaded
+2021-12-14T02:48:49.430Z - success: hierarchy loaded
+2021-12-14T02:48:49.434Z - success: inspector loaded
+2021-12-14T02:48:49.436Z - success: keystore loaded
+2021-12-14T02:48:49.441Z - success: node-library loaded
+2021-12-14T02:48:49.442Z - success: package-asset loaded
+2021-12-14T02:48:49.443Z - success: preferences loaded
+2021-12-14T02:48:49.446Z - success: project-exporter loaded
+2021-12-14T02:48:49.450Z - success: project-importer loaded
+2021-12-14T02:48:49.455Z - success: project-settings loaded
+2021-12-14T02:48:49.462Z - success: scene loaded
+2021-12-14T02:48:49.464Z - success: simulator-debugger loaded
+2021-12-14T02:48:49.468Z - success: sprite-editor loaded
+2021-12-14T02:48:49.475Z - success: store loaded
+2021-12-14T02:48:49.484Z - success: timeline loaded
+2021-12-14T02:48:49.493Z - success: xiaomi-runtime loaded
+2021-12-14T02:48:51.160Z - normal: Loading packages
+2021-12-14T02:48:51.168Z - normal: Watching packages
+2021-12-14T02:48:51.374Z - normal: Run Application
+2021-12-14T02:48:52.545Z - info: Cocos Services load base data!
+2021-12-14T04:35:24.539Z - info: Only the prefab node "Unit" and its child nodes are saved.
+2021-12-14T04:36:31.182Z - error: Window "main" unresponsive: [object Object]
+    at BrowserWindow.nativeWin.on.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2243)
+    at emitOne (events.js:96:13)
+    at BrowserWindow.emit (events.js:191:7)
+2021-12-14T04:44:49.869Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:46:04.193Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:46:43.341Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:47:58.437Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:48:13.599Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:48:43.763Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:48:59.882Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:50:48.576Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:51:10.186Z - failed: Task [animation-change-current-clip] run error, stop running other tasks.
+ Error: The corresponding clip cannot be found - fakeOut
+    at Object.i (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:7337)
+    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
+    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2021-12-14T04:52:36.352Z - error: TypeError: Cannot read property 'clip' of null
+    at Object.isRecordCurrentClip (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/animation.js:1:8522)
+    at Object.setProperty (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:8499)
+    at HTMLElement.set-property (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:785)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)

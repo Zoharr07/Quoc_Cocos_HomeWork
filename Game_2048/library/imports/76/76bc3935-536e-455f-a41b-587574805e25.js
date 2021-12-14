@@ -35,7 +35,7 @@ cc.Class({
                 rowBoard.push(unitPos);
                 this.node.addChild(unit);
                 Emiter.instance.emit('addPos', unitPos);
-                //cc.log(unit)
+                cc.log(unit);
             }
             var minX = (1 - (this._col + 1) / 2) * this._distance;
             var maxX = (this._col - (this._col + 1) / 2) * this._distance;
