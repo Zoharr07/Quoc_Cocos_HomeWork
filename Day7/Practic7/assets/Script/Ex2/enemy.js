@@ -16,14 +16,16 @@ cc.Class({
 
     // update (dt) {},
     onCollisionEnter: function (other, self) {
-        console.log('on collision enter');
-        cc.log(other, self);
-        cc.tween(this.node)
-            .delay(0.4)
-            .call(() => {
-                this.node.destroy();
-            })
-            .start()
+        console.log('on bullet hit');
+        if (other.tag == 4) {
 
+            cc.log(other, self);
+            cc.tween(this.node)
+                .delay(0.1)
+                .call(() => {
+                    this.node.destroy();
+                })
+                .start()
+        }
     },
 });
