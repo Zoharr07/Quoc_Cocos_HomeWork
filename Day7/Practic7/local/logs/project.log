@@ -1,0 +1,359 @@
+2021-12-15T06:32:28.029Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-15T06:32:28.063Z - normal: Initializing Asset Database
+2021-12-15T06:32:28.065Z - normal: checking language setting...
+2021-12-15T06:32:28.065Z - normal: Language: en
+2021-12-15T06:32:28.482Z - success: preview server running at http://localhost:7456
+2021-12-15T06:32:28.495Z - success: protocol editor-framework registered
+2021-12-15T06:32:28.495Z - success: protocol app registered
+2021-12-15T06:32:28.495Z - success: protocol theme registered
+2021-12-15T06:32:28.495Z - success: protocol packages registered
+2021-12-15T06:32:28.495Z - success: protocol uuid registerred
+2021-12-15T06:32:28.495Z - success: protocol db registerred
+2021-12-15T06:32:28.495Z - success: protocol thumbnail registerred
+2021-12-15T06:32:28.495Z - success: protocol unpack registerred
+2021-12-15T06:32:28.495Z - success: protocol disable-commonjs registerred
+2021-12-15T06:32:28.960Z - normal: connected!
+2021-12-15T06:32:28.962Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7
+2021-12-15T06:32:28.963Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7
+2021-12-15T06:32:29.196Z - normal: Initializing Cocos2d
+2021-12-15T06:32:29.596Z - normal: Initializing engine extends
+2021-12-15T06:32:29.610Z - success: alipay-adapter loaded
+2021-12-15T06:32:29.616Z - success: asset-db-debugger loaded
+2021-12-15T06:32:29.620Z - success: baidu-adapter loaded
+2021-12-15T06:32:29.623Z - success: color-picker loaded
+2021-12-15T06:32:29.707Z - success: fb-audience-network loaded
+2021-12-15T06:32:29.754Z - success: fb-live-stream loaded
+2021-12-15T06:32:29.756Z - success: google-play-instant loaded
+2021-12-15T06:32:29.759Z - success: huawei-runtime loaded
+2021-12-15T06:32:29.889Z - success: cpk-publish loaded
+2021-12-15T06:32:29.889Z - success: jsb-adapter loaded
+2021-12-15T06:32:29.892Z - success: oppo-runtime loaded
+2021-12-15T06:32:29.895Z - success: package-manager loaded
+2021-12-15T06:32:29.962Z - success: qqplay-adapter loaded
+2021-12-15T06:32:29.963Z - success: runtime-dev-tools loaded
+2021-12-15T06:32:29.984Z - success: sdkbox loaded
+2021-12-15T06:32:29.987Z - success: tester loaded
+2021-12-15T06:32:29.990Z - success: ui-kit-preview-extra loaded
+2021-12-15T06:32:29.992Z - success: ui-kit-preview loaded
+2021-12-15T06:32:29.994Z - success: ui-kit loaded
+2021-12-15T06:32:29.999Z - success: vivo-runtime loaded
+2021-12-15T06:32:29.999Z - success: weapp-adapter loaded
+2021-12-15T06:32:30.000Z - success: xiaomi-adapter loaded
+2021-12-15T06:32:30.002Z - success: alipay-minigame loaded
+2021-12-15T06:32:30.030Z - success: assets loaded
+2021-12-15T06:32:30.032Z - success: builder loaded
+2021-12-15T06:32:30.187Z - success: cocos-services loaded
+2021-12-15T06:32:30.191Z - success: console loaded
+2021-12-15T06:32:30.213Z - success: fb-instant-games loaded
+2021-12-15T06:32:30.215Z - success: game-window loaded
+2021-12-15T06:32:30.216Z - success: google-instant-games loaded
+2021-12-15T06:32:30.220Z - success: hierarchy loaded
+2021-12-15T06:32:30.222Z - success: inspector loaded
+2021-12-15T06:32:30.223Z - success: keystore loaded
+2021-12-15T06:32:30.226Z - success: node-library loaded
+2021-12-15T06:32:30.227Z - success: package-asset loaded
+2021-12-15T06:32:30.228Z - success: preferences loaded
+2021-12-15T06:32:30.230Z - success: project-exporter loaded
+2021-12-15T06:32:30.233Z - success: project-importer loaded
+2021-12-15T06:32:30.235Z - success: project-settings loaded
+2021-12-15T06:32:30.238Z - success: scene loaded
+2021-12-15T06:32:30.239Z - success: simulator-debugger loaded
+2021-12-15T06:32:30.240Z - success: sprite-editor loaded
+2021-12-15T06:32:30.243Z - success: store loaded
+2021-12-15T06:32:30.247Z - success: timeline loaded
+2021-12-15T06:32:30.250Z - success: xiaomi-runtime loaded
+2021-12-15T06:32:30.926Z - normal: Loading packages
+2021-12-15T06:32:30.930Z - normal: Watching packages
+2021-12-15T06:32:31.018Z - normal: Run Application
+2021-12-15T06:32:33.828Z - info: Cocos Services load base data!
+2021-12-15T06:38:47.621Z - info: Only the prefab node "bullet" and its child nodes are saved.
+2021-12-15T06:38:48.857Z - info: Only the prefab node "bullet" and its child nodes are saved.
+2021-12-15T07:09:45.754Z - error: Can not find cc.Component in the script 21d8aJ+PYRB6quIOvNYnOP3.
+    at Object.addComponent (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:6036)
+    at HTMLElement.add-component (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:1171)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2021-12-15T07:09:54.339Z - error: Can not find cc.Component in the script 21d8aJ+PYRB6quIOvNYnOP3.
+    at Object.addComponent (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:6036)
+    at HTMLElement.add-component (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:1171)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2021-12-15T07:10:34.545Z - error: Can not find cc.Component in the script 21d8aJ+PYRB6quIOvNYnOP3.
+    at Object.addComponent (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:6036)
+    at HTMLElement.add-component (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:1171)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2021-12-15T07:11:19.821Z - error: Can not find cc.Component in the script 21d8aJ+PYRB6quIOvNYnOP3.
+    at Object.addComponent (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:6036)
+    at HTMLElement.add-component (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:1171)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2021-12-15T07:15:30.903Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build",
+  "debug": false,
+  "dest": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "887feec6-0f7f-42d5-9914-250c97c58f32",
+    "3bebb64f-e72a-4194-90ff-2de66de3df67"
+  ],
+  "sourceMaps": false,
+  "startScene": "887feec6-0f7f-42d5-9914-250c97c58f32",
+  "template": "link",
+  "title": "collider_homework",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "3c0789c3-84f7-40",
+  "zipCompressJs": true,
+  "project": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7",
+  "projectName": "collider_homework",
+  "debugBuildWorker": false
+}
+2021-12-15T07:15:30.906Z - normal: Building /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7
+2021-12-15T07:15:30.906Z - normal: Destination /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-mobile
+2021-12-15T07:15:31.015Z - normal: Delete /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-mobile/subpackages/**/*,/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-mobile/**/*
+2021-12-15T07:15:32.379Z - normal: Start building assets
+2021-12-15T07:15:32.380Z - normal: Start spawn build-worker
+2021-12-15T07:15:32.896Z - normal: Finish spawn build-worker
+2021-12-15T07:15:32.896Z - normal: Start init build-worker
+2021-12-15T07:15:34.848Z - normal: Finish init build-worker
+2021-12-15T07:15:34.849Z - normal: Start build-assets in worker
+2021-12-15T07:15:35.086Z - normal: Finish build-assets in worker
+2021-12-15T07:15:36.809Z - normal: Finish building assets
+2021-12-15T07:15:36.814Z - normal: Start building plugin scripts
+2021-12-15T07:15:36.864Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-15T07:15:36.874Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
+2021-12-15T07:15:36.884Z - normal: Built to "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-mobile" successfully
+2021-12-15T07:15:41.860Z - normal: Start building with options : {
+  "actualPlatform": "web-desktop",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build",
+  "debug": false,
+  "dest": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-desktop",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "887feec6-0f7f-42d5-9914-250c97c58f32",
+    "3bebb64f-e72a-4194-90ff-2de66de3df67"
+  ],
+  "sourceMaps": false,
+  "startScene": "887feec6-0f7f-42d5-9914-250c97c58f32",
+  "template": "link",
+  "title": "collider_homework",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "3c0789c3-84f7-40",
+  "zipCompressJs": true,
+  "project": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7",
+  "projectName": "collider_homework",
+  "debugBuildWorker": false
+}
+2021-12-15T07:15:41.860Z - normal: Building /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7
+2021-12-15T07:15:41.860Z - normal: Destination /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop
+2021-12-15T07:15:41.861Z - normal: Delete /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop/subpackages/**/*,/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop/**/*
+2021-12-15T07:15:43.136Z - normal: Start building assets
+2021-12-15T07:15:43.136Z - normal: Start spawn build-worker
+2021-12-15T07:15:43.655Z - normal: Finish spawn build-worker
+2021-12-15T07:15:43.655Z - normal: Start init build-worker
+2021-12-15T07:15:45.833Z - normal: Finish init build-worker
+2021-12-15T07:15:45.833Z - normal: Start build-assets in worker
+2021-12-15T07:15:46.061Z - normal: Finish build-assets in worker
+2021-12-15T07:15:46.063Z - normal: Finish building assets
+2021-12-15T07:15:46.066Z - normal: Start building plugin scripts
+2021-12-15T07:15:46.103Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-15T07:15:46.106Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-desktop/template/index.html
+2021-12-15T07:15:46.112Z - normal: Built to "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop" successfully
+2021-12-15T07:16:37.954Z - normal: Start building with options : {
+  "actualPlatform": "web-desktop",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build",
+  "debug": false,
+  "dest": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-desktop",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "3bebb64f-e72a-4194-90ff-2de66de3df67",
+    "887feec6-0f7f-42d5-9914-250c97c58f32"
+  ],
+  "sourceMaps": false,
+  "startScene": "3bebb64f-e72a-4194-90ff-2de66de3df67",
+  "template": "link",
+  "title": "collider_homework",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "3c0789c3-84f7-40",
+  "zipCompressJs": true,
+  "project": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7",
+  "projectName": "collider_homework",
+  "debugBuildWorker": false
+}
+2021-12-15T07:16:37.955Z - normal: Building /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7
+2021-12-15T07:16:37.955Z - normal: Destination /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop
+2021-12-15T07:16:37.956Z - normal: Delete /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop/subpackages/**/*,/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop/**/*
+2021-12-15T07:16:39.159Z - normal: Start building assets
+2021-12-15T07:16:39.160Z - normal: Start spawn build-worker
+2021-12-15T07:16:39.640Z - normal: Finish spawn build-worker
+2021-12-15T07:16:39.640Z - normal: Start init build-worker
+2021-12-15T07:16:41.530Z - normal: Finish init build-worker
+2021-12-15T07:16:41.531Z - normal: Start build-assets in worker
+2021-12-15T07:16:41.757Z - normal: Finish build-assets in worker
+2021-12-15T07:16:41.759Z - normal: Finish building assets
+2021-12-15T07:16:41.763Z - normal: Start building plugin scripts
+2021-12-15T07:16:41.798Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-15T07:16:41.802Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-desktop/template/index.html
+2021-12-15T07:16:41.809Z - normal: Built to "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Day7/Practic7/build/web-desktop" successfully
