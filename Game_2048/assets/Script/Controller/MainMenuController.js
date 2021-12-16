@@ -4,6 +4,7 @@ cc.Class({
 
     properties: {
         newGameBtn: cc.Button,
+        startGameBtn: cc.Button,
         backMenuBtn: cc.Button,
         exitBtn: cc.Button,
         gamePlayNode: cc.Node,
@@ -13,6 +14,7 @@ cc.Class({
 
     onLoad() {
         this.newGameBtn.node.on('click', this._newGameFunc, this);
+        this.startGameBtn.node.on('click', this._startGameFunc, this);
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
     },
@@ -45,6 +47,7 @@ cc.Class({
         cc.game.end();
     },
 
-
-
+    _startGameFunc() {
+        Emiter.instance.emit('startGame');
+    },
 });

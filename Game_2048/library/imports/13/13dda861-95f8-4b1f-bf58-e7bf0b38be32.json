@@ -54,8 +54,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -335.13,
-      "y": 77.452,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -290,6 +290,12 @@
       "__id__": 1
     },
     "_enabled": true,
+    "sprite": null,
+    "valueLable": null,
+    "value": null,
+    "moveValue": 200,
+    "_canMove": true,
+    "goTo": null,
     "_id": ""
   },
   {
