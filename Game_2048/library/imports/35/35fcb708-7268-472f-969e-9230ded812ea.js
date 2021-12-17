@@ -27,7 +27,7 @@ cc.Class({
 
     onLoad: function onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
     },
@@ -36,35 +36,32 @@ cc.Class({
 
     // update (dt) {},
 
-    onKeyUp: function onKeyUp(event) {
+    onKeyDown: function onKeyDown(event) {
         var _this = this;
 
         if (this._canPress == false) return;
         this._canPress = false;
         switch (event.keyCode) {
             case cc.macro.KEY.up:
-                console.log('release up key');
-                //Emiter.instance.emit('moveunit', 'up');
                 this._moveUp();
                 break;
             case cc.macro.KEY.down:
-                console.log('release down key');
-                // Emiter.instance.emit('moveunit', 'down');
                 this._moveDown();
                 break;
             case cc.macro.KEY.left:
-                console.log('release left key');
-                // Emiter.instance.emit('moveunit', 'left');
+                this._moveLeft();
                 break;
             case cc.macro.KEY.right:
-                console.log('release right key');
-                // Emiter.instance.emit('moveunit', 'right');
+                this._moveRight();
                 break;
         }
-        cc.tween(this.node).delay(0.25).call(function () {
-            _this.instanceRandomUnit();
-            _this._canPress = true;
-        }).start();
+        //all even call this func -> need check keyinput!!!
+        if (event.keyCode == cc.macro.KEY.up || event.keyCode == cc.macro.KEY.down || event.keyCode == cc.macro.KEY.left || event.keyCode == cc.macro.KEY.right) {
+            cc.tween(this.node).delay(0.25).call(function () {
+                _this.instanceRandomUnit();
+                _this._canPress = true;
+            }).start();
+        }
     },
 
     instanceRandomUnit: function instanceRandomUnit() {
@@ -77,19 +74,26 @@ cc.Class({
         var unit = cc.instantiate(this.unitPrefabs);
         var randX = 0;
         var randY = 0;
-        random();
+        randomXY();
         while (this._boardUnitArgs[randX][randY] != null) {
-            random();
+            randomXY();
         }this._boardUnitArgs[randX][randY] = unit;
         this.boardUnit.addChild(unit);
         unit.position = this._boardPosition[randX][randY];
+        unit.setUnitValue(randomValue());
         cc.log(this._boardUnitArgs, 'add unit, total ', this._maxObj);
 
         cc.tween(unit).to(0.1, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.1, { scale: 1 }).start();
 
-        function random() {
+        function randomXY() {
             randX = Math.floor(Math.random() * 4);
             randY = Math.floor(Math.random() * 4);
+        }
+        function randomValue() {
+            var rand = Math.random();
+            rand > 0.75 ? rand = 4 : rand = 2;
+            // if (this._maxObj < 3) rand = 2;
+            return rand;
         }
     },
     instanceBackgroundUnit: function instanceBackgroundUnit() {
@@ -130,18 +134,17 @@ cc.Class({
     _moveUp: function _moveUp() {
         for (var y = 0; y < this._col; y++) {
             for (var x = 0; x < this._row; x++) {
-                if (this._boardUnitArgs[x][y] != null) {
-                    if (x == 0) continue;
-                    if (this._boardUnitArgs[0][y] == null) {
-                        this._movePosition(x, y, 0);
-                    } else {
-                        var index = 0;
-                        for (var i = 0; i < x; i++) {
-                            if (this._boardUnitArgs[i][y] != null) index = i + 1;
-                        }
-                        if (index == x) continue;
-                        if (this._boardUnitArgs[index][y] == null) this._movePosition(x, y, index);
+                if (this._boardUnitArgs[x][y] == null) continue;
+                if (x == 0) continue;
+                if (this._boardUnitArgs[0][y] == null) {
+                    this._movePositionX(x, y, 0);
+                } else {
+                    var index = 0;
+                    for (var i = 0; i < x; i++) {
+                        if (this._boardUnitArgs[i][y] != null) index = i + 1;
                     }
+                    if (index == x) continue;
+                    if (this._boardUnitArgs[index][y] == null) this._movePositionX(x, y, index);
                 }
             }
         }
@@ -149,28 +152,70 @@ cc.Class({
     _moveDown: function _moveDown() {
         for (var y = this._col - 1; y >= 0; y--) {
             for (var x = this._row - 1; x >= 0; x--) {
-                if (this._boardUnitArgs[x][y] != null) {
-                    if (x == this._row - 1) continue;
-                    if (this._boardUnitArgs[this._row - 1][y] == null) {
-                        this._movePosition(x, y, this._row - 1);
-                    } else {
-                        var index = this._row - 1;
-                        for (var i = this._row - 1; i > x; i--) {
-                            if (this._boardUnitArgs[i][y] != null) index = i - 1;
-                        }
-                        if (index == x) continue;
-                        if (this._boardUnitArgs[index][y] == null) this._movePosition(x, y, index);
+                if (this._boardUnitArgs[x][y] == null) continue;
+                if (x == this._row - 1) continue;
+                if (this._boardUnitArgs[this._row - 1][y] == null) {
+                    this._movePositionX(x, y, this._row - 1);
+                } else {
+                    var index = this._row - 1;
+                    for (var i = this._row - 1; i > x; i--) {
+                        if (this._boardUnitArgs[i][y] != null) index = i - 1;
                     }
+                    if (index == x) continue;
+                    if (this._boardUnitArgs[index][y] == null) this._movePositionX(x, y, index);
                 }
             }
         }
     },
-    _movePosition: function _movePosition(x, y, index) {
+    _moveLeft: function _moveLeft() {
+        for (var x = 0; x < this._row; x++) {
+            for (var y = 0; y < this._col; y++) {
+                if (this._boardUnitArgs[x][y] == null) continue;
+                if (y == 0) continue;
+                if (this._boardUnitArgs[x][0] == null) {
+                    this._movePositionY(x, y, 0);
+                } else {
+                    var index = 0;
+                    for (var i = 0; i < y; i++) {
+                        if (this._boardUnitArgs[x][i] != null) index = i + 1;
+                    }
+                    if (index == y) continue;
+                    if (this._boardUnitArgs[x][index] == null) this._movePositionY(x, y, index);
+                }
+            }
+        }
+    },
+    _moveRight: function _moveRight() {
+        for (var x = this._row - 1; x >= 0; x--) {
+            for (var y = this._col - 1; y >= 0; y--) {
+                if (this._boardUnitArgs[x][y] == null) continue;
+                if (y == this._col - 1) continue;
+                if (this._boardUnitArgs[x][this._col - 1] == null) {
+                    this._movePositionY(x, y, this._col - 1);
+                } else {
+                    var index = this._col - 1;
+                    for (var i = this._col - 1; i > y; i--) {
+                        if (this._boardUnitArgs[x][i] != null) index = i - 1;
+                    }
+                    if (index == y) continue;
+                    if (this._boardUnitArgs[x][index] == null) this._movePositionY(x, y, index);
+                }
+            }
+        }
+    },
+    _movePositionX: function _movePositionX(x, y, index) {
         cc.log(x, y, index);
         var temp = this._boardUnitArgs[x][y];
         this._boardUnitArgs[x][y] = this._boardUnitArgs[index][y];
         this._boardUnitArgs[index][y] = temp;
         this._boardUnitArgs[index][y].moveUnit(this._boardPosition[index][y]);
+    },
+    _movePositionY: function _movePositionY(x, y, index) {
+        cc.log(x, y, index);
+        var temp = this._boardUnitArgs[x][y];
+        this._boardUnitArgs[x][y] = this._boardUnitArgs[x][index];
+        this._boardUnitArgs[x][index] = temp;
+        this._boardUnitArgs[x][index].moveUnit(this._boardPosition[x][index]);
     }
 });
 

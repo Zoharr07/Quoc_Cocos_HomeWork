@@ -290,9 +290,13 @@
       "__id__": 1
     },
     "_enabled": true,
-    "sprite": null,
-    "valueLable": null,
-    "value": null,
+    "sprite": {
+      "__id__": 3
+    },
+    "valueLable": {
+      "__id__": 6
+    },
+    "unitValue": 0,
     "moveValue": 200,
     "_canMove": true,
     "goTo": null,

@@ -11,7 +11,7 @@ cc.Class({
     properties: {
         sprite: cc.Sprite,
         valueLable: cc.Label,
-        value: Number,
+        unitValue: 0,
         moveValue: 200,
         _canMove: true,
         goTo: null
@@ -22,6 +22,8 @@ cc.Class({
     onLoad: function onLoad() {
         this.node.destroyNode = this._destroyNode.bind(this);
         this.node.moveUnit = this._moveUnit.bind(this);
+        this.node.getUnitValue = this._getUnitValue.bind(this);
+        this.node.setUnitValue = this._setUnitValue.bind(this);
     },
     start: function start() {},
     update: function update(dt) {},
@@ -32,10 +34,17 @@ cc.Class({
     _moveUnit: function _moveUnit(vector2) {
         var _this = this;
 
-        cc.tween(this.node).to(0.2, { position: vector2 }).call(function () {
+        cc.tween(this.node).to(0.15, { position: vector2 }).call(function () {
             _this._canMove = true;
             cc.log(_this.node.x, _this.node.y);
         }).start();
+    },
+    _getUnitValue: function _getUnitValue() {
+        return this.unitValue;
+    },
+    _setUnitValue: function _setUnitValue(num) {
+        this.valueLable.string = num;
+        this.unitValue = num;
     }
 });
 

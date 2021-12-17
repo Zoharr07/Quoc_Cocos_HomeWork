@@ -66,3 +66,6 @@
 2021-12-17T02:14:13.072Z - normal: Watching packages
 2021-12-17T02:14:13.148Z - normal: Run Application
 2021-12-17T02:14:20.885Z - info: Cocos Services load base data!
+2021-12-17T10:11:23.194Z - info: Only the prefab node "Unit" and its child nodes are saved.
+2021-12-17T10:14:10.054Z - info: Only the prefab node "Unit" and its child nodes are saved.
+2021-12-17T10:14:11.955Z - info: Only the prefab node "Unit" and its child nodes are saved.
