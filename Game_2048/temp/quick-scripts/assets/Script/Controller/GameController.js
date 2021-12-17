@@ -18,17 +18,18 @@ cc.Class({
         _row: 4,
         _col: 4,
         _distance: 200,
-        _maxObj: 0
+        _maxObj: 0,
+        _canPress: true
 
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function onLoad() {
-        this._instanceBoardArray();
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this.instanceBackgroundUnit();
+        this._instanceBoardArray();
     },
     start: function start() {},
 
@@ -36,45 +37,36 @@ cc.Class({
     // update (dt) {},
 
     onKeyUp: function onKeyUp(event) {
+        var _this = this;
+
+        if (this._canPress == false) return;
+        this._canPress = false;
         switch (event.keyCode) {
             case cc.macro.KEY.up:
                 console.log('release up key');
                 //Emiter.instance.emit('moveunit', 'up');
-                this._moveUnit('up');
+                this._moveUp();
                 break;
             case cc.macro.KEY.down:
                 console.log('release down key');
-                Emiter.instance.emit('moveunit', 'down');
+                // Emiter.instance.emit('moveunit', 'down');
+                this._moveDown();
                 break;
             case cc.macro.KEY.left:
                 console.log('release left key');
-                Emiter.instance.emit('moveunit', 'left');
+                // Emiter.instance.emit('moveunit', 'left');
                 break;
             case cc.macro.KEY.right:
                 console.log('release right key');
-                Emiter.instance.emit('moveunit', 'right');
+                // Emiter.instance.emit('moveunit', 'right');
                 break;
         }
-        this.instanceRandomUnit();
+        cc.tween(this.node).delay(0.25).call(function () {
+            _this.instanceRandomUnit();
+            _this._canPress = true;
+        }).start();
     },
 
-    _moveUnit: function _moveUnit(moveDirect) {
-        {
-            if (moveDirect == 'up') {
-                for (var i = 0; i < this._col; i++) {
-                    for (var j = 0; j < this._row; j++) {
-                        if (this._canMoveUp(i, j)) {
-                            this._boardUnitArgs[i][j].moveUp();
-
-                            this._boardUnitArgs[i][j - 1] = this._boardUnitArgs[i][j];
-                            this._boardUnitArgs[i][j] = null;
-                            cc.log(i, j);
-                        }
-                    }
-                }
-            }
-        }
-    },
     instanceRandomUnit: function instanceRandomUnit() {
         this._maxObj++;
         if (this._maxObj > this._row * this._col) {
@@ -86,38 +78,32 @@ cc.Class({
         var randX = 0;
         var randY = 0;
         random();
-        //cc.log(randX, randY, this._boardPosition[randX][randY])
         while (this._boardUnitArgs[randX][randY] != null) {
             random();
-        }
-        this._boardUnitArgs[randX][randY] = unit;
+        }this._boardUnitArgs[randX][randY] = unit;
         this.boardUnit.addChild(unit);
         unit.position = this._boardPosition[randX][randY];
-        //cc.log(this._boardUnitArgs, 'add unit, total ', this._maxObj)
+        cc.log(this._boardUnitArgs, 'add unit, total ', this._maxObj);
+
+        cc.tween(unit).to(0.1, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.1, { scale: 1 }).start();
 
         function random() {
             randX = Math.floor(Math.random() * 4);
             randY = Math.floor(Math.random() * 4);
         }
-        cc.tween(unit).to(0.1, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.1, { scale: 1 }).start();
     },
     instanceBackgroundUnit: function instanceBackgroundUnit() {
         for (var i = 1; i <= this._row; i++) {
             var rowBoard = [];
             for (var j = 1; j <= this._col; j++) {
                 var unit = cc.instantiate(this.unitBG);
-                var unitPos = cc.v2((j - (this._col + 1) / 2) * this._distance, (i - (this._row + 1) / 2) * this._distance);
+                var unitPos = cc.v2((j - (this._col + 1) / 2) * this._distance, -((i - (this._row + 1) / 2) * this._distance));
                 unit.position = unitPos;
                 rowBoard.push(unitPos);
                 this.nodeBG.addChild(unit);
             }
             this._boardPosition.push(rowBoard);
         }
-        var minX = (1 - (this._col + 1) / 2) * this._distance;
-        var maxX = (this._col - (this._col + 1) / 2) * this._distance;
-        var minY = (1 - (this._row + 1) / 2) * this._distance;
-        var maxY = (this._row - (this._row + 1) / 2) * this._distance;
-        Emiter.instance.emit('setMinMaxPosition', minX, maxX, minY, maxY);
     },
     _startGameFunc: function _startGameFunc() {
         this._clearBoardGame();
@@ -128,58 +114,63 @@ cc.Class({
         for (var i = 0; i < this._row; i++) {
             var rowBoardArg = [];
             for (var j = 0; j < this._col; j++) {
-                var empty = null;
-                rowBoardArg.push(empty);
-            }
-            this._boardUnitArgs.push(rowBoardArg);
+                rowBoardArg.push(null);
+            }this._boardUnitArgs.push(rowBoardArg);
         }
     },
     _clearBoardGame: function _clearBoardGame() {
         for (var i = 0; i < this._row; i++) {
             for (var j = 0; j < this._col; j++) {
-                if (this._boardUnitArgs[i][j] != null) {
-                    this._boardUnitArgs[i][j].destroyNode();
-                }
+                if (this._boardUnitArgs[i][j] != null) this._boardUnitArgs[i][j].destroyNode();
                 this._boardUnitArgs[i][j] = null;
             }
         }
         this._maxObj = 0;
-        cc.log(this._boardUnitArgs);
     },
-    _canMoveUp: function _canMoveUp(x, y) {
-        if (y <= 0) return false;
-        if (this._boardUnitArgs[x][y] == null) {
-            cc.log('null obj');
-            return false;
+    _moveUp: function _moveUp() {
+        for (var y = 0; y < this._col; y++) {
+            for (var x = 0; x < this._row; x++) {
+                if (this._boardUnitArgs[x][y] != null) {
+                    if (x == 0) continue;
+                    if (this._boardUnitArgs[0][y] == null) {
+                        this._movePosition(x, y, 0);
+                    } else {
+                        var index = 0;
+                        for (var i = 0; i < x; i++) {
+                            if (this._boardUnitArgs[i][y] != null) index = i + 1;
+                        }
+                        if (index == x) continue;
+                        if (this._boardUnitArgs[index][y] == null) this._movePosition(x, y, index);
+                    }
+                }
+            }
         }
-        if (this._boardUnitArgs[x][y - 1] != null) {
-            return false;
-        } else return true;
     },
-    _canMoveDown: function _canMoveDown(x, y) {
-        if (this._validatePosition(x, y) == false) return false;
-        if (this._boardUnitArgs[x][y + 1] != null) {
-            return false;
-        } else return true;
-    },
-    _canMoveLeft: function _canMoveLeft(x, y) {
-        if (this._validatePosition() == false) return false;
-        if (this._boardUnitArgs[x - 1][y] != null) {
-            return false;
-        } else return true;
-    },
-    _canMoveRight: function _canMoveRight(x, y) {
-        if (this._validatePosition() == false) return false;
-        if (this._boardUnitArgs[x + 1][y] != null) {
-            return false;
-        } else return true;
-    },
-    _validatePosition: function _validatePosition(x, y) {
-        if (x <= 0 || x >= this._col || y <= 0 || y >= this._row) return false;
-        if (this._boardUnitArgs[x][y] == null) {
-            cc.log('null obj');
-            return false;
+    _moveDown: function _moveDown() {
+        for (var y = this._col - 1; y >= 0; y--) {
+            for (var x = this._row - 1; x >= 0; x--) {
+                if (this._boardUnitArgs[x][y] != null) {
+                    if (x == this._row - 1) continue;
+                    if (this._boardUnitArgs[this._row - 1][y] == null) {
+                        this._movePosition(x, y, this._row - 1);
+                    } else {
+                        var index = this._row - 1;
+                        for (var i = this._row - 1; i > x; i--) {
+                            if (this._boardUnitArgs[i][y] != null) index = i - 1;
+                        }
+                        if (index == x) continue;
+                        if (this._boardUnitArgs[index][y] == null) this._movePosition(x, y, index);
+                    }
+                }
+            }
         }
+    },
+    _movePosition: function _movePosition(x, y, index) {
+        cc.log(x, y, index);
+        var temp = this._boardUnitArgs[x][y];
+        this._boardUnitArgs[x][y] = this._boardUnitArgs[index][y];
+        this._boardUnitArgs[index][y] = temp;
+        this._boardUnitArgs[index][y].moveUnit(this._boardPosition[index][y]);
     }
 });
 

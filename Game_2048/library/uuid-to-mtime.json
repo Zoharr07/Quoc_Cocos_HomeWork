@@ -70,8 +70,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1639652364423,
-    "meta": 1639652364433,
+    "asset": 1639728044833,
+    "meta": 1639728044843,
     "relativePath": "Scene/helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -499,18 +499,13 @@
     "meta": 1639108409885,
     "relativePath": "Script/Events"
   },
-  "a9b47273-8b2b-46eb-9954-443320acb082": {
-    "asset": 1639448290824,
-    "meta": 1639448304754,
-    "relativePath": "Script/Events/EventController.js"
-  },
   "14f21bff-86bd-430a-b558-020e44d89fe3": {
     "asset": 1639449149556,
     "meta": 1639449149630,
     "relativePath": "Texture/2048_improbable.png"
   },
   "137babe0-f5e3-4139-9705-408734e3f50a": {
-    "asset": 1639458786485,
+    "asset": 1639636457606,
     "meta": 1639451249068,
     "relativePath": "Script/Controller"
   },
@@ -529,11 +524,6 @@
     "meta": 1639458718869,
     "relativePath": "Sound"
   },
-  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
-    "asset": 1639463630874,
-    "meta": 1639463634999,
-    "relativePath": "Script/Controller/SoundController.js"
-  },
   "0cc70db6-460c-415a-b61f-fd53f8ab110a": {
     "asset": 1639457613942,
     "meta": 1639456591136,
@@ -545,18 +535,28 @@
     "relativePath": "Script/Events/Emitter.js"
   },
   "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
-    "asset": 1639636028368,
-    "meta": 1639636029545,
+    "asset": 1639729394565,
+    "meta": 1639729788827,
     "relativePath": "Script/Controller/MainMenuController.js"
   },
+  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
+    "asset": 1639729461425,
+    "meta": 1639729788838,
+    "relativePath": "Script/Controller/SoundController.js"
+  },
+  "a9b47273-8b2b-46eb-9954-443320acb082": {
+    "asset": 1639729475580,
+    "meta": 1639729788849,
+    "relativePath": "Script/Events/EventController.js"
+  },
   "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb": {
-    "asset": 1639650893722,
-    "meta": 1639650898306,
+    "asset": 1639730177028,
+    "meta": 1639730178593,
     "relativePath": "Script/Unit/Unit.js"
   },
   "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1639652354710,
-    "meta": 1639652360796,
+    "asset": 1639731565712,
+    "meta": 1639731567674,
     "relativePath": "Script/Controller/GameController.js"
   }
 }

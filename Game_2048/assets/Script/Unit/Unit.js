@@ -14,11 +14,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
-        this.goTo = this._goTo.bind(this);
-        Emiter.instance.addEvent('moveunit', this.goTo);
         this.node.destroyNode = this._destroyNode.bind(this);
-
-        this.node.moveUp = this._moveUp.bind(this);
+        this.node.moveUnit = this._moveUnit.bind(this);
     },
 
     start() {
@@ -28,49 +25,19 @@ cc.Class({
     update(dt) {
 
     },
-    _goTo(direct) {
-        // while () { 
 
-        // }
-        if ((this.node.x <= -300 && direct == 'left') || (this.node.x >= 300 && direct == 'right') ||
-            (this.node.y <= -300 && direct == 'down') || (this.node.y >= 300 && direct == 'up')) {
-            cc.log("can't move!!!", this.node.x, this.node.y, direct);
-            return;
-        }
-        if (this._canMove == false) return;
-        this._canMove = false;
-        cc.log('unit move ', direct);
-        if (direct == 'left') {
-            this._movePosition(-this.moveValue, 0);
-        }
-        if (direct == 'right') {
-            this._movePosition(this.moveValue, 0);
-        }
-        // if (direct == 'up') {
-        //     this._movePosition(0, this.moveValue);
-        // } 
-        if (direct == 'down') {
-            this._movePosition(0, -this.moveValue);
-        }
-
+    _destroyNode() {
+        this.node.destroy();
+        cc.log('remove node');
     },
 
-    _movePosition(x, y) {
+    _moveUnit(vector2) {
         cc.tween(this.node)
-            .by(0.15, { position: cc.v2(x, y) })
+            .to(0.2, { position: vector2 })
             .call(() => {
                 this._canMove = true;
                 cc.log(this.node.x, this.node.y);
             })
             .start();
-    },
-    _destroyNode() {
-        Emiter.instance.removeEvent('moveunit', this.goTo);
-        this.node.destroy();
-        cc.log('remove node');
-    },
-
-    _moveUp() {
-        this._movePosition(0, this.moveValue);
     },
 });

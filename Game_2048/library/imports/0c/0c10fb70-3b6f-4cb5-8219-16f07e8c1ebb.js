@@ -20,53 +20,22 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function onLoad() {
-        this.goTo = this._goTo.bind(this);
-        Emiter.instance.addEvent('moveunit', this.goTo);
         this.node.destroyNode = this._destroyNode.bind(this);
-
-        this.node.moveUp = this._moveUp.bind(this);
+        this.node.moveUnit = this._moveUnit.bind(this);
     },
     start: function start() {},
     update: function update(dt) {},
-    _goTo: function _goTo(direct) {
-        // while () { 
-
-        // }
-        if (this.node.x <= -300 && direct == 'left' || this.node.x >= 300 && direct == 'right' || this.node.y <= -300 && direct == 'down' || this.node.y >= 300 && direct == 'up') {
-            cc.log("can't move!!!", this.node.x, this.node.y, direct);
-            return;
-        }
-        if (this._canMove == false) return;
-        this._canMove = false;
-        cc.log('unit move ', direct);
-        if (direct == 'left') {
-            this._movePosition(-this.moveValue, 0);
-        }
-        if (direct == 'right') {
-            this._movePosition(this.moveValue, 0);
-        }
-        // if (direct == 'up') {
-        //     this._movePosition(0, this.moveValue);
-        // } 
-        if (direct == 'down') {
-            this._movePosition(0, -this.moveValue);
-        }
-    },
-    _movePosition: function _movePosition(x, y) {
-        var _this = this;
-
-        cc.tween(this.node).by(0.15, { position: cc.v2(x, y) }).call(function () {
-            _this._canMove = true;
-            cc.log(_this.node.x, _this.node.y);
-        }).start();
-    },
     _destroyNode: function _destroyNode() {
-        Emiter.instance.removeEvent('moveunit', this.goTo);
         this.node.destroy();
         cc.log('remove node');
     },
-    _moveUp: function _moveUp() {
-        this._movePosition(0, this.moveValue);
+    _moveUnit: function _moveUnit(vector2) {
+        var _this = this;
+
+        cc.tween(this.node).to(0.2, { position: vector2 }).call(function () {
+            _this._canMove = true;
+            cc.log(_this.node.x, _this.node.y);
+        }).start();
     }
 });
 

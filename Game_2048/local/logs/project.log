@@ -1,251 +1,68 @@
-2021-12-16T02:01:05.052Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-16T02:01:05.095Z - normal: Initializing Asset Database
-2021-12-16T02:01:05.097Z - normal: checking language setting...
-2021-12-16T02:01:05.097Z - normal: Language: en
-2021-12-16T02:01:05.769Z - success: preview server running at http://localhost:7456
-2021-12-16T02:01:05.781Z - success: protocol editor-framework registered
-2021-12-16T02:01:05.781Z - success: protocol app registered
-2021-12-16T02:01:05.781Z - success: protocol theme registered
-2021-12-16T02:01:05.782Z - success: protocol packages registered
-2021-12-16T02:01:05.782Z - success: protocol uuid registerred
-2021-12-16T02:01:05.782Z - success: protocol db registerred
-2021-12-16T02:01:05.782Z - success: protocol thumbnail registerred
-2021-12-16T02:01:05.782Z - success: protocol unpack registerred
-2021-12-16T02:01:05.782Z - success: protocol disable-commonjs registerred
-2021-12-16T02:01:06.839Z - normal: connected!
-2021-12-16T02:01:06.840Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-16T02:01:06.842Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-16T02:01:07.198Z - normal: Initializing Cocos2d
-2021-12-16T02:01:07.861Z - normal: Initializing engine extends
-2021-12-16T02:01:07.903Z - success: alipay-adapter loaded
-2021-12-16T02:01:07.911Z - success: asset-db-debugger loaded
-2021-12-16T02:01:07.916Z - success: baidu-adapter loaded
-2021-12-16T02:01:07.921Z - success: color-picker loaded
-2021-12-16T02:01:08.068Z - success: fb-audience-network loaded
-2021-12-16T02:01:08.112Z - success: fb-live-stream loaded
-2021-12-16T02:01:08.115Z - success: google-play-instant loaded
-2021-12-16T02:01:08.121Z - success: huawei-runtime loaded
-2021-12-16T02:01:08.338Z - success: cpk-publish loaded
-2021-12-16T02:01:08.339Z - success: jsb-adapter loaded
-2021-12-16T02:01:08.345Z - success: oppo-runtime loaded
-2021-12-16T02:01:08.351Z - success: package-manager loaded
-2021-12-16T02:01:08.481Z - success: qqplay-adapter loaded
-2021-12-16T02:01:08.483Z - success: runtime-dev-tools loaded
-2021-12-16T02:01:08.507Z - success: sdkbox loaded
-2021-12-16T02:01:08.511Z - success: tester loaded
-2021-12-16T02:01:08.515Z - success: ui-kit-preview-extra loaded
-2021-12-16T02:01:08.519Z - success: ui-kit-preview loaded
-2021-12-16T02:01:08.522Z - success: ui-kit loaded
-2021-12-16T02:01:08.528Z - success: vivo-runtime loaded
-2021-12-16T02:01:08.529Z - success: weapp-adapter loaded
-2021-12-16T02:01:08.531Z - success: xiaomi-adapter loaded
-2021-12-16T02:01:08.534Z - success: alipay-minigame loaded
-2021-12-16T02:01:08.567Z - success: assets loaded
-2021-12-16T02:01:08.570Z - success: builder loaded
-2021-12-16T02:01:08.828Z - success: cocos-services loaded
-2021-12-16T02:01:08.833Z - success: console loaded
-2021-12-16T02:01:08.861Z - success: fb-instant-games loaded
-2021-12-16T02:01:08.865Z - success: game-window loaded
-2021-12-16T02:01:08.865Z - success: google-instant-games loaded
-2021-12-16T02:01:08.871Z - success: hierarchy loaded
-2021-12-16T02:01:08.875Z - success: inspector loaded
-2021-12-16T02:01:08.876Z - success: keystore loaded
-2021-12-16T02:01:08.882Z - success: node-library loaded
-2021-12-16T02:01:08.884Z - success: package-asset loaded
-2021-12-16T02:01:08.885Z - success: preferences loaded
-2021-12-16T02:01:08.888Z - success: project-exporter loaded
-2021-12-16T02:01:08.892Z - success: project-importer loaded
-2021-12-16T02:01:08.895Z - success: project-settings loaded
-2021-12-16T02:01:08.899Z - success: scene loaded
-2021-12-16T02:01:08.901Z - success: simulator-debugger loaded
-2021-12-16T02:01:08.903Z - success: sprite-editor loaded
-2021-12-16T02:01:08.908Z - success: store loaded
-2021-12-16T02:01:08.914Z - success: timeline loaded
-2021-12-16T02:01:08.919Z - success: xiaomi-runtime loaded
-2021-12-16T02:01:13.056Z - normal: Loading packages
-2021-12-16T02:01:13.060Z - normal: Watching packages
-2021-12-16T02:01:13.130Z - normal: Run Application
-2021-12-16T02:01:16.940Z - info: Cocos Services load base data!
-2021-12-16T02:52:27.710Z - info: Only the prefab node "Unit" and its child nodes are saved.
-2021-12-16T02:52:34.094Z - info: Only the prefab node "Unit" and its child nodes are saved.
-2021-12-16T03:04:07.630Z - info: Only the prefab node "UnitBG" and its child nodes are saved.
-2021-12-16T03:04:09.655Z - info: Only the prefab node "UnitBG" and its child nodes are saved.
-2021-12-16T04:28:23.875Z - warn: Can not instantiate CCClass 'Unit' with arguments.
-2021-12-16T04:28:23.899Z - error: TypeError: Cannot read property 'setPosition' of null
-    at new Unit (eval at <anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:475:20), <anonymous>:10:4)
-    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
-    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
-    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:535:36)
-    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:218:28)
-    at Loader.handle (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/loader.js:185:29)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:33:35)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-2021-12-16T04:28:23.900Z - error: TypeError: Cannot read property 'setPosition' of null
-    at new Unit (eval at <anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:475:20), <anonymous>:10:4)
-    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
-    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
-    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:535:36)
-    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:218:28)
-    at Loader.handle (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/loader.js:185:29)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:33:35)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-2021-12-16T04:28:23.900Z - error: TypeError: Cannot read property 'setPosition' of null
-    at new Unit (eval at <anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:475:20), <anonymous>:10:4)
-    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
-    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
-    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:535:36)
-    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:218:28)
-    at Loader.handle (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/loader.js:185:29)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:33:35)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-2021-12-16T04:28:23.900Z - error: TypeError: Cannot read property 'setPosition' of null
-    at new Unit (eval at <anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:475:20), <anonymous>:10:4)
-    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
-    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
-    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:535:36)
-    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:218:28)
-    at Loader.handle (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/loader.js:185:29)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:33:35)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:27:21)
-2021-12-16T04:28:24.659Z - error: TypeError: Cannot read property 'setPosition' of null
-    at new Unit (eval at <anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:475:20), <anonymous>:10:4)
-    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
-    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
-    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:535:36)
-    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:218:28)
-    at Loader.handle (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/loader.js:185:29)
-    at flow (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:33:35)
-    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/pipeline.js:44:29
-    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/downloader.js:182:33
-2021-12-16T06:34:21.766Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:34:34.564Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:35:32.925Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:37:33.446Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:37:34.390Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:37:44.561Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:37:45.728Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T06:37:47.802Z - warn: Script attached to "UnitBackground" is missing or invalid. Detailed information:
-Node path: "Canvas/GamePlayNode/UnitBackground"
-Script UUID: "76bc3935-536e-455f-a41b-587574805e25"
-Class ID: "76bc3k1U25FX6QbWHV0gF4l"
-
-2021-12-16T08:45:36.135Z - failed: load script [/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js] failed : TypeError: Cannot read property '_goTo' of undefined
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:17:24)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:66:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:73:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:76:3)
-    at Module._compile (module.js:571:32)
-    at Object.Module._extensions..js (module.js:580:10)
-    at Module.load (module.js:488:32)
-    at tryModuleLoad (module.js:447:12)
-    at Function.Module._load (module.js:439:3)
-    at Module.require (module.js:498:17)
-2021-12-16T08:45:36.700Z - warn: Script attached to "Unit" in prefab "Unit.prefab" is missing or invalid. Detailed information:
-Node path: "Unit"
-Asset url: "db://assets/Prefabs/Unit.prefab"
-Script UUID: "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb"
-Class ID: "0c10ftwO29MtYIZFvB+jB67"
-
-2021-12-16T08:46:27.211Z - failed: load script [/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js] failed : TypeError: Cannot read property '_goTo' of undefined
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:17:24)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:66:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:73:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:76:3)
-    at Module._compile (module.js:571:32)
-    at Object.Module._extensions..js (module.js:580:10)
-    at Module.load (module.js:488:32)
-    at tryModuleLoad (module.js:447:12)
-    at Function.Module._load (module.js:439:3)
-    at Module.require (module.js:498:17)
-2021-12-16T08:46:27.522Z - warn: Script attached to "Unit" in prefab "Unit.prefab" is missing or invalid. Detailed information:
-Node path: "Unit"
-Asset url: "db://assets/Prefabs/Unit.prefab"
-Script UUID: "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb"
-Class ID: "0c10ftwO29MtYIZFvB+jB67"
-
-2021-12-16T08:48:12.770Z - failed: load script [/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js] failed : TypeError: Cannot read property '_goTo' of undefined
-    at __define (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:17:24)
-    at /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:66:13
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:73:11)
-    at Object.<anonymous> (/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/temp/quick-scripts/assets/Script/Unit/Unit.js:76:3)
-    at Module._compile (module.js:571:32)
-    at Object.Module._extensions..js (module.js:580:10)
-    at Module.load (module.js:488:32)
-    at tryModuleLoad (module.js:447:12)
-    at Function.Module._load (module.js:439:3)
-    at Module.require (module.js:498:17)
-2021-12-16T08:48:13.170Z - warn: Script attached to "Unit" in prefab "Unit.prefab" is missing or invalid. Detailed information:
-Node path: "Unit"
-Asset url: "db://assets/Prefabs/Unit.prefab"
-Script UUID: "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb"
-Class ID: "0c10ftwO29MtYIZFvB+jB67"
-
-2021-12-16T09:02:38.607Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Unit/Unit.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Unit/Unit.js: Unexpected token (30:15)
-  28 |     },
-  29 |     _goTo(direct) {
-> 30 |         while () { }
-     |                ^
-  31 |         if ((this.node.x <= -300 && direct == 'left') || (this.node.x >= 300 && direct == 'right') ||
-  32 |             (this.node.y <= -300 && direct == 'down') || (this.node.y >= 300 && direct == 'up')) {
-  33 |             cc.log("can't move!!!", this.node.x, this.node.y, direct);
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3750:12)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
-    at Parser.pp$3.parseExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3306:19)
-    at Parser.pp$3.parseParenExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3789:18)
-2021-12-16T09:11:55.557Z - info: Only the prefab node "Unit" and its child nodes are saved.
-2021-12-16T10:34:58.296Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Controller/GameController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Controller/GameController.js: Unexpected token (63:20)
-  61 |                     for (let j = 0; j < this._row; j++) {
-  62 |                         if (this._canMoveUp(j, i))
-> 63 |                     }
-     |                     ^
-  64 |                 }
-  65 |             }
-  66 |         }
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3750:12)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
-    at Parser.pp$3.parseExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3306:19)
-    at Parser.pp$1.parseStatement (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1906:19)
+2021-12-17T02:14:07.741Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-17T02:14:07.784Z - normal: Initializing Asset Database
+2021-12-17T02:14:07.787Z - normal: checking language setting...
+2021-12-17T02:14:07.787Z - normal: Language: en
+2021-12-17T02:14:08.447Z - success: preview server running at http://localhost:7456
+2021-12-17T02:14:08.458Z - success: protocol editor-framework registered
+2021-12-17T02:14:08.458Z - success: protocol app registered
+2021-12-17T02:14:08.458Z - success: protocol theme registered
+2021-12-17T02:14:08.458Z - success: protocol packages registered
+2021-12-17T02:14:08.459Z - success: protocol uuid registerred
+2021-12-17T02:14:08.459Z - success: protocol db registerred
+2021-12-17T02:14:08.459Z - success: protocol thumbnail registerred
+2021-12-17T02:14:08.459Z - success: protocol unpack registerred
+2021-12-17T02:14:08.459Z - success: protocol disable-commonjs registerred
+2021-12-17T02:14:10.133Z - normal: connected!
+2021-12-17T02:14:10.135Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-17T02:14:10.136Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-17T02:14:10.473Z - normal: Initializing Cocos2d
+2021-12-17T02:14:11.126Z - normal: Initializing engine extends
+2021-12-17T02:14:11.166Z - success: alipay-adapter loaded
+2021-12-17T02:14:11.176Z - success: asset-db-debugger loaded
+2021-12-17T02:14:11.182Z - success: baidu-adapter loaded
+2021-12-17T02:14:11.185Z - success: color-picker loaded
+2021-12-17T02:14:11.337Z - success: fb-audience-network loaded
+2021-12-17T02:14:11.392Z - success: fb-live-stream loaded
+2021-12-17T02:14:11.396Z - success: google-play-instant loaded
+2021-12-17T02:14:11.402Z - success: huawei-runtime loaded
+2021-12-17T02:14:11.620Z - success: cpk-publish loaded
+2021-12-17T02:14:11.621Z - success: jsb-adapter loaded
+2021-12-17T02:14:11.627Z - success: oppo-runtime loaded
+2021-12-17T02:14:11.632Z - success: package-manager loaded
+2021-12-17T02:14:11.761Z - success: qqplay-adapter loaded
+2021-12-17T02:14:11.763Z - success: runtime-dev-tools loaded
+2021-12-17T02:14:11.787Z - success: sdkbox loaded
+2021-12-17T02:14:11.792Z - success: tester loaded
+2021-12-17T02:14:11.796Z - success: ui-kit-preview-extra loaded
+2021-12-17T02:14:11.800Z - success: ui-kit-preview loaded
+2021-12-17T02:14:11.803Z - success: ui-kit loaded
+2021-12-17T02:14:11.809Z - success: vivo-runtime loaded
+2021-12-17T02:14:11.811Z - success: weapp-adapter loaded
+2021-12-17T02:14:11.812Z - success: xiaomi-adapter loaded
+2021-12-17T02:14:11.815Z - success: alipay-minigame loaded
+2021-12-17T02:14:11.849Z - success: assets loaded
+2021-12-17T02:14:11.851Z - success: builder loaded
+2021-12-17T02:14:12.108Z - success: cocos-services loaded
+2021-12-17T02:14:12.113Z - success: console loaded
+2021-12-17T02:14:12.141Z - success: fb-instant-games loaded
+2021-12-17T02:14:12.145Z - success: game-window loaded
+2021-12-17T02:14:12.146Z - success: google-instant-games loaded
+2021-12-17T02:14:12.151Z - success: hierarchy loaded
+2021-12-17T02:14:12.156Z - success: inspector loaded
+2021-12-17T02:14:12.157Z - success: keystore loaded
+2021-12-17T02:14:12.162Z - success: node-library loaded
+2021-12-17T02:14:12.164Z - success: package-asset loaded
+2021-12-17T02:14:12.166Z - success: preferences loaded
+2021-12-17T02:14:12.168Z - success: project-exporter loaded
+2021-12-17T02:14:12.173Z - success: project-importer loaded
+2021-12-17T02:14:12.176Z - success: project-settings loaded
+2021-12-17T02:14:12.181Z - success: scene loaded
+2021-12-17T02:14:12.182Z - success: simulator-debugger loaded
+2021-12-17T02:14:12.184Z - success: sprite-editor loaded
+2021-12-17T02:14:12.188Z - success: store loaded
+2021-12-17T02:14:12.195Z - success: timeline loaded
+2021-12-17T02:14:12.199Z - success: xiaomi-runtime loaded
+2021-12-17T02:14:13.067Z - normal: Loading packages
+2021-12-17T02:14:13.072Z - normal: Watching packages
+2021-12-17T02:14:13.148Z - normal: Run Application
+2021-12-17T02:14:20.885Z - info: Cocos Services load base data!
