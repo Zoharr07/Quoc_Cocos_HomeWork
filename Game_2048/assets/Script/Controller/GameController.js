@@ -166,18 +166,20 @@ cc.Class({
                     this._moveUnitPosition(x, y, x, 0);
                     continue;
                 }
+
                 let index = 0;
                 for (let i = 0; i < y; i++) if (this._boardUnitArgs[x][i] != null) index = i + 1;
                 if (this._boardUnitArgs[x][index] == null) {
                     this._moveUnitPosition(x, y, x, index);
                     this._crossUnit(x, index, 'left');
                     continue;
-                } else if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
-                    this._moveUnitPosition(x, y, x, index);
-                    this._crossUnit(x, index, 'left');
+                }
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
+                    this._moveUnitPosition(x, y, x, y - 1);
+                    this._crossUnit(x, y, 'left');
+
                 }
 
-                //this._crossUnit(x, index, 'left');
             }
         }
     },
@@ -192,7 +194,15 @@ cc.Class({
                 }
                 let index = this._col - 1;
                 for (let i = this._col - 1; i > y; i--) if (this._boardUnitArgs[x][i] != null) index = i - 1;
-                if (this._boardUnitArgs[x][index] == null) this._moveUnitPosition(x, y, x, index);
+                if (this._boardUnitArgs[x][index] == null) {
+                    this._moveUnitPosition(x, y, x, index);
+                    this._crossUnit(x, index, 'right');
+                    continue;
+                }
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y + 1].getUnitValue()) {
+                    this._moveUnitPosition(x, y, x, y + 1);
+                    this._crossUnit(x, y, 'right');
+                }
             }
         }
     },
@@ -215,14 +225,19 @@ cc.Class({
         }
         if (direct == 'left') {
             if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
+                this._boardUnitArgs[x][y - 1].setUnitValue(this._boardUnitArgs[x][y - 1].getUnitValue() * 2);
                 this._boardUnitArgs[x][y].destroyNode();
                 this._boardUnitArgs[x][y] = null;
-                this._boardUnitArgs[x][y - 1].setUnitValue(this._boardUnitArgs[x][y - 1].getUnitValue() * 2);
                 this._maxObj--;
             }
         }
         if (direct == 'right') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
+            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y + 1].getUnitValue()) {
+                this._boardUnitArgs[x][y + 1].setUnitValue(this._boardUnitArgs[x][y + 1].getUnitValue() * 2);
+                this._boardUnitArgs[x][y].destroyNode();
+                this._boardUnitArgs[x][y] = null;
+                this._maxObj--;
+            }
         }
     }
 });
