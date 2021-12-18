@@ -70,8 +70,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1639739088952,
-    "meta": 1639739088958,
+    "asset": 1639802423249,
+    "meta": 1639802423267,
     "relativePath": "Scene/helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -550,13 +550,13 @@
     "relativePath": "Script/Events/EventController.js"
   },
   "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb": {
-    "asset": 1639736873861,
-    "meta": 1639738005576,
+    "asset": 1639801863391,
+    "meta": 1639801868048,
     "relativePath": "Script/Unit/Unit.js"
   },
   "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1639739068312,
-    "meta": 1639739085733,
+    "asset": 1639802405744,
+    "meta": 1639802422695,
     "relativePath": "Script/Controller/GameController.js"
   }
 }

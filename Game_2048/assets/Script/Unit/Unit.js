@@ -29,17 +29,21 @@ cc.Class({
     },
 
     _destroyNode() {
+        this.node.destroyNode = null;
+        this.node.moveUnit = null;
+        this.node.getUnitValue = null;
+        this.node.setUnitValue = null;
         this.node.destroy();
         cc.log('remove node');
     },
 
     _moveUnit(vector2) {
+        let time = 0.05;
+        // if (vector2.x != this.node.x) time = time * (Math.abs((vector2.x - this.node.x) / this.moveValue));
+        // if (vector2.y != this.node.y) time = time * (Math.abs((vector2.y - this.node.y) / this.moveValue));
         cc.tween(this.node)
-            .to(0.15, { position: vector2 })
-            .call(() => {
-                this._canMove = true;
-                cc.log(this.node.x, this.node.y);
-            })
+            .to(time, { position: vector2 })
+            .call(() => { this._canMove = true; })
             .start();
     },
 
@@ -49,6 +53,9 @@ cc.Class({
     _setUnitValue(num) {
         this.valueLable.string = num;
         this.unitValue = num;
-
+        cc.tween(this.node)
+            .to(0.05, { scale: 1.1 }, { easing: 'elasticOut' })
+            .to(0.05, { scale: 1 })
+            .start();
     },
 });

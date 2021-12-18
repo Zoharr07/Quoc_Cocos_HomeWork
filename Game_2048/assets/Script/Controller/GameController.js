@@ -78,11 +78,6 @@ cc.Class({
         unit.setUnitValue(randomValue());
         cc.log(this._boardUnitArgs, 'add unit, total ', this._maxObj)
 
-        cc.tween(unit)
-            .to(0.1, { scale: 1.1 }, { easing: 'elasticOut' })
-            .to(0.1, { scale: 1 })
-            .start();
-
         function randomXY() {
             randX = Math.floor(Math.random() * 4);
             randY = Math.floor(Math.random() * 4);
@@ -90,7 +85,6 @@ cc.Class({
         function randomValue() {
             let rand = Math.random();
             rand > 0.75 ? rand = 4 : rand = 2;
-            // if (this._maxObj < 3) rand = 2;
             return rand;
         }
     },
@@ -136,96 +130,99 @@ cc.Class({
 
     _moveUp() {
         for (let y = 0; y < this._col; y++) {
-            for (let x = 0; x < this._row; x++) {
+            for (let x = 1; x < this._row; x++) {
                 if (this._boardUnitArgs[x][y] == null) continue;
-                if (x == 0) continue;
                 if (this._boardUnitArgs[0][y] == null) {
-                    this._movePositionX(x, y, 0)
-                } else {
-                    let index = 0;
-                    for (let i = 0; i < x; i++) {
-                        if (this._boardUnitArgs[i][y] != null) index = i + 1;
-                    }
-                    if (index == x) continue;
-                    if (this._boardUnitArgs[index][y] == null) this._movePositionX(x, y, index);
+                    this._moveUnitPosition(x, y, 0, y);
+                    continue;
                 }
+                let index = 0;
+                for (let i = 0; i < x; i++) if (this._boardUnitArgs[i][y] != null) index = i + 1;
+                if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
             }
         }
     },
 
     _moveDown() {
         for (let y = this._col - 1; y >= 0; y--) {
-            for (let x = this._row - 1; x >= 0; x--) {
+            for (let x = this._row - 2; x >= 0; x--) {
                 if (this._boardUnitArgs[x][y] == null) continue;
-                if (x == this._row - 1) continue;
                 if (this._boardUnitArgs[this._row - 1][y] == null) {
-                    this._movePositionX(x, y, this._row - 1)
-                } else {
-                    let index = this._row - 1;
-                    for (let i = this._row - 1; i > x; i--) {
-                        if (this._boardUnitArgs[i][y] != null) index = i - 1;
-                    }
-                    if (index == x) continue;
-                    if (this._boardUnitArgs[index][y] == null) this._movePositionX(x, y, index);
+                    this._moveUnitPosition(x, y, this._row - 1, y);
+                    continue;
                 }
+                let index = this._row - 1;
+                for (let i = this._row - 1; i > x; i--) if (this._boardUnitArgs[i][y] != null) index = i - 1;
+                if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
             }
         }
     },
 
     _moveLeft() {
         for (let x = 0; x < this._row; x++) {
-            for (let y = 0; y < this._col; y++) {
+            for (let y = 1; y < this._col; y++) {
                 if (this._boardUnitArgs[x][y] == null) continue;
-                if (y == 0) continue;
                 if (this._boardUnitArgs[x][0] == null) {
-                    this._movePositionY(x, y, 0)
-                } else {
-                    let index = 0;
-                    for (let i = 0; i < y; i++) {
-                        if (this._boardUnitArgs[x][i] != null) index = i + 1;
-                    }
-                    if (index == y) continue;
-                    if (this._boardUnitArgs[x][index] == null) this._movePositionY(x, y, index);
+                    this._moveUnitPosition(x, y, x, 0);
+                    continue;
                 }
+                let index = 0;
+                for (let i = 0; i < y; i++) if (this._boardUnitArgs[x][i] != null) index = i + 1;
+                if (this._boardUnitArgs[x][index] == null) {
+                    this._moveUnitPosition(x, y, x, index);
+                    this._crossUnit(x, index, 'left');
+                    continue;
+                } else if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
+                    this._moveUnitPosition(x, y, x, index);
+                    this._crossUnit(x, index, 'left');
+                }
+
+                //this._crossUnit(x, index, 'left');
             }
         }
     },
 
     _moveRight() {
         for (let x = this._row - 1; x >= 0; x--) {
-            for (let y = this._col - 1; y >= 0; y--) {
+            for (let y = this._col - 2; y >= 0; y--) {
                 if (this._boardUnitArgs[x][y] == null) continue;
-                if (y == this._col - 1) continue;
                 if (this._boardUnitArgs[x][this._col - 1] == null) {
-                    this._movePositionY(x, y, this._col - 1)
-                } else {
-                    let index = this._col - 1;
-                    for (let i = this._col - 1; i > y; i--) {
-                        if (this._boardUnitArgs[x][i] != null) index = i - 1;
-                    }
-                    if (index == y) continue;
-                    if (this._boardUnitArgs[x][index] == null) this._movePositionY(x, y, index);
+                    this._moveUnitPosition(x, y, x, this._col - 1);
+                    continue;
                 }
+                let index = this._col - 1;
+                for (let i = this._col - 1; i > y; i--) if (this._boardUnitArgs[x][i] != null) index = i - 1;
+                if (this._boardUnitArgs[x][index] == null) this._moveUnitPosition(x, y, x, index);
             }
         }
     },
 
 
-    _movePositionX(x, y, index) {
-        cc.log(x, y, index);
+    _moveUnitPosition(x, y, indexX, indexY) {
         let temp = this._boardUnitArgs[x][y];
-        this._boardUnitArgs[x][y] = this._boardUnitArgs[index][y];
-        this._boardUnitArgs[index][y] = temp;
-        this._boardUnitArgs[index][y].moveUnit(this._boardPosition[index][y]);
+        this._boardUnitArgs[x][y] = this._boardUnitArgs[indexX][indexY];
+        this._boardUnitArgs[indexX][indexY] = temp;
+        this._boardUnitArgs[indexX][indexY].moveUnit(this._boardPosition[indexX][indexY]);
     },
-
-    _movePositionY(x, y, index) {
-        cc.log(x, y, index);
-        let temp = this._boardUnitArgs[x][y];
-        this._boardUnitArgs[x][y] = this._boardUnitArgs[x][index];
-        this._boardUnitArgs[x][index] = temp;
-        this._boardUnitArgs[x][index].moveUnit(this._boardPosition[x][index]);
-    },
-
-
+    _crossUnit(x, y, direct) {
+        cc.log(x, y);
+        //if (this._boardUnitArgs[x][y] == null || this._boardUnitArgs[x][y - 1]) return;
+        if (direct == 'up') {
+            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
+        }
+        if (direct == 'down') {
+            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
+        }
+        if (direct == 'left') {
+            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
+                this._boardUnitArgs[x][y].destroyNode();
+                this._boardUnitArgs[x][y] = null;
+                this._boardUnitArgs[x][y - 1].setUnitValue(this._boardUnitArgs[x][y - 1].getUnitValue() * 2);
+                this._maxObj--;
+            }
+        }
+        if (direct == 'right') {
+            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
+        }
+    }
 });
