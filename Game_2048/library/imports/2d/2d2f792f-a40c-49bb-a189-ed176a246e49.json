@@ -163,7 +163,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 497.03731578798937
+      "z": 497.09858177226783
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -1661,6 +1661,7 @@
     "_distance": 200,
     "_maxObj": 0,
     "_canPress": true,
+    "_canInstanceUnit": false,
     "_id": "bfw2Ybz4JNXLMOc1yuSnJQ"
   },
   {

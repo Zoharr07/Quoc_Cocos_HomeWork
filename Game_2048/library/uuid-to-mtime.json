@@ -70,8 +70,8 @@
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1639890283308,
-    "meta": 1639890283329,
+    "asset": 1639931744497,
+    "meta": 1639931744511,
     "relativePath": "Scene\\helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -550,8 +550,8 @@
     "relativePath": "Script\\Unit\\Unit.js"
   },
   "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1639890269799,
-    "meta": 1639890277928,
+    "asset": 1639931899403,
+    "meta": 1639931908923,
     "relativePath": "Script\\Controller\\GameController.js"
   }
 }

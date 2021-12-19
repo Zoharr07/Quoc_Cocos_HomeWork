@@ -14,6 +14,7 @@ cc.Class({
         _distance: 200,
         _maxObj: 0,
         _canPress: true,
+        _canInstanceUnit: false,
 
 
     },
@@ -49,15 +50,6 @@ cc.Class({
                 this._moveRight();
                 break;
         }
-        //all even call this func -> need check keyinput!!!
-        if (event.keyCode == cc.macro.KEY.up || event.keyCode == cc.macro.KEY.down ||
-            event.keyCode == cc.macro.KEY.left || event.keyCode == cc.macro.KEY.right) {
-            cc.tween(this.node).delay(0.25).call(() => {
-                this.instanceRandomUnit();
-                this._canPress = true;
-            }).start();
-        }
-
     },
 
     instanceRandomUnit() {
@@ -87,6 +79,15 @@ cc.Class({
             rand > 0.75 ? rand = 4 : rand = 2;
             return rand;
         }
+    },
+
+    _instanceUnit() {
+        cc.tween(this.node).delay(0.25).call(() => {
+            this._canPress = true;
+            if (this._canInstanceUnit == false) return;
+            this._canInstanceUnit = false;
+            this.instanceRandomUnit();
+        }).start();
     },
 
     instanceBackgroundUnit() {
@@ -130,41 +131,55 @@ cc.Class({
 
     _moveUp() {
         for (let y = 0; y < this._col; y++) {
-            for (let x = 1; x < this._row; x++) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[0][y] == null) {
-                    this._moveUnitPosition(x, y, 0, y);
+            for (let x = 0; x < this._row; x++) {
+                let index = this._getIndex(x, y, 'col', 'forward');
+                if (index == x) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(index, y, x, y);
+                    if (index != y) y--;
                     continue;
                 }
-                let index = 0;
-                for (let i = 0; i < x; i++) if (this._boardUnitArgs[i][y] != null) index = i + 1;
-                if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[index][y].getUnitValue()) {
+                    this._moveUnitPosition(index, y, x, y);
+                    this._mergeUnit(x, y, index, y);
+                    continue;
+                }
+                this._moveUnitPosition(index, y, x + 1, y);
             }
         }
+        this._instanceUnit();
     },
 
     _moveDown() {
         for (let y = this._col - 1; y >= 0; y--) {
-            for (let x = this._row - 2; x >= 0; x--) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[this._row - 1][y] == null) {
-                    this._moveUnitPosition(x, y, this._row - 1, y);
+            for (let x = this._row - 1; x >= 0; x--) {
+                let index = this._getIndex(x, y, 'col', 'backward');
+                if (index == x) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(index, y, x, y);
+                    if (index != y) y++;
                     continue;
                 }
-                let index = this._row - 1;
-                for (let i = this._row - 1; i > x; i--) if (this._boardUnitArgs[i][y] != null) index = i - 1;
-                if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[index][y].getUnitValue()) {
+                    this._moveUnitPosition(index, y, x, y);
+                    this._mergeUnit(x, y, index, y);
+                    continue;
+                }
+                this._moveUnitPosition(index, y, x - 1, y);
             }
         }
+        this._instanceUnit();
     },
 
     _moveLeft() {
         for (let x = 0; x < this._row; x++) {
             for (let y = 0; y < this._col; y++) {
+                cc.log('x', x, 'y', y)
                 let index = this._getIndex(x, y, 'row', 'forward');
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
                     this._moveUnitPosition(x, index, x, y);
+                    if (index != y) y--;
                     continue;
                 }
                 if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
@@ -175,6 +190,7 @@ cc.Class({
                 this._moveUnitPosition(x, index, x, y + 1);
             }
         }
+        this._instanceUnit();
     },
 
     _moveRight() {
@@ -184,6 +200,7 @@ cc.Class({
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
                     this._moveUnitPosition(x, index, x, y);
+                    if (index != y) y++;
                     continue;
                 }
                 if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
@@ -194,6 +211,7 @@ cc.Class({
                 this._moveUnitPosition(x, index, x, y - 1);
             }
         }
+        this._instanceUnit();
     },
 
 
@@ -202,33 +220,7 @@ cc.Class({
         this._boardUnitArgs[currentX][currentY] = this._boardUnitArgs[indexX][indexY];
         this._boardUnitArgs[indexX][indexY] = temp;
         this._boardUnitArgs[indexX][indexY].moveUnit(this._boardPosition[indexX][indexY]);
-    },
-
-    _crossUnit(x, y, direct) {
-        cc.log(x, y);
-        //if (this._boardUnitArgs[x][y] == null || this._boardUnitArgs[x][y - 1]) return;
-        if (direct == 'up') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
-        }
-        if (direct == 'down') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
-        }
-        if (direct == 'left') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
-                this._boardUnitArgs[x][y - 1].setUnitValue(this._boardUnitArgs[x][y - 1].getUnitValue() * 2);
-                this._boardUnitArgs[x][y].destroyNode();
-                this._boardUnitArgs[x][y] = null;
-                this._maxObj--;
-            }
-        }
-        if (direct == 'right') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y + 1].getUnitValue()) {
-                this._boardUnitArgs[x][y + 1].setUnitValue(this._boardUnitArgs[x][y + 1].getUnitValue() * 2);
-                this._boardUnitArgs[x][y].destroyNode();
-                this._boardUnitArgs[x][y] = null;
-                this._maxObj--;
-            }
-        }
+        this._canInstanceUnit = true;
     },
 
     _mergeUnit(x, y, indexX, indexY) {
@@ -261,11 +253,12 @@ cc.Class({
                 }
             }
             if (sortType == 'backward') for (let i = 0; i < x; i++) {
-                if (this._boardUnitArgs[i][x] != null) {
+                if (this._boardUnitArgs[i][y] != null) {
                     index = i;
                 }
             }
         }
+        cc.log(index)
         return index;
     },
 });

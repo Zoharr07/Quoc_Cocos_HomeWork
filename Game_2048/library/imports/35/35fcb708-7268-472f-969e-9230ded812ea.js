@@ -19,7 +19,8 @@ cc.Class({
         _col: 4,
         _distance: 200,
         _maxObj: 0,
-        _canPress: true
+        _canPress: true,
+        _canInstanceUnit: false
 
     },
 
@@ -37,8 +38,6 @@ cc.Class({
     // update (dt) {},
 
     onKeyUp: function onKeyUp(event) {
-        var _this = this;
-
         if (this._canPress == false) return;
         this._canPress = false;
         switch (event.keyCode) {
@@ -54,13 +53,6 @@ cc.Class({
             case cc.macro.KEY.right:
                 this._moveRight();
                 break;
-        }
-        //all even call this func -> need check keyinput!!!
-        if (event.keyCode == cc.macro.KEY.up || event.keyCode == cc.macro.KEY.down || event.keyCode == cc.macro.KEY.left || event.keyCode == cc.macro.KEY.right) {
-            cc.tween(this.node).delay(0.25).call(function () {
-                _this.instanceRandomUnit();
-                _this._canPress = true;
-            }).start();
         }
     },
 
@@ -92,6 +84,16 @@ cc.Class({
             rand > 0.75 ? rand = 4 : rand = 2;
             return rand;
         }
+    },
+    _instanceUnit: function _instanceUnit() {
+        var _this = this;
+
+        cc.tween(this.node).delay(0.25).call(function () {
+            _this._canPress = true;
+            if (_this._canInstanceUnit == false) return;
+            _this._canInstanceUnit = false;
+            _this.instanceRandomUnit();
+        }).start();
     },
     instanceBackgroundUnit: function instanceBackgroundUnit() {
         for (var i = 1; i <= this._row; i++) {
@@ -130,41 +132,53 @@ cc.Class({
     },
     _moveUp: function _moveUp() {
         for (var y = 0; y < this._col; y++) {
-            for (var x = 1; x < this._row; x++) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[0][y] == null) {
-                    this._moveUnitPosition(x, y, 0, y);
+            for (var x = 0; x < this._row; x++) {
+                var index = this._getIndex(x, y, 'col', 'forward');
+                if (index == x) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(index, y, x, y);
+                    if (index != y) y--;
                     continue;
                 }
-                var index = 0;
-                for (var i = 0; i < x; i++) {
-                    if (this._boardUnitArgs[i][y] != null) index = i + 1;
-                }if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[index][y].getUnitValue()) {
+                    this._moveUnitPosition(index, y, x, y);
+                    this._mergeUnit(x, y, index, y);
+                    continue;
+                }
+                this._moveUnitPosition(index, y, x + 1, y);
             }
         }
+        this._instanceUnit();
     },
     _moveDown: function _moveDown() {
         for (var y = this._col - 1; y >= 0; y--) {
-            for (var x = this._row - 2; x >= 0; x--) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[this._row - 1][y] == null) {
-                    this._moveUnitPosition(x, y, this._row - 1, y);
+            for (var x = this._row - 1; x >= 0; x--) {
+                var index = this._getIndex(x, y, 'col', 'backward');
+                if (index == x) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(index, y, x, y);
+                    if (index != y) y++;
                     continue;
                 }
-                var index = this._row - 1;
-                for (var i = this._row - 1; i > x; i--) {
-                    if (this._boardUnitArgs[i][y] != null) index = i - 1;
-                }if (this._boardUnitArgs[index][y] == null) this._moveUnitPosition(x, y, index, y);
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[index][y].getUnitValue()) {
+                    this._moveUnitPosition(index, y, x, y);
+                    this._mergeUnit(x, y, index, y);
+                    continue;
+                }
+                this._moveUnitPosition(index, y, x - 1, y);
             }
         }
+        this._instanceUnit();
     },
     _moveLeft: function _moveLeft() {
         for (var x = 0; x < this._row; x++) {
             for (var y = 0; y < this._col; y++) {
+                cc.log('x', x, 'y', y);
                 var index = this._getIndex(x, y, 'row', 'forward');
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
                     this._moveUnitPosition(x, index, x, y);
+                    if (index != y) y--;
                     continue;
                 }
                 if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
@@ -175,6 +189,7 @@ cc.Class({
                 this._moveUnitPosition(x, index, x, y + 1);
             }
         }
+        this._instanceUnit();
     },
     _moveRight: function _moveRight() {
         for (var x = this._row - 1; x >= 0; x--) {
@@ -183,6 +198,7 @@ cc.Class({
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
                     this._moveUnitPosition(x, index, x, y);
+                    if (index != y) y++;
                     continue;
                 }
                 if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
@@ -193,38 +209,14 @@ cc.Class({
                 this._moveUnitPosition(x, index, x, y - 1);
             }
         }
+        this._instanceUnit();
     },
     _moveUnitPosition: function _moveUnitPosition(currentX, currentY, indexX, indexY) {
         var temp = this._boardUnitArgs[currentX][currentY];
         this._boardUnitArgs[currentX][currentY] = this._boardUnitArgs[indexX][indexY];
         this._boardUnitArgs[indexX][indexY] = temp;
         this._boardUnitArgs[indexX][indexY].moveUnit(this._boardPosition[indexX][indexY]);
-    },
-    _crossUnit: function _crossUnit(x, y, direct) {
-        cc.log(x, y);
-        //if (this._boardUnitArgs[x][y] == null || this._boardUnitArgs[x][y - 1]) return;
-        if (direct == 'up') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
-        }
-        if (direct == 'down') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x - 1][y].getUnitValue()) return true;
-        }
-        if (direct == 'left') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
-                this._boardUnitArgs[x][y - 1].setUnitValue(this._boardUnitArgs[x][y - 1].getUnitValue() * 2);
-                this._boardUnitArgs[x][y].destroyNode();
-                this._boardUnitArgs[x][y] = null;
-                this._maxObj--;
-            }
-        }
-        if (direct == 'right') {
-            if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y + 1].getUnitValue()) {
-                this._boardUnitArgs[x][y + 1].setUnitValue(this._boardUnitArgs[x][y + 1].getUnitValue() * 2);
-                this._boardUnitArgs[x][y].destroyNode();
-                this._boardUnitArgs[x][y] = null;
-                this._maxObj--;
-            }
-        }
+        this._canInstanceUnit = true;
     },
     _mergeUnit: function _mergeUnit(x, y, indexX, indexY) {
         this._boardUnitArgs[x][y].setUnitValue(this._boardUnitArgs[x][y].getUnitValue() * 2);
@@ -255,11 +247,12 @@ cc.Class({
                 }
             }
             if (sortType == 'backward') for (var _i3 = 0; _i3 < x; _i3++) {
-                if (this._boardUnitArgs[_i3][x] != null) {
+                if (this._boardUnitArgs[_i3][y] != null) {
                     index = _i3;
                 }
             }
         }
+        cc.log(index);
         return index;
     }
 });
