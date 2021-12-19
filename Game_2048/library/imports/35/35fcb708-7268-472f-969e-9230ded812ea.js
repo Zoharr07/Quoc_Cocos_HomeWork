@@ -161,7 +161,6 @@ cc.Class({
     _moveLeft: function _moveLeft() {
         for (var x = 0; x < this._row; x++) {
             for (var y = 0; y < this._col; y++) {
-                cc.log('x', x, 'y', y);
                 var index = this._getIndex(x, y, 'row', 'forward');
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
@@ -179,24 +178,19 @@ cc.Class({
     },
     _moveRight: function _moveRight() {
         for (var x = this._row - 1; x >= 0; x--) {
-            for (var y = this._col - 2; y >= 0; y--) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[x][this._col - 1] == null) {
-                    this._moveUnitPosition(x, y, x, this._col - 1);
+            for (var y = this._col - 1; y >= 0; y--) {
+                var index = this._getIndex(x, y, 'row', 'backward');
+                if (index == y) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(x, index, x, y);
                     continue;
                 }
-                var index = this._col - 1;
-                for (var i = this._col - 1; i > y; i--) {
-                    if (this._boardUnitArgs[x][i] != null) index = i - 1;
-                }if (this._boardUnitArgs[x][index] == null) {
-                    this._moveUnitPosition(x, y, x, index);
-                    this._crossUnit(x, index, 'right');
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
+                    this._moveUnitPosition(x, index, x, y);
+                    this._mergeUnit(x, y, x, index);
                     continue;
                 }
-                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y + 1].getUnitValue()) {
-                    this._moveUnitPosition(x, y, x, y + 1);
-                    this._crossUnit(x, y, 'right');
-                }
+                this._moveUnitPosition(x, index, x, y - 1);
             }
         }
     },
@@ -247,7 +241,7 @@ cc.Class({
                     index = i;
                 }
             }
-            if (sortType == 'backward') for (var _i = y + 1; _i < this._col; _i++) {
+            if (sortType == 'backward') for (var _i = 0; _i < y; _i++) {
                 if (this._boardUnitArgs[x][_i] != null) {
                     index = _i;
                 }
@@ -260,13 +254,12 @@ cc.Class({
                     index = _i2;
                 }
             }
-            if (sortType == 'backward') for (var _i3 = x + 1; _i3 < this._row; _i3++) {
+            if (sortType == 'backward') for (var _i3 = 0; _i3 < x; _i3++) {
                 if (this._boardUnitArgs[_i3][x] != null) {
                     index = _i3;
                 }
             }
         }
-        cc.log(index);
         return index;
     }
 });
