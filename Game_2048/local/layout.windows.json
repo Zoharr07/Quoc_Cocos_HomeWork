@@ -1,14 +1,15 @@
 {
   "version": "1.1.1",
   "windows": {
+    "worker": {},
     "main": {
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 0,
-      "y": 25,
-      "width": 1680,
-      "height": 940,
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1056,
       "layout": {
         "children": [
           {
@@ -19,7 +20,7 @@
                   "hierarchy",
                   "node-library"
                 ],
-                "height": 405,
+                "height": 390.234375,
                 "type": "panel",
                 "width": 264
               },
@@ -28,12 +29,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 445,
+                "height": 428.765625,
                 "type": "panel",
                 "width": 264
               }
             ],
-            "height": 852,
+            "height": 821,
             "type": "dock-v",
             "width": 264
           },
@@ -44,9 +45,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 583.984375,
+                "height": 552.984375,
                 "type": "panel",
-                "width": 1013
+                "width": 1001.515625
               },
               {
                 "active": 0,
@@ -57,12 +58,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 1013
+                "width": 1001.515625
               }
             ],
-            "height": 852,
+            "height": 821,
             "type": "dock-v",
-            "width": 1013
+            "width": 1001.515625
           },
           {
             "active": 0,
@@ -70,9 +71,9 @@
               "inspector",
               "cocos-services"
             ],
-            "height": 852,
+            "height": 821,
             "type": "panel",
-            "width": 399
+            "width": 394.484375
           }
         ],
         "type": "dock-h"
@@ -102,6 +103,12 @@
       "y": 206,
       "width": 580,
       "height": 528
+    },
+    "preferences": {
+      "x": 662,
+      "y": 240,
+      "width": 600,
+      "height": 565
     }
   }
 }

@@ -22,7 +22,7 @@ cc.Class({
 
     onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
     },
@@ -32,7 +32,7 @@ cc.Class({
 
     // update (dt) {},
 
-    onKeyDown: function (event) {
+    onKeyUp: function (event) {
         if (this._canPress == false) return;
         this._canPress = false;
         switch (event.keyCode) {
@@ -160,26 +160,20 @@ cc.Class({
 
     _moveLeft() {
         for (let x = 0; x < this._row; x++) {
-            for (let y = 1; y < this._col; y++) {
-                if (this._boardUnitArgs[x][y] == null) continue;
-                if (this._boardUnitArgs[x][0] == null) {
-                    this._moveUnitPosition(x, y, x, 0);
+            for (let y = 0; y < this._col; y++) {
+                cc.log('x', x, 'y', y)
+                let index = this._getIndex(x, y, 'row', 'forward');
+                if (index == y) continue;
+                if (this._boardUnitArgs[x][y] == null) {
+                    this._moveUnitPosition(x, index, x, y);
                     continue;
                 }
-
-                let index = 0;
-                for (let i = 0; i < y; i++) if (this._boardUnitArgs[x][i] != null) index = i + 1;
-                if (this._boardUnitArgs[x][index] == null) {
-                    this._moveUnitPosition(x, y, x, index);
-                    this._crossUnit(x, index, 'left');
+                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][index].getUnitValue()) {
+                    this._moveUnitPosition(x, index, x, y);
+                    this._mergeUnit(x, y, x, index);
                     continue;
                 }
-                if (this._boardUnitArgs[x][y].getUnitValue() == this._boardUnitArgs[x][y - 1].getUnitValue()) {
-                    this._moveUnitPosition(x, y, x, y - 1);
-                    this._crossUnit(x, y, 'left');
-
-                }
-
+                this._moveUnitPosition(x, index, x, y + 1);
             }
         }
     },
@@ -208,12 +202,13 @@ cc.Class({
     },
 
 
-    _moveUnitPosition(x, y, indexX, indexY) {
-        let temp = this._boardUnitArgs[x][y];
-        this._boardUnitArgs[x][y] = this._boardUnitArgs[indexX][indexY];
+    _moveUnitPosition(currentX, currentY, indexX, indexY) {
+        let temp = this._boardUnitArgs[currentX][currentY];
+        this._boardUnitArgs[currentX][currentY] = this._boardUnitArgs[indexX][indexY];
         this._boardUnitArgs[indexX][indexY] = temp;
         this._boardUnitArgs[indexX][indexY].moveUnit(this._boardPosition[indexX][indexY]);
     },
+
     _crossUnit(x, y, direct) {
         cc.log(x, y);
         //if (this._boardUnitArgs[x][y] == null || this._boardUnitArgs[x][y - 1]) return;
@@ -239,5 +234,48 @@ cc.Class({
                 this._maxObj--;
             }
         }
-    }
+    },
+
+    _mergeUnit(x, y, indexX, indexY) {
+        this._boardUnitArgs[x][y].setUnitValue(this._boardUnitArgs[x][y].getUnitValue() * 2);
+        this._boardUnitArgs[indexX][indexY].destroyNode();
+        this._boardUnitArgs[indexX][indexY] = null;
+        this._maxObj--;
+    },
+
+    _getIndex(x, y, getType, sortType) {
+        let index = null;
+        if (getType == 'row') {
+            index = y;
+            if (sortType == 'forward')
+                for (let i = this._col - 1; i > y; i--) {
+                    if (this._boardUnitArgs[x][i] != null) {
+                        index = i;
+                    }
+                }
+            if (sortType == 'backward')
+                for (let i = y + 1; i < this._col; i++) {
+                    if (this._boardUnitArgs[x][i] != null) {
+                        index = i;
+                    }
+                }
+        }
+        if (getType == 'col') {
+            index = x;
+            if (sortType == 'forward')
+                for (let i = this._row - 1; i > x; i--) {
+                    if (this._boardUnitArgs[i][y] != null) {
+                        index = i;
+                    }
+                }
+            if (sortType == 'backward')
+                for (let i = x + 1; i < this._row; i++) {
+                    if (this._boardUnitArgs[i][x] != null) {
+                        index = i;
+                    }
+                }
+        }
+        cc.log(index)
+        return index;
+    },
 });
