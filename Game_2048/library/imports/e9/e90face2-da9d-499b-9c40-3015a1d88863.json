@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "PikPng",
+    "texture": "13b6f758-f7b2-40b8-ac99-8288f0e8aad9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      600,
+      600
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      600,
+      600
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

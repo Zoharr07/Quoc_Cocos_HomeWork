@@ -1,25 +1,27 @@
 const Emiter = require('Emitter');
 cc.Class({
     extends: cc.Component,
-
     properties: {
-        soundBtnClick: cc.AudioSource,
+        clickAudio: cc.AudioSource,
+        slideAudio: cc.AudioSource,
+        awardAudio: cc.AudioSource,
         soundBackground: cc.AudioSource,
     },
-
-    // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
         Emiter.instance.addEvent('playSoundBG', () => { this.soundBackground.play(); });
         Emiter.instance.addEvent('playSoundClick', this._playSoundClick.bind(this));
+        Emiter.instance.addEvent('playSoundSlide', this._playSoundSlide.bind(this));
+        Emiter.instance.addEvent('playSoundAward', this._playSoundAward.bind(this));
     },
 
-    start() {
-
-    },
-
-    // update (dt) {},
     _playSoundClick() {
-        this.soundBtnClick.play();
+        this.clickAudio.play();
+    },
+    _playSoundSlide() {
+        this.slideAudio.play();
+    },
+    _playSoundAward() {
+        this.awardAudio.play();
     },
 });

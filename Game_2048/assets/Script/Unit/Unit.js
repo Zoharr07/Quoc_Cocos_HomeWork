@@ -1,7 +1,6 @@
 const Emiter = require('Emitter');
 cc.Class({
     extends: cc.Component,
-
     properties: {
         sprite: cc.Sprite,
         valueLable: cc.Label,
@@ -11,21 +10,11 @@ cc.Class({
         goTo: null,
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad() {
         this.node.destroyNode = this._destroyNode.bind(this);
         this.node.moveUnit = this._moveUnit.bind(this);
         this.node.getUnitValue = this._getUnitValue.bind(this);
         this.node.setUnitValue = this._setUnitValue.bind(this);
-    },
-
-    start() {
-
-    },
-
-    update(dt) {
-
     },
 
     _destroyNode() {
@@ -34,7 +23,6 @@ cc.Class({
         this.node.getUnitValue = null;
         this.node.setUnitValue = null;
         this.node.destroy();
-        cc.log('remove node');
     },
 
     _moveUnit(vector2) {
@@ -50,12 +38,45 @@ cc.Class({
     _getUnitValue() {
         return this.unitValue;
     },
+
     _setUnitValue(num) {
         this.valueLable.string = num;
         this.unitValue = num;
+        this._changeColorSprite(num);
         cc.tween(this.node)
             .to(0.05, { scale: 1.1 }, { easing: 'elasticOut' })
             .to(0.05, { scale: 1 })
             .start();
+    },
+
+    _changeColorSprite(num) {
+        switch (num) {
+            case 2: this.sprite.node.color = cc.color(255, 255, 255, 255);
+                break;
+            case 4: this.sprite.node.color = cc.color(150, 200, 160, 255);
+                break;
+            case 8: this.sprite.node.color = cc.color(210, 90, 160, 255);
+                break;
+            case 16: this.sprite.node.color = cc.color(160, 100, 65, 255);
+                break;
+            case 32: this.sprite.node.color = cc.color(230, 115, 120, 255);
+                break;
+            case 64: this.sprite.node.color = cc.color(190, 75, 210, 255);
+                break;
+            case 128: this.sprite.node.color = cc.color(220, 160, 150, 255);
+                break;
+            case 256: this.sprite.node.color = cc.color(105, 195, 230, 255);
+                break;
+            case 512: this.sprite.node.color = cc.color(180, 230, 100, 255);
+                break;
+            case 1024: this.sprite.node.color = cc.color(220, 108, 170, 255);
+                break;
+            case 2048: this.sprite.node.color = cc.color(170, 35, 40, 255);
+                break;
+            case 4096: this.sprite.node.color = cc.color(140, 75, 40, 255);
+                break;
+            case 8192: this.sprite.node.color = cc.color(140, 75, 40, 255);
+                break;
+        }
     },
 });

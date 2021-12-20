@@ -114,8 +114,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": 3.843,
+      "y": -4.392,
       "z": 0
     },
     "_scale": {
@@ -152,7 +152,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4b229319-44b3-419a-b84a-502267f601de"
+      "__uuid__": "e90face2-da9d-499b-9c40-3015a1d88863"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -165,9 +165,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "990ee6ea-e591-4233-ad17-85d001fe0161"
-    },
+    "_atlas": null,
     "_id": ""
   },
   {
@@ -257,7 +255,7 @@
     "_useOriginalSize": false,
     "_string": "2048",
     "_N$string": "2048",
-    "_fontSize": 65,
+    "_fontSize": 60,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,

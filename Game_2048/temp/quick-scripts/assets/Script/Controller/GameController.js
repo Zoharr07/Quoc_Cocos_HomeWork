@@ -7,12 +7,13 @@ cc._RF.push(module, '35fcbcIcmhHL5aekjDe2BLq', 'GameController', __filename);
 var Emiter = require('Emitter');
 cc.Class({
     extends: cc.Component,
-
     properties: {
         unitBG: cc.Prefab,
         unitPrefabs: cc.Prefab,
         boardUnit: cc.Node,
         nodeBG: cc.Node,
+        scoreTotal: cc.Label,
+        bestScore: cc.Label,
         _boardPosition: [],
         _boardUnitArgs: [],
         _row: 4,
@@ -21,21 +22,16 @@ cc.Class({
         _maxObj: 0,
         _canPress: true,
         _canInstanceUnit: false
-
     },
-
-    // LIFE-CYCLE CALLBACKS:
 
     onLoad: function onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
+        this._clearBoardGame();
     },
-    start: function start() {},
 
-
-    // update (dt) {},
 
     onKeyUp: function onKeyUp(event) {
         if (this._canPress == false) return;
@@ -58,22 +54,16 @@ cc.Class({
 
     instanceRandomUnit: function instanceRandomUnit() {
         this._maxObj++;
-        if (this._maxObj > this._row * this._col) {
-            cc.log('overGame');
-            this._maxObj--;
-            return;
-        }
-        var unit = cc.instantiate(this.unitPrefabs);
+        if (this._maxObj > this._row * this._col) return;
         var randX = 0;
         var randY = 0;
-        randomXY();
         while (this._boardUnitArgs[randX][randY] != null) {
             randomXY();
-        }this._boardUnitArgs[randX][randY] = unit;
+        }var unit = cc.instantiate(this.unitPrefabs);
+        this._boardUnitArgs[randX][randY] = unit;
         this.boardUnit.addChild(unit);
         unit.position = this._boardPosition[randX][randY];
         unit.setUnitValue(randomValue());
-        cc.log(this._boardUnitArgs, 'add unit, total ', this._maxObj);
 
         function randomXY() {
             randX = Math.floor(Math.random() * 4);
@@ -81,15 +71,20 @@ cc.Class({
         }
         function randomValue() {
             var rand = Math.random();
-            rand > 0.75 ? rand = 4 : rand = 2;
+            rand > 0.8 ? rand = 4 : rand = 2;
             return rand;
         }
     },
     _instanceUnit: function _instanceUnit() {
         var _this = this;
 
-        cc.tween(this.node).delay(0.25).call(function () {
+        Emiter.instance.emit('playSoundSlide');
+        cc.tween(this.node).delay(0.3).call(function () {
             _this._canPress = true;
+            if (_this._maxObj >= 16 && _this._canInstanceUnit == false) {
+                _this._updateBestScore();
+                cc.log('end Game');
+            }
             if (_this._canInstanceUnit == false) return;
             _this._canInstanceUnit = false;
             _this.instanceRandomUnit();
@@ -129,6 +124,7 @@ cc.Class({
             }
         }
         this._maxObj = 0;
+        this._resetScore();
     },
     _moveUp: function _moveUp() {
         for (var y = 0; y < this._col; y++) {
@@ -173,7 +169,6 @@ cc.Class({
     _moveLeft: function _moveLeft() {
         for (var x = 0; x < this._row; x++) {
             for (var y = 0; y < this._col; y++) {
-                cc.log('x', x, 'y', y);
                 var index = this._getIndex(x, y, 'row', 'forward');
                 if (index == y) continue;
                 if (this._boardUnitArgs[x][y] == null) {
@@ -212,6 +207,7 @@ cc.Class({
         this._instanceUnit();
     },
     _moveUnitPosition: function _moveUnitPosition(currentX, currentY, indexX, indexY) {
+        if (currentX == indexX && currentY == indexY) return;
         var temp = this._boardUnitArgs[currentX][currentY];
         this._boardUnitArgs[currentX][currentY] = this._boardUnitArgs[indexX][indexY];
         this._boardUnitArgs[indexX][indexY] = temp;
@@ -219,9 +215,11 @@ cc.Class({
         this._canInstanceUnit = true;
     },
     _mergeUnit: function _mergeUnit(x, y, indexX, indexY) {
+        Emiter.instance.emit('playSoundAward');
         this._boardUnitArgs[x][y].setUnitValue(this._boardUnitArgs[x][y].getUnitValue() * 2);
         this._boardUnitArgs[indexX][indexY].destroyNode();
         this._boardUnitArgs[indexX][indexY] = null;
+        this._addScore(this._boardUnitArgs[x][y].getUnitValue());
         this._maxObj--;
     },
     _getIndex: function _getIndex(x, y, getType, sortType) {
@@ -229,31 +227,39 @@ cc.Class({
         if (getType == 'row') {
             index = y;
             if (sortType == 'forward') for (var i = this._col - 1; i > y; i--) {
-                if (this._boardUnitArgs[x][i] != null) {
-                    index = i;
-                }
+                if (this._boardUnitArgs[x][i] != null) index = i;
             }
             if (sortType == 'backward') for (var _i = 0; _i < y; _i++) {
-                if (this._boardUnitArgs[x][_i] != null) {
-                    index = _i;
-                }
+                if (this._boardUnitArgs[x][_i] != null) index = _i;
             }
         }
         if (getType == 'col') {
             index = x;
             if (sortType == 'forward') for (var _i2 = this._row - 1; _i2 > x; _i2--) {
-                if (this._boardUnitArgs[_i2][y] != null) {
-                    index = _i2;
-                }
+                if (this._boardUnitArgs[_i2][y] != null) index = _i2;
             }
             if (sortType == 'backward') for (var _i3 = 0; _i3 < x; _i3++) {
-                if (this._boardUnitArgs[_i3][y] != null) {
-                    index = _i3;
-                }
+                if (this._boardUnitArgs[_i3][y] != null) index = _i3;
             }
         }
-        cc.log(index);
         return index;
+    },
+    _addScore: function _addScore(score) {
+        this.scoreTotal.string = +score + +this.scoreTotal.string;
+    },
+    _resetScore: function _resetScore() {
+        this.scoreTotal.string = 0;
+        if (cc.sys.localStorage.getItem('BestScore')) {
+            this.bestScore.string = cc.sys.localStorage.getItem('BestScore');
+            return;
+        }
+        this.bestScore.string = 0;
+    },
+    _updateBestScore: function _updateBestScore() {
+        if (+this.scoreTotal.string > +this.bestScore.string) {
+            this.bestScore.string = this.scoreTotal.string;
+            cc.sys.localStorage.setItem('BestScore', +this.bestScore.string);
+        }
     }
 });
 
