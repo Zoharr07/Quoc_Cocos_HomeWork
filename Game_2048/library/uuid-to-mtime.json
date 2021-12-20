@@ -525,8 +525,8 @@
     "relativePath": "Anim"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1639996424932,
-    "meta": 1639996424940,
+    "asset": 1639997408444,
+    "meta": 1639997408455,
     "relativePath": "Scene/helloworld.fire"
   },
   "1b1f7b5b-1981-4fb6-a897-66a6db52d23b": {
@@ -579,14 +579,14 @@
     "meta": 1639996390340,
     "relativePath": "Script/Controller/GameController.js"
   },
-  "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
-    "asset": 1639996387980,
-    "meta": 1639996390350,
-    "relativePath": "Script/Controller/MainMenuController.js"
-  },
   "7ffc13e1-0894-434f-8607-c0418352f0d8": {
     "asset": 1639996389232,
     "meta": 1639996390353,
     "relativePath": "Script/Controller/SoundController.js"
+  },
+  "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
+    "asset": 1639997792018,
+    "meta": 1639997793937,
+    "relativePath": "Script/Controller/MainMenuController.js"
   }
 }
