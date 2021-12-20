@@ -8,6 +8,7 @@ cc.Class({
         backMenuBtn: cc.Button,
         exitBtn: cc.Button,
         gamePlayNode: cc.Node,
+        menuNode: cc.Node,
     },
 
     onLoad() {
@@ -19,14 +20,14 @@ cc.Class({
 
     _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
-        this._move(-1500, 0, this.node, 1.0, false);
-        this._move(-1500, 0, this.gamePlayNode, 1.0, true);
+        this._move(-2000, 0, this.menuNode, 1.0);
+        this._move(-2000, 0, this.gamePlayNode, 1.0);
     },
 
     _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
-        this._move(1500, 0, this.node, 1.0, false);
-        this._move(1500, 0, this.gamePlayNode, 1.0, true);
+        this._move(2000, 0, this.menuNode, 1.0);
+        this._move(2000, 0, this.gamePlayNode, 1.0);
     },
 
     _move(x, y, nodeObj, time) {

@@ -13,7 +13,8 @@ cc.Class({
         startGameBtnLabel: cc.Label,
         backMenuBtn: cc.Button,
         exitBtn: cc.Button,
-        gamePlayNode: cc.Node
+        gamePlayNode: cc.Node,
+        menuNode: cc.Node
     },
 
     onLoad: function onLoad() {
@@ -24,13 +25,13 @@ cc.Class({
     },
     _newGameFunc: function _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
-        this._move(-1500, 0, this.node, 1.0, false);
-        this._move(-1500, 0, this.gamePlayNode, 1.0, true);
+        this._move(-2000, 0, this.menuNode, 1.0);
+        this._move(-2000, 0, this.gamePlayNode, 1.0);
     },
     _backMenuFunc: function _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
-        this._move(1500, 0, this.node, 1.0, false);
-        this._move(1500, 0, this.gamePlayNode, 1.0, true);
+        this._move(2000, 0, this.menuNode, 1.0);
+        this._move(2000, 0, this.gamePlayNode, 1.0);
     },
     _move: function _move(x, y, nodeObj, time) {
         cc.tween(nodeObj).by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }).start();

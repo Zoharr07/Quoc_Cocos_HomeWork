@@ -104,6 +104,7 @@ cc.Class({
         }
     },
     _startGameFunc: function _startGameFunc() {
+        Emiter.instance.emit('playSoundClick');
         this._clearBoardGame();
         this.instanceRandomUnit();
         this.instanceRandomUnit();
