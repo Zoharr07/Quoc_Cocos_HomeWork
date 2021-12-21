@@ -13,6 +13,7 @@ cc.Class({
         Emiter.instance.addEvent('playSoundClick', this._playSoundClick.bind(this));
         Emiter.instance.addEvent('playSoundSlide', this._playSoundSlide.bind(this));
         Emiter.instance.addEvent('playSoundAward', this._playSoundAward.bind(this));
+        Emiter.instance.addEvent('playSoundBackground', this._playSoundBackground.bind(this));
     },
 
     _playSoundClick() {
@@ -23,5 +24,8 @@ cc.Class({
     },
     _playSoundAward() {
         this.awardAudio.play();
+    },
+    _playSoundBackground() {
+        this.soundBackground.play();
     },
 });

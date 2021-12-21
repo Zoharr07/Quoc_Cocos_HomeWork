@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "musicOff",
+    "texture": "d7c38470-8a41-43b6-832c-f56da7db3252",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      347,
+      347
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      347,
+      347
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

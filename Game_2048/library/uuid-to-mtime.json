@@ -70,7 +70,7 @@
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1640093760116,
+    "asset": 1640097709426,
     "meta": 1638978767323,
     "relativePath": "Texture"
   },
@@ -100,8 +100,8 @@
     "relativePath": "Prefabs"
   },
   "24c802d5-c210-4dda-b09d-49cb5b405a8a": {
-    "asset": 1639877179917,
-    "meta": 1640091212091,
+    "asset": 1640103255931,
+    "meta": 1640103255944,
     "relativePath": "Prefabs\\UnitBG.prefab"
   },
   "5317d874-0171-4538-b3b5-92a0a26f615e": {
@@ -155,13 +155,13 @@
     "relativePath": "Sound\\FUTDJNV-game-coin.mp3"
   },
   "68e50ebf-b645-4550-9137-837b357f4848": {
-    "asset": 1640009301714,
+    "asset": 1640096610339,
     "meta": 1639484671011,
     "relativePath": "Sound"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1640093740687,
-    "meta": 1640093740706,
+    "asset": 1640103373406,
+    "meta": 1640103373431,
     "relativePath": "Scene\\helloworld.fire"
   },
   "1b1f7b5b-1981-4fb6-a897-66a6db52d23b": {
@@ -203,11 +203,6 @@
     "asset": 1640009301712,
     "meta": 1640091212401,
     "relativePath": "Sound\\collectcoin.mp3"
-  },
-  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
-    "asset": 1640009301704,
-    "meta": 1640091212176,
-    "relativePath": "Script\\Controller\\SoundController.js"
   },
   "802cc89c-1375-475f-8e2b-25ab614170da": {
     "asset": 1640091182621,
@@ -619,11 +614,6 @@
     "meta": 1640092011791,
     "relativePath": "Texture\\—Pngtree—set of buttons and popup_5255492.png"
   },
-  "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1640093745569,
-    "meta": 1640093760627,
-    "relativePath": "Script\\Controller\\GameController.js"
-  },
   "6700ebac-5635-4228-9176-c58f46ddcfc2": {
     "asset": 1640093688277,
     "meta": 1640093760756,
@@ -636,8 +626,8 @@
   },
   "8855f698-2b2f-4432-910a-5f8493df8ea0": {
     "asset": 1640096409282,
-    "meta": 1640096409310,
-    "relativePath": "Sound\\Gaming - High impact Gaming.mp3"
+    "meta": 1640098009774,
+    "relativePath": "Sound\\Impact Gaming.mp3"
   },
   "a5777dbb-d1cb-45a2-aba0-a4b9091ef290": {
     "asset": 1640096440336,
@@ -659,14 +649,54 @@
     "meta": 1640097413737,
     "relativePath": "Texture\\button.png"
   },
-  "cbd077a5-d8a9-43ab-9dde-fbf3c41bffc0": {
-    "asset": 1640097167259,
-    "meta": 1640097413800,
-    "relativePath": "Texture\\popupMsg.png"
-  },
   "e976e599-eebd-47db-a50e-6c80f5d07669": {
     "asset": 1640097313995,
     "meta": 1640097413894,
     "relativePath": "Texture\\WinGamePopUp.png"
+  },
+  "d7c38470-8a41-43b6-832c-f56da7db3252": {
+    "asset": 1640093969043,
+    "meta": 1640097709740,
+    "relativePath": "Texture\\musicOff.png"
+  },
+  "ccbabfef-6969-4539-a007-c643db2896b7": {
+    "asset": 1640093940630,
+    "meta": 1640097709745,
+    "relativePath": "Texture\\musicOn.png"
+  },
+  "23d23c46-bc4a-4c91-ac08-430a182b2bbd": {
+    "asset": 1640093833667,
+    "meta": 1640097709791,
+    "relativePath": "Texture\\soundOn.png"
+  },
+  "d5a27bdc-a827-42e4-a104-e0023e79986a": {
+    "asset": 1640093904007,
+    "meta": 1640097709794,
+    "relativePath": "Texture\\soundOff.png"
+  },
+  "35fcb708-7268-472f-969e-9230ded812ea": {
+    "asset": 1640098446613,
+    "meta": 1640098465435,
+    "relativePath": "Script\\Controller\\GameController.js"
+  },
+  "cbd077a5-d8a9-43ab-9dde-fbf3c41bffc0": {
+    "asset": 1640099296894,
+    "meta": 1640099304246,
+    "relativePath": "Texture\\popupMsg.png"
+  },
+  "b692815e-0c4a-453f-9d6a-fb65757045e9": {
+    "asset": 1640099552779,
+    "meta": 1640099552781,
+    "relativePath": "Fonts"
+  },
+  "ae0fac9d-d9af-42b8-8c8c-984a5312b6b1": {
+    "asset": 1640099561277,
+    "meta": 1640099561289,
+    "relativePath": "Fonts\\Salsa-Regular.ttf"
+  },
+  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
+    "asset": 1640103313347,
+    "meta": 1640103315417,
+    "relativePath": "Script\\Controller\\SoundController.js"
   }
 }
