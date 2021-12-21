@@ -14,31 +14,21 @@ cc.Class({
         _col: 4,
         _distance: 200,
         _maxObj: 0,
-        _canPress: true,
+        _canMoveBoard: true,
         _canInstanceUnit: false,
     },
 
     onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+
+        Emiter.instance.addEvent('moveUp', this._moveUp.bind(this));
+        Emiter.instance.addEvent('moveDown', this._moveDown.bind(this));
+        Emiter.instance.addEvent('moveLeft', this._moveLeft.bind(this));
+        Emiter.instance.addEvent('moveRight', this._moveRight.bind(this));
+
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
         this._clearBoardGame();
-    },
-
-    onKeyUp: function (event) {
-        if (this._canPress == false) return;
-        this._canPress = false;
-        switch (event.keyCode) {
-            case cc.macro.KEY.up: this._moveUp();
-                break;
-            case cc.macro.KEY.down: this._moveDown();
-                break;
-            case cc.macro.KEY.left: this._moveLeft();
-                break;
-            case cc.macro.KEY.right: this._moveRight();
-                break;
-        }
     },
 
     instanceRandomUnit() {
@@ -59,17 +49,16 @@ cc.Class({
         }
         function randomValue() {
             let rand = Math.random();
-            rand > 0.8 ? rand = 4 : rand = 2;
+            rand > 0.5 ? rand = 4 : rand = 2;
             return rand;
         }
     },
 
     _instanceUnit() {
         Emiter.instance.emit('playSoundSlide');
-        cc.tween(this.node).delay(0.3).call(() => {
-            this._canPress = true;
+        cc.tween(this.node).delay(0.15).call(() => {
+            this._canMoveBoard = true;
             if (this._maxObj >= 16 && this._canInstanceUnit == false) {
-                this._updateBestScore();
                 cc.log('end Game');
             }
             if (this._canInstanceUnit == false) return;
@@ -118,8 +107,9 @@ cc.Class({
         this._resetScore();
     },
 
-
     _moveUp() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (let y = 0; y < this._col; y++) {
             for (let x = 0; x < this._row; x++) {
                 let index = this._getIndex(x, y, 'col', 'forward');
@@ -141,6 +131,8 @@ cc.Class({
     },
 
     _moveDown() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (let y = this._col - 1; y >= 0; y--) {
             for (let x = this._row - 1; x >= 0; x--) {
                 let index = this._getIndex(x, y, 'col', 'backward');
@@ -162,6 +154,8 @@ cc.Class({
     },
 
     _moveLeft() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (let x = 0; x < this._row; x++) {
             for (let y = 0; y < this._col; y++) {
                 let index = this._getIndex(x, y, 'row', 'forward');
@@ -183,6 +177,8 @@ cc.Class({
     },
 
     _moveRight() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (let x = this._row - 1; x >= 0; x--) {
             for (let y = this._col - 1; y >= 0; y--) {
                 let index = this._getIndex(x, y, 'row', 'backward');
@@ -250,6 +246,7 @@ cc.Class({
 
     _addScore(score) {
         this.scoreTotal.string = (+score) + (+this.scoreTotal.string);
+        this._updateBestScore();
     },
 
     _resetScore() {

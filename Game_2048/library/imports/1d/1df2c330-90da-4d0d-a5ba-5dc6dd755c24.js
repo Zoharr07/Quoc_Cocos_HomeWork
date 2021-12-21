@@ -22,6 +22,7 @@ cc.Class({
         this.startGameBtn.node.on('click', this._startGameFunc, this);
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
+        this.exitBtn.node.on('click', this._exitGame, this);
 
         this.gamePlayNode.active = false;
         this.menuNode.active = true;
@@ -37,9 +38,13 @@ cc.Class({
         this._move(1000, 0, this.gamePlayNode, 1.0, false);
     },
     _move: function _move(x, y, nodeObj, time, isActive) {
-        cc.tween(nodeObj).call(function () {
+
+        var indx = 0;
+        if (isActive == true) indx = 255;
+        var t = cc.tween;
+        t(nodeObj).call(function () {
             if (isActive == true) nodeObj.active = isActive;
-        }).by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }).call(function () {
+        }).parallel(t().by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }), t().to(time / 5, { opacity: indx })).call(function () {
             if (isActive == false) nodeObj.active = isActive;
         }).start();
     },

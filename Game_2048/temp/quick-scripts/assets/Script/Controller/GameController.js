@@ -20,38 +20,22 @@ cc.Class({
         _col: 4,
         _distance: 200,
         _maxObj: 0,
-        _canPress: true,
+        _canMoveBoard: true,
         _canInstanceUnit: false
     },
 
     onLoad: function onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+
+        Emiter.instance.addEvent('moveUp', this._moveUp.bind(this));
+        Emiter.instance.addEvent('moveDown', this._moveDown.bind(this));
+        Emiter.instance.addEvent('moveLeft', this._moveLeft.bind(this));
+        Emiter.instance.addEvent('moveRight', this._moveRight.bind(this));
+
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
         this._clearBoardGame();
     },
-
-
-    onKeyUp: function onKeyUp(event) {
-        if (this._canPress == false) return;
-        this._canPress = false;
-        switch (event.keyCode) {
-            case cc.macro.KEY.up:
-                this._moveUp();
-                break;
-            case cc.macro.KEY.down:
-                this._moveDown();
-                break;
-            case cc.macro.KEY.left:
-                this._moveLeft();
-                break;
-            case cc.macro.KEY.right:
-                this._moveRight();
-                break;
-        }
-    },
-
     instanceRandomUnit: function instanceRandomUnit() {
         this._maxObj++;
         if (this._maxObj > this._row * this._col) return;
@@ -71,7 +55,7 @@ cc.Class({
         }
         function randomValue() {
             var rand = Math.random();
-            rand > 0.8 ? rand = 4 : rand = 2;
+            rand > 0.5 ? rand = 4 : rand = 2;
             return rand;
         }
     },
@@ -79,10 +63,9 @@ cc.Class({
         var _this = this;
 
         Emiter.instance.emit('playSoundSlide');
-        cc.tween(this.node).delay(0.3).call(function () {
-            _this._canPress = true;
+        cc.tween(this.node).delay(0.15).call(function () {
+            _this._canMoveBoard = true;
             if (_this._maxObj >= 16 && _this._canInstanceUnit == false) {
-                _this._updateBestScore();
                 cc.log('end Game');
             }
             if (_this._canInstanceUnit == false) return;
@@ -128,6 +111,8 @@ cc.Class({
         this._resetScore();
     },
     _moveUp: function _moveUp() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (var y = 0; y < this._col; y++) {
             for (var x = 0; x < this._row; x++) {
                 var index = this._getIndex(x, y, 'col', 'forward');
@@ -148,6 +133,8 @@ cc.Class({
         this._instanceUnit();
     },
     _moveDown: function _moveDown() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (var y = this._col - 1; y >= 0; y--) {
             for (var x = this._row - 1; x >= 0; x--) {
                 var index = this._getIndex(x, y, 'col', 'backward');
@@ -168,6 +155,8 @@ cc.Class({
         this._instanceUnit();
     },
     _moveLeft: function _moveLeft() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (var x = 0; x < this._row; x++) {
             for (var y = 0; y < this._col; y++) {
                 var index = this._getIndex(x, y, 'row', 'forward');
@@ -188,6 +177,8 @@ cc.Class({
         this._instanceUnit();
     },
     _moveRight: function _moveRight() {
+        if (this._canMoveBoard == false) return;
+        this._canMoveBoard = false;
         for (var x = this._row - 1; x >= 0; x--) {
             for (var y = this._col - 1; y >= 0; y--) {
                 var index = this._getIndex(x, y, 'row', 'backward');
@@ -247,6 +238,7 @@ cc.Class({
     },
     _addScore: function _addScore(score) {
         this.scoreTotal.string = +score + +this.scoreTotal.string;
+        this._updateBestScore();
     },
     _resetScore: function _resetScore() {
         this.scoreTotal.string = 0;

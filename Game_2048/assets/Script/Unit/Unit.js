@@ -25,7 +25,7 @@ cc.Class({
     },
 
     _moveUnit(vector2) {
-        let time = 0.05;
+        let time = 0.04;
         cc.tween(this.node)
             .to(time, { position: vector2 })
             .start();
@@ -40,8 +40,8 @@ cc.Class({
         this.unitValue = num;
         this._changeColorSprite(num);
         cc.tween(this.node)
-            .to(0.05, { scale: 1.1 }, { easing: 'elasticOut' })
-            .to(0.05, { scale: 1 })
+            .to(0.04, { scale: 1.1 }, { easing: 'elasticOut' })
+            .to(0.04, { scale: 1 })
             .start();
     },
 

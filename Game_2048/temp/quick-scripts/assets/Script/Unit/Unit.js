@@ -29,7 +29,7 @@ cc.Class({
         this.node.destroy();
     },
     _moveUnit: function _moveUnit(vector2) {
-        var time = 0.05;
+        var time = 0.04;
         cc.tween(this.node).to(time, { position: vector2 }).start();
     },
     _getUnitValue: function _getUnitValue() {
@@ -39,7 +39,7 @@ cc.Class({
         this.valueLable.string = num;
         this.unitValue = num;
         this._changeColorSprite(num);
-        cc.tween(this.node).to(0.05, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.05, { scale: 1 }).start();
+        cc.tween(this.node).to(0.04, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.04, { scale: 1 }).start();
     },
     _changeColorSprite: function _changeColorSprite(num) {
         switch (num) {

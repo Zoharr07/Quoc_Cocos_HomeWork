@@ -66,3 +66,124 @@
 2021-12-21T02:12:41.432Z - normal: Watching packages
 2021-12-21T02:12:41.509Z - normal: Run Application
 2021-12-21T02:12:43.147Z - info: Cocos Services load base data!
+2021-12-21T06:24:17.769Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Controller/MainMenuController.js, message: Compile error: SyntaxError: /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/assets/Script/Controller/MainMenuController.js: Unexpected token, expected , (44:16)
+  42 |             .parallel(
+  43 |                 t().by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' })
+> 44 |                 t()
+     |                 ^
+  45 |             )
+  46 |             .call(() => {
+  47 |                 if (isActive == false) nodeObj.active = isActive;
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
+2021-12-21T10:48:37.388Z - warn: Script attached to "UnitBoard" is missing or invalid. Detailed information:
+Node path: "Canvas/MainNode/GamePlayNode/UnitBoard"
+Script UUID: "216c96ca-0238-4267-9a25-12bb4e864729"
+Class ID: "216c9bKAjhCZ5olErtOhkcp"
+
+2021-12-21T10:48:38.802Z - warn: Script attached to "UnitBoard" is missing or invalid. Detailed information:
+Node path: "Canvas/MainNode/GamePlayNode/UnitBoard"
+Script UUID: "216c96ca-0238-4267-9a25-12bb4e864729"
+Class ID: "216c9bKAjhCZ5olErtOhkcp"
+
+2021-12-21T10:48:57.783Z - error: Can not find cc.Component in the script 216c9bKAjhCZ5olErtOhkcp.
+    at Object.addComponent (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:6036)
+    at HTMLElement.add-component (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.js:1:1171)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2921)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2021-12-21T10:51:51.370Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build",
+  "debug": false,
+  "dest": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build/web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "2048-NguyenBaoQuoc",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "5ee52678-e465-45",
+  "zipCompressJs": true,
+  "project": "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048",
+  "projectName": "2048-NguyenBaoQuoc",
+  "debugBuildWorker": false
+}
+2021-12-21T10:51:51.373Z - normal: Building /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-21T10:51:51.374Z - normal: Destination /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build/web-mobile
+2021-12-21T10:51:51.495Z - normal: Delete /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build/web-mobile/subpackages/**/*,/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build/web-mobile/**/*
+2021-12-21T10:51:53.317Z - normal: Start building assets
+2021-12-21T10:51:53.318Z - normal: Start spawn build-worker
+2021-12-21T10:51:53.867Z - normal: Finish spawn build-worker
+2021-12-21T10:51:53.867Z - normal: Start init build-worker
+2021-12-21T10:51:56.074Z - normal: Finish init build-worker
+2021-12-21T10:51:56.074Z - normal: Start build-assets in worker
+2021-12-21T10:51:56.317Z - normal: Finish build-assets in worker
+2021-12-21T10:51:56.319Z - normal: Finish building assets
+2021-12-21T10:51:56.326Z - normal: Start building plugin scripts
+2021-12-21T10:51:56.351Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-21T10:51:56.362Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
+2021-12-21T10:51:56.377Z - normal: Built to "/Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048/build/web-mobile" successfully

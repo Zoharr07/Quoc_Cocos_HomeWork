@@ -165,8 +165,8 @@
     "relativePath": "Anim"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1640067210960,
-    "meta": 1640067210969,
+    "asset": 1640083832352,
+    "meta": 1640083832358,
     "relativePath": "Scene/helloworld.fire"
   },
   "1b1f7b5b-1981-4fb6-a897-66a6db52d23b": {
@@ -218,16 +218,6 @@
     "asset": 1640060317455,
     "meta": 1640060471932,
     "relativePath": "Script/Unit/UnitColor.js"
-  },
-  "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb": {
-    "asset": 1640061612592,
-    "meta": 1640061681266,
-    "relativePath": "Script/Unit/Unit.js"
-  },
-  "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
-    "asset": 1640062026742,
-    "meta": 1640062027328,
-    "relativePath": "Script/Controller/MainMenuController.js"
   },
   "430eccbf-bf2c-4e6e-8c0c-884bbb487f32": {
     "asset": 1568707779000,
@@ -589,9 +579,34 @@
     "meta": 1640067110584,
     "relativePath": "model/primitives.fbx"
   },
+  "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb": {
+    "asset": 1640076916445,
+    "meta": 1640076917642,
+    "relativePath": "Script/Unit/Unit.js"
+  },
+  "e2a00049-2aa2-4afe-ae02-1094b3ad770e": {
+    "asset": 1640082877211,
+    "meta": 1640082877212,
+    "relativePath": "Script/Input"
+  },
   "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1640067199430,
-    "meta": 1640067205530,
+    "asset": 1640083793803,
+    "meta": 1640083794997,
     "relativePath": "Script/Controller/GameController.js"
+  },
+  "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
+    "asset": 1640083787631,
+    "meta": 1640083795006,
+    "relativePath": "Script/Controller/MainMenuController.js"
+  },
+  "01b53890-c2e9-4ffa-8795-e7bb2e788aa4": {
+    "asset": 1640083876626,
+    "meta": 1640083880058,
+    "relativePath": "Script/Input/KeyboardController.js"
+  },
+  "216c96ca-0238-4267-9a25-12bb4e864729": {
+    "asset": 1640083867567,
+    "meta": 1640083880059,
+    "relativePath": "Script/Input/TouchController.js"
   }
 }

@@ -88,7 +88,9 @@
         "cocos-services",
         "scene"
       ]
-    }
+    },
+    "worker": {},
+    "window-1640083901562": {}
   },
   "panels": {
     "sprite-editor": {

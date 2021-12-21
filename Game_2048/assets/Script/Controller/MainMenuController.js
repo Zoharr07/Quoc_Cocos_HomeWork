@@ -16,6 +16,7 @@ cc.Class({
         this.startGameBtn.node.on('click', this._startGameFunc, this);
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
+        this.exitBtn.node.on('click', this._exitGame, this);
 
         this.gamePlayNode.active = false;
         this.menuNode.active = true;
@@ -34,11 +35,18 @@ cc.Class({
     },
 
     _move(x, y, nodeObj, time, isActive) {
-        cc.tween(nodeObj)
+
+        let indx = 0;
+        if (isActive == true) indx = 255;
+        let t = cc.tween;
+        t(nodeObj)
             .call(() => {
                 if (isActive == true) nodeObj.active = isActive;
             })
-            .by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' })
+            .parallel(
+                t().by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }),
+                t().to(time / 5, { opacity: indx }),
+            )
             .call(() => {
                 if (isActive == false) nodeObj.active = isActive;
             })
