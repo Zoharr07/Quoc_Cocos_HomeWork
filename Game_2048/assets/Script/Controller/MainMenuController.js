@@ -17,8 +17,8 @@ cc.Class({
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
 
-        //this.gamePlayNode.active = false;
-        //this.menuNode.node.active = true;
+        this.gamePlayNode.active = false;
+        this.menuNode.active = true;
     },
 
     _newGameFunc() {
@@ -36,11 +36,11 @@ cc.Class({
     _move(x, y, nodeObj, time, isActive) {
         cc.tween(nodeObj)
             .call(() => {
-                //if (isActive == true) nodeObj.active = isActive;
+                if (isActive == true) nodeObj.active = isActive;
             })
             .by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' })
             .call(() => {
-                //if (isActive == false) nodeObj.active = isActive;
+                if (isActive == false) nodeObj.active = isActive;
             })
             .start();
     },

@@ -316,12 +316,15 @@
         "__id__": 25
       },
       {
-        "__id__": 60
+        "__id__": 59
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [
+      {
+        "__id__": 69
+      },
       {
         "__id__": 70
       }
@@ -1252,9 +1255,6 @@
     "_components": [
       {
         "__id__": 58
-      },
-      {
-        "__id__": 59
       }
     ],
     "_prefab": null,
@@ -2857,16 +2857,6 @@
     "_id": "34QQhR0/1Jf7m56QLF1nnH"
   },
   {
-    "__type__": "a9b47JziytG65lURDMgrLCC",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 25
-    },
-    "_enabled": true,
-    "_id": "d37iIM969LMJXtuMS28QAu"
-  },
-  {
     "__type__": "35fcbcIcmhHL5aekjDe2BLq",
     "_name": "",
     "_objFlags": 0,
@@ -2911,23 +2901,23 @@
     },
     "_children": [
       {
-        "__id__": 61
+        "__id__": 60
       },
       {
-        "__id__": 63
+        "__id__": 62
       },
       {
-        "__id__": 65
+        "__id__": 64
       },
       {
-        "__id__": 67
+        "__id__": 66
       }
     ],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 69
+        "__id__": 68
       }
     ],
     "_prefab": null,
@@ -2978,14 +2968,14 @@
     "_name": "clickSound",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 60
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 62
+        "__id__": 61
       }
     ],
     "_prefab": null,
@@ -3036,7 +3026,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 61
+      "__id__": 60
     },
     "_enabled": true,
     "_clip": {
@@ -3054,14 +3044,14 @@
     "_name": "slidepaper",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 60
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 64
+        "__id__": 63
       }
     ],
     "_prefab": null,
@@ -3112,7 +3102,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 63
+      "__id__": 62
     },
     "_enabled": true,
     "_clip": {
@@ -3130,14 +3120,14 @@
     "_name": "awardEff",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 60
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 66
+        "__id__": 65
       }
     ],
     "_prefab": null,
@@ -3188,7 +3178,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 65
+      "__id__": 64
     },
     "_enabled": true,
     "_clip": {
@@ -3206,14 +3196,14 @@
     "_name": "collectcoin",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 60
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_level": 3,
     "_components": [
       {
-        "__id__": 68
+        "__id__": 67
       }
     ],
     "_prefab": null,
@@ -3264,7 +3254,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 67
+      "__id__": 66
     },
     "_enabled": true,
     "_clip": {
@@ -3282,20 +3272,30 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 60
+      "__id__": 59
     },
     "_enabled": true,
     "clickAudio": {
-      "__id__": 62
+      "__id__": 61
     },
     "slideAudio": {
-      "__id__": 64
+      "__id__": 63
     },
     "awardAudio": {
-      "__id__": 68
+      "__id__": 67
     },
     "soundBackground": null,
     "_id": "d1f6vNkj5HOpsbk+AjMS4V"
+  },
+  {
+    "__type__": "a9b47JziytG65lURDMgrLCC",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "_id": "31A71mSTNByYQT9ZB9Uybn"
   },
   {
     "__type__": "1df2cMwkNpNDaW6XcbddVwk",

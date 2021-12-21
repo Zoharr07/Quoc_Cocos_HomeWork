@@ -23,8 +23,8 @@ cc.Class({
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
 
-        //this.gamePlayNode.active = false;
-        //this.menuNode.node.active = true;
+        this.gamePlayNode.active = false;
+        this.menuNode.active = true;
     },
     _newGameFunc: function _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
@@ -38,9 +38,9 @@ cc.Class({
     },
     _move: function _move(x, y, nodeObj, time, isActive) {
         cc.tween(nodeObj).call(function () {
-            //if (isActive == true) nodeObj.active = isActive;
+            if (isActive == true) nodeObj.active = isActive;
         }).by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }).call(function () {
-            //if (isActive == false) nodeObj.active = isActive;
+            if (isActive == false) nodeObj.active = isActive;
         }).start();
     },
     _exitGame: function _exitGame() {
