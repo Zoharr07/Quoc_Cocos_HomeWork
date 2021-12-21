@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "popupMsg",
+    "texture": "cbd077a5-d8a9-43ab-9dde-fbf3c41bffc0",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1002,
+      1236
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1002,
+      1236
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

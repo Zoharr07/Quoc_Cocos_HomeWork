@@ -41,6 +41,7 @@ cc.Class({
         if (this._maxObj > this._row * this._col) return;
         var randX = 0;
         var randY = 0;
+        randomXY();
         while (this._boardUnitArgs[randX][randY] != null) {
             randomXY();
         }var unit = cc.instantiate(this.unitPrefabs);

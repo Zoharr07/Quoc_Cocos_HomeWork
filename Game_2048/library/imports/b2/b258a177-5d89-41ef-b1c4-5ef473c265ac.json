@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "WinGamePopUp",
+    "texture": "e976e599-eebd-47db-a50e-6c80f5d07669",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1216,
+      1647
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1216,
+      1647
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
