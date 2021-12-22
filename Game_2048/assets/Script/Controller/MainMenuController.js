@@ -4,11 +4,18 @@ cc.Class({
     properties: {
         newGameBtn: cc.Button,
         startGameBtn: cc.Button,
-        startGameBtnLabel: cc.Label,
+        replaySprite: cc.Node,
         backMenuBtn: cc.Button,
         exitBtn: cc.Button,
         gamePlayNode: cc.Node,
         menuNode: cc.Node,
+
+        soundMusicBtn: cc.Button,
+        soundMusicOffSprite: cc.Node,
+        soundEffectBtn: cc.Button,
+        soundEffectOffSprite: cc.Node,
+        musicOn: true,
+        soundOn: true,
     },
 
     onLoad() {
@@ -20,17 +27,18 @@ cc.Class({
 
         this.gamePlayNode.active = false;
         this.menuNode.active = true;
+        this._backMenuFunc();
     },
 
     _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
         this._move(-1000, 0, this.menuNode, 1.0, false);
-        this._move(-1000, 0, this.gamePlayNode, 1.0, true);
+        this._move(0, 0, this.gamePlayNode, 1.0, true);
     },
 
     _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
-        this._move(1000, 0, this.menuNode, 1.0, true);
+        this._move(0, 0, this.menuNode, 1.0, true);
         this._move(1000, 0, this.gamePlayNode, 1.0, false);
     },
 
@@ -44,7 +52,7 @@ cc.Class({
                 if (isActive == true) nodeObj.active = isActive;
             })
             .parallel(
-                t().by(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }),
+                t().to(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }),
                 t().to(time / 5, { opacity: indx }),
             )
             .call(() => {
@@ -59,6 +67,6 @@ cc.Class({
 
     _startGameFunc() {
         Emiter.instance.emit('startGame');
-        this.startGameBtnLabel.string = 'RePlay';
+        this.replaySprite.active = true;
     },
 });

@@ -39,7 +39,7 @@ cc.Class({
         this.valueLable.string = num;
         this.unitValue = num;
         this._changeColorSprite(num);
-        cc.tween(this.node).to(0.04, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.04, { scale: 1 }).start();
+        cc.tween(this.node).to(0.02, { scale: 1.1 }, { easing: 'elasticOut' }).to(0.06, { scale: 1 }).start();
     },
     _changeColorSprite: function _changeColorSprite(num) {
         switch (num) {

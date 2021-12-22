@@ -56,14 +56,14 @@ cc.Class({
     },
 
     _instanceUnit() {
-        Emiter.instance.emit('playSoundSlide');
-        cc.tween(this.node).delay(0.15).call(() => {
+        cc.tween(this.node).delay(0.08).call(() => {
             this._canMoveBoard = true;
             if (this._maxObj >= 16 && this._canInstanceUnit == false) {
                 cc.log('end Game');
             }
             if (this._canInstanceUnit == false) return;
             this._canInstanceUnit = false;
+            Emiter.instance.emit('playSoundSlide');
             this.instanceRandomUnit();
         }).start();
     },

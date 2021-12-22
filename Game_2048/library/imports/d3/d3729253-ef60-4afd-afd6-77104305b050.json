@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "—Pngtree—set of buttons and popup_5255492_09",
+    "texture": "59358bc9-da50-4cd1-9ae4-1e771a77d7cb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      566,
+      566
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      566,
+      566
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

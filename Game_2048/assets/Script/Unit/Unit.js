@@ -40,8 +40,8 @@ cc.Class({
         this.unitValue = num;
         this._changeColorSprite(num);
         cc.tween(this.node)
-            .to(0.04, { scale: 1.1 }, { easing: 'elasticOut' })
-            .to(0.04, { scale: 1 })
+            .to(0.02, { scale: 1.1 }, { easing: 'elasticOut' })
+            .to(0.06, { scale: 1 })
             .start();
     },
 

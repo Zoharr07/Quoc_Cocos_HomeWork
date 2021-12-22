@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "baby-light-blue-background",
+    "texture": "c786d237-891f-4ab0-aa4c-8fe6442a0316",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1920,
+      1090
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1920,
+      1090
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

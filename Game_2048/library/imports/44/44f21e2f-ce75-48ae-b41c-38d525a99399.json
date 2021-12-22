@@ -1,7 +1,7 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "replay_png",
+    "name": "replay",
     "texture": "ab490d61-fd62-4b69-9342-0d0678bbcc3b",
     "atlas": "",
     "rect": [
