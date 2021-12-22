@@ -28,7 +28,7 @@ cc.Class({
     },
 
     _checkDirect: function _checkDirect() {
-        var distance = 30;
+        var distance = 20;
         var moveX = this._endPos.x - this._starPos.x;
         var moveY = this._endPos.y - this._starPos.y;
         if (Math.abs(moveX) > Math.abs(moveY)) {

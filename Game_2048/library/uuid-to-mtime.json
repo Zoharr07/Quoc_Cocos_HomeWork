@@ -70,7 +70,7 @@
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1640140212121,
+    "asset": 1640143806843,
     "meta": 1640140212087,
     "relativePath": "Texture"
   },
@@ -150,8 +150,8 @@
     "relativePath": "Sound"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1640149403440,
-    "meta": 1640149403450,
+    "asset": 1640170488669,
+    "meta": 1640170488678,
     "relativePath": "Scene/helloworld.fire"
   },
   "1b1f7b5b-1981-4fb6-a897-66a6db52d23b": {
@@ -559,16 +559,6 @@
     "meta": 1640140212049,
     "relativePath": "Script/Input"
   },
-  "01b53890-c2e9-4ffa-8795-e7bb2e788aa4": {
-    "asset": 1640140212049,
-    "meta": 1640140352627,
-    "relativePath": "Script/Input/KeyboardController.js"
-  },
-  "216c96ca-0238-4267-9a25-12bb4e864729": {
-    "asset": 1640140212049,
-    "meta": 1640140352627,
-    "relativePath": "Script/Input/TouchController.js"
-  },
   "13d0bc14-945e-43c3-ba8d-40975def994d": {
     "asset": 1640140212089,
     "meta": 1640140353845,
@@ -664,14 +654,9 @@
     "meta": 1640140352092,
     "relativePath": "Fonts/Salsa-Regular.ttf"
   },
-  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
-    "asset": 1640140212048,
-    "meta": 1640140352587,
-    "relativePath": "Script/Controller/SoundController.js"
-  },
   "990ee6ea-e591-4233-ad17-85d001fe0161": {
-    "asset": 1640142471196,
-    "meta": 1640142515152,
+    "asset": 1640142823711,
+    "meta": 1640155197669,
     "relativePath": "Texture/btn.plist"
   },
   "085d1e9c-839f-4238-89de-2b14af667a97": {
@@ -834,24 +819,54 @@
     "meta": 1640143806905,
     "relativePath": "Texture/baby-light-blue-background.jpeg"
   },
-  "802cc89c-1375-475f-8e2b-25ab614170da": {
-    "asset": 1640147805026,
-    "meta": 1640147891380,
-    "relativePath": "Script/Unit/UnitColor.js"
-  },
-  "35fcb708-7268-472f-969e-9230ded812ea": {
-    "asset": 1640148697773,
-    "meta": 1640148731344,
-    "relativePath": "Script/Controller/GameController.js"
-  },
   "0c10fb70-3b6f-4cb5-8219-16f07e8c1ebb": {
     "asset": 1640148721197,
     "meta": 1640148731344,
     "relativePath": "Script/Unit/Unit.js"
   },
+  "216c96ca-0238-4267-9a25-12bb4e864729": {
+    "asset": 1640159507795,
+    "meta": 1640159513270,
+    "relativePath": "Script/Input/TouchController.js"
+  },
+  "01b53890-c2e9-4ffa-8795-e7bb2e788aa4": {
+    "asset": 1640167695323,
+    "meta": 1640167896185,
+    "relativePath": "Script/Input/KeyboardController.js"
+  },
+  "7a501fd6-8af0-4896-b970-55ab9c328e15": {
+    "asset": 1640168204280,
+    "meta": 1640168208622,
+    "relativePath": "Script/Input/InputController.js"
+  },
   "1df2c330-90da-4d0d-a5ba-5dc6dd755c24": {
-    "asset": 1640149398841,
-    "meta": 1640149402212,
+    "asset": 1640169459963,
+    "meta": 1640169611492,
     "relativePath": "Script/Controller/MainMenuController.js"
+  },
+  "c0f45e55-29e4-4de8-9b5e-ae92735d7977": {
+    "asset": 1640169527132,
+    "meta": 1640169611492,
+    "relativePath": "Script/Controller/WinPopupController.js"
+  },
+  "35fcb708-7268-472f-969e-9230ded812ea": {
+    "asset": 1640170391149,
+    "meta": 1640170396502,
+    "relativePath": "Script/Controller/GameController.js"
+  },
+  "d8da770e-7d41-4ae8-9cb8-a12232ef825d": {
+    "asset": 1640170377664,
+    "meta": 1640170396515,
+    "relativePath": "Script/Controller/LosePopupController.js"
+  },
+  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
+    "asset": 1640170385917,
+    "meta": 1640170396538,
+    "relativePath": "Script/Controller/SoundController.js"
+  },
+  "802cc89c-1375-475f-8e2b-25ab614170da": {
+    "asset": 1640170389616,
+    "meta": 1640170396538,
+    "relativePath": "Script/Unit/UnitColor.js"
   }
 }

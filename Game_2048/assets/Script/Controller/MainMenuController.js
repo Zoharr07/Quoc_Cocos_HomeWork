@@ -12,10 +12,12 @@ cc.Class({
 
         soundMusicBtn: cc.Button,
         soundMusicOffSprite: cc.Node,
+        _musicOn: true,
+
         soundEffectBtn: cc.Button,
         soundEffectOffSprite: cc.Node,
-        musicOn: true,
-        soundOn: true,
+
+        _soundOn: true,
     },
 
     onLoad() {
@@ -23,8 +25,14 @@ cc.Class({
         this.startGameBtn.node.on('click', this._startGameFunc, this);
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
-        this.exitBtn.node.on('click', this._exitGame, this);
 
+        this.soundMusicBtn.node.on('click', this._setSound, this);
+        this.soundEffectBtn.node.on('click', this._setEffectSound, this);
+
+        this._initStart();
+    },
+
+    _initStart() {
         this.gamePlayNode.active = false;
         this.menuNode.active = true;
         this._backMenuFunc();
@@ -32,12 +40,15 @@ cc.Class({
 
     _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
+        Emiter.instance.emit('canInput', true);
         this._move(-1000, 0, this.menuNode, 1.0, false);
         this._move(0, 0, this.gamePlayNode, 1.0, true);
     },
 
     _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
+        Emiter.instance.emit('turnOffPopup');
+        Emiter.instance.emit('canInput', false);
         this._move(0, 0, this.menuNode, 1.0, true);
         this._move(1000, 0, this.gamePlayNode, 1.0, false);
     },
@@ -67,6 +78,32 @@ cc.Class({
 
     _startGameFunc() {
         Emiter.instance.emit('startGame');
+        Emiter.instance.emit('turnOffPopup');
+        Emiter.instance.emit('canInput', true);
         this.replaySprite.active = true;
+    },
+
+    _setSound() {
+        if (this._musicOn) {
+            this._musicOn = false;
+            this.soundMusicOffSprite.active = true;
+            Emiter.instance.emit('turnMusic', false);
+            return;
+        }
+        this._musicOn = true;
+        this.soundMusicOffSprite.active = false;
+        Emiter.instance.emit('turnMusic', true);
+    },
+
+    _setEffectSound() {
+        if (this._musicOn) {
+            this._musicOn = false;
+            this.soundEffectOffSprite.active = true;
+            Emiter.instance.emit('turnEffectSound', false);
+            return;
+        }
+        this._musicOn = true;
+        this.soundEffectOffSprite.active = false;
+        Emiter.instance.emit('turnEffectSound', true);
     },
 });

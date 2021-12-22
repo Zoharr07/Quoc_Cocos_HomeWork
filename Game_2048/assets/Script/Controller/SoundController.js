@@ -14,6 +14,8 @@ cc.Class({
         Emiter.instance.addEvent('playSoundSlide', this._playSoundSlide.bind(this));
         Emiter.instance.addEvent('playSoundAward', this._playSoundAward.bind(this));
         Emiter.instance.addEvent('playSoundBackground', this._playSoundBackground.bind(this));
+        Emiter.instance.addEvent('turnMusic', this._turnMusic.bind(this));
+        Emiter.instance.addEvent('turnEffectSound', this._turnEffectSound.bind(this));
     },
 
     _playSoundClick() {
@@ -27,5 +29,14 @@ cc.Class({
     },
     _playSoundBackground() {
         this.soundBackground.play();
+    },
+
+    _turnMusic(status) {
+        this.soundBackground.mute = !status;
+    },
+    _turnEffectSound(status) {
+        this.slideAudio.mute = !status;
+        this.awardAudio.mute = !status;
+        this.clickAudio.mute = !status;
     },
 });

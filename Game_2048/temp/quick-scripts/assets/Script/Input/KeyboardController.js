@@ -7,14 +7,19 @@ cc._RF.push(module, '01b53iQwulP+oeV57sueIqk', 'KeyboardController', __filename)
 var Emiter = require('Emitter');
 cc.Class({
     extends: cc.Component,
-    properties: {},
+    properties: {
+        _canInputKeyboard: true
+    },
 
     onLoad: function onLoad() {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        Emiter.instance.addEvent('inputKeyboard', this._setInputKeyboard.bind(this));
+        this._setInputKeyboard(false);
     },
 
 
     onKeyUp: function onKeyUp(event) {
+        if (this._canInputKeyboard == false) return;
         switch (event.keyCode) {
             case cc.macro.KEY.up:
                 Emiter.instance.emit('moveUp');
@@ -29,6 +34,10 @@ cc.Class({
                 Emiter.instance.emit('moveRight');
                 break;
         }
+    },
+
+    _setInputKeyboard: function _setInputKeyboard(status) {
+        this._canInputKeyboard = status;
     }
 });
 

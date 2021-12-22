@@ -21,7 +21,7 @@ cc.Class({
     },
 
     _checkDirect() {
-        let distance = 30;
+        let distance = 20;
         let moveX = this._endPos.x - this._starPos.x;
         let moveY = this._endPos.y - this._starPos.y;
         if (Math.abs(moveX) > Math.abs(moveY)) {
