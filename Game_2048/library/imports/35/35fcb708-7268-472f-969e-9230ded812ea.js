@@ -29,16 +29,14 @@ cc.Class({
     onLoad: function onLoad() {
         Emiter.instance.addEvent('startGame', this._startGameFunc.bind(this));
         Emiter.instance.addEvent('continuePlayOverPoint', this._continuePlayOverPoint.bind(this));
-
         Emiter.instance.addEvent('moveUp', this._moveUp.bind(this));
         Emiter.instance.addEvent('moveDown', this._moveDown.bind(this));
         Emiter.instance.addEvent('moveLeft', this._moveLeft.bind(this));
         Emiter.instance.addEvent('moveRight', this._moveRight.bind(this));
-
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
         this._clearBoardGame();
-        this._winPoint = 2048;
+        this._winPoint = 128;
     },
     instanceRandomUnit: function instanceRandomUnit() {
         this._maxObj++;

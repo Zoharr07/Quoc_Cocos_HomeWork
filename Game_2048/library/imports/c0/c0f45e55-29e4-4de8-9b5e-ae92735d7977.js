@@ -11,6 +11,7 @@ cc.Class({
     properties: {
         continuePlayBtn: cc.Button,
         backGameplayBtn: cc.Button,
+        playerNameLable: cc.Label,
         _onPopup: false,
         _playerName: ''
     },
@@ -50,6 +51,7 @@ cc.Class({
     },
     _setPlayerName: function _setPlayerName(name) {
         this._playerName = name;
+        this.playerNameLable.string = name;
     }
 });
 

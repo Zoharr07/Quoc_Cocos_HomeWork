@@ -1,7 +1,7 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "PikPng",
+    "name": "UnitSprite",
     "texture": "13b6f758-f7b2-40b8-ac99-8288f0e8aad9",
     "atlas": "",
     "rect": [

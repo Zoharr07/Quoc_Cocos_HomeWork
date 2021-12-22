@@ -9,6 +9,11 @@ cc.Class({
         exitBtn: cc.Button,
         gamePlayNode: cc.Node,
         menuNode: cc.Node,
+
+        leaderBoardNode: cc.Node,
+        hightScoreBtn: cc.Button,
+        backMenuLeaderboardBtn: cc.Button,
+
         playerNameInput: cc.EditBox,
 
         soundMusicBtn: cc.Button,
@@ -27,6 +32,9 @@ cc.Class({
         this.backMenuBtn.node.on('click', this._backMenuFunc, this);
         this.exitBtn.node.on('click', this._exitGame, this);
 
+        this.hightScoreBtn.node.on('click', this._hightScoreFunc, this);
+        this.backMenuLeaderboardBtn.node.on('click', this._backMenuFunc, this);
+
         this.soundMusicBtn.node.on('click', this._setSound, this);
         this.soundEffectBtn.node.on('click', this._setEffectSound, this);
 
@@ -36,6 +44,7 @@ cc.Class({
     _initStart() {
         this.gamePlayNode.active = false;
         this.menuNode.active = true;
+        this.leaderBoardNode.active = false;
         this._backMenuFunc();
     },
 
@@ -47,12 +56,20 @@ cc.Class({
         this._move(0, 0, this.gamePlayNode, 1.0, true);
     },
 
+    _hightScoreFunc() {
+        Emiter.instance.emit('playSoundClick');
+        Emiter.instance.emit('canInput', false);
+        this._move(1000, 0, this.menuNode, 1.0, false);
+        this._move(0, 0, this.leaderBoardNode, 1.0, true);
+    },
+
     _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
         Emiter.instance.emit('turnOffPopup');
         Emiter.instance.emit('canInput', false);
         this._move(0, 0, this.menuNode, 1.0, true);
         this._move(1000, 0, this.gamePlayNode, 1.0, false);
+        this._move(-1000, 0, this.leaderBoardNode, 1.0, false);
     },
 
     _move(x, y, nodeObj, time, isActive) {
