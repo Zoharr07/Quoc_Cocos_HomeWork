@@ -11,5 +11,6 @@ cc.Class({
 
     _canInput(status) {
         Emiter.instance.emit('inputKeyboard', status);
+        Emiter.instance.emit('inputTouch', status);
     }
 });

@@ -11,12 +11,14 @@ cc.Class({
     properties: {
         continuePlayBtn: cc.Button,
         backGameplayBtn: cc.Button,
-        _onPopup: false
+        _onPopup: false,
+        _playerName: ''
     },
 
     onLoad: function onLoad() {
         Emiter.instance.addEvent('winGame', this._turnOnPopup.bind(this));
         Emiter.instance.addEvent('turnOffPopup', this._turnOffPopup.bind(this));
+        Emiter.instance.addEvent('setPlayerName', this._setPlayerName.bind(this));
         this.continuePlayBtn.node.on('click', this._continuePlayFunc, this);
         this.backGameplayBtn.node.on('click', this._newGameBtn, this);
     },
@@ -45,6 +47,9 @@ cc.Class({
         if (isActive == true) indx = 255;
         var t = cc.tween;
         t(nodeObj).parallel(t().to(time, { position: cc.v2(x, y) }, { easing: 'quartOut' }), t().to(time / 5, { opacity: indx })).start();
+    },
+    _setPlayerName: function _setPlayerName(name) {
+        this._playerName = name;
     }
 });
 

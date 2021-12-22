@@ -9,6 +9,7 @@ cc.Class({
         exitBtn: cc.Button,
         gamePlayNode: cc.Node,
         menuNode: cc.Node,
+        playerNameInput: cc.EditBox,
 
         soundMusicBtn: cc.Button,
         soundMusicOffSprite: cc.Node,
@@ -41,6 +42,7 @@ cc.Class({
     _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
         Emiter.instance.emit('canInput', true);
+        Emiter.instance.emit('setPlayerName', this.playerNameInput.string);
         this._move(-1000, 0, this.menuNode, 1.0, false);
         this._move(0, 0, this.gamePlayNode, 1.0, true);
     },

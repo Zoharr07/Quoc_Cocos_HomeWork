@@ -4,13 +4,16 @@ cc.Class({
 
     properties: {
         scoreLable: cc.Label,
+        playerNameLable: cc.Label,
         backGameplayBtn: cc.Button,
         _onPopup: false,
+        _playerName: '',
     },
 
     onLoad() {
         Emiter.instance.addEvent('loseGame', this._turnOnPopup.bind(this));
         Emiter.instance.addEvent('turnOffPopup', this._turnOffPopup.bind(this));
+        Emiter.instance.addEvent('setPlayerName', this._setPlayerName.bind(this));
         this.backGameplayBtn.node.on('click', this._newGameBtn, this);
     },
 
@@ -44,4 +47,9 @@ cc.Class({
             )
             .start();
     },
+
+    _setPlayerName(name) {
+        this._playerName = name;
+        this.playerNameLable.string = name;
+    }
 });

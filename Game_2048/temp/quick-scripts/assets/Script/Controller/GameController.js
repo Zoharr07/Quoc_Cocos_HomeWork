@@ -22,8 +22,7 @@ cc.Class({
         _maxObj: 0,
         _canMoveBoard: true,
         _canInstanceUnit: false,
-
-        _winPoint: 2048,
+        _winPoint: 0,
         _playOverPoint: false
     },
 
@@ -39,6 +38,7 @@ cc.Class({
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
         this._clearBoardGame();
+        this._winPoint = 2048;
     },
     instanceRandomUnit: function instanceRandomUnit() {
         this._maxObj++;
@@ -223,13 +223,15 @@ cc.Class({
     },
     _mergeUnit: function _mergeUnit(x, y, indexX, indexY) {
         Emiter.instance.emit('playSoundAward');
-        var point = this._boardUnitArgs[x][y].getUnitValue() * 2;
-        this._boardUnitArgs[x][y].setUnitValue(point);
+        var unitPoint = this._boardUnitArgs[x][y].getUnitValue() * 2;
+        this._boardUnitArgs[x][y].setUnitValue(unitPoint);
         this._boardUnitArgs[indexX][indexY].destroyNode();
         this._boardUnitArgs[indexX][indexY] = null;
         this._addScore(this._boardUnitArgs[x][y].getUnitValue());
         this._maxObj--;
-        if (point >= this._winPoint && this._playOverPoint == false) Emiter.instance.emit('winGame');
+        if (this._playOverPoint == true) return;
+
+        if (unitPoint >= this._winPoint) Emiter.instance.emit('winGame');
     },
     _getIndex: function _getIndex(x, y, getType, sortType) {
         var index = null;
