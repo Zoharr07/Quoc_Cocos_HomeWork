@@ -11,6 +11,9 @@ cc.Class({
         clickAudio: cc.AudioSource,
         slideAudio: cc.AudioSource,
         awardAudio: cc.AudioSource,
+        winAudio: cc.AudioSource,
+        loseAudio: cc.AudioSource,
+
         soundBackground: cc.AudioSource
     },
 
@@ -23,6 +26,9 @@ cc.Class({
         Emiter.instance.addEvent('playSoundClick', this._playSoundClick.bind(this));
         Emiter.instance.addEvent('playSoundSlide', this._playSoundSlide.bind(this));
         Emiter.instance.addEvent('playSoundAward', this._playSoundAward.bind(this));
+        Emiter.instance.addEvent('playSoundWin', this._playSoundWin.bind(this));
+        Emiter.instance.addEvent('playSoundLose', this._playSoundLose.bind(this));
+
         Emiter.instance.addEvent('playSoundBackground', this._playSoundBackground.bind(this));
         Emiter.instance.addEvent('turnMusic', this._turnMusic.bind(this));
         Emiter.instance.addEvent('turnEffectSound', this._turnEffectSound.bind(this));
@@ -35,6 +41,12 @@ cc.Class({
     },
     _playSoundAward: function _playSoundAward() {
         this.awardAudio.play();
+    },
+    _playSoundWin: function _playSoundWin() {
+        this.winAudio.play();
+    },
+    _playSoundLose: function _playSoundLose() {
+        this.loseAudio.play();
     },
     _playSoundBackground: function _playSoundBackground() {
         this.soundBackground.play();

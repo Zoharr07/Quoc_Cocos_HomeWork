@@ -27,6 +27,7 @@ cc.Class({
         if (this._onPopup) return;
         this._onPopup = true;
         Emiter.instance.emit('canInput', false);
+        Emiter.instance.emit('playSoundLose');
         this.scoreLable.string = score;
         this._score = score;
         Emiter.instance.emit('addScoreData', this._playerName, this._score);

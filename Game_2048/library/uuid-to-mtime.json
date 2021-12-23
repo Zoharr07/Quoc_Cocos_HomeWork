@@ -174,21 +174,6 @@
     "meta": 1640260427721,
     "relativePath": "Sound\\Impact Gaming.mp3"
   },
-  "a5777dbb-d1cb-45a2-aba0-a4b9091ef290": {
-    "asset": 1640096440336,
-    "meta": 1640260427729,
-    "relativePath": "Sound\\Melodic Electronica_2.mp3"
-  },
-  "8da85bac-2f5c-446e-8e10-31e509c0ad27": {
-    "asset": 1640096482062,
-    "meta": 1640260427755,
-    "relativePath": "Sound\\Science & Technology - Gaming.mp3"
-  },
-  "29779ccb-6409-4d6f-9f35-909846b27562": {
-    "asset": 1640096610332,
-    "meta": 1640260427746,
-    "relativePath": "Sound\\Science & Technology - Gaming_4.mp3"
-  },
   "4e56546b-b4a4-4398-93ce-0f6a7ab29f92": {
     "asset": 1640097364563,
     "meta": 1640260427805,
@@ -248,11 +233,6 @@
     "asset": 1640174652229,
     "meta": 1640260427579,
     "relativePath": "Script\\Input\\KeyboardController.js"
-  },
-  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
-    "asset": 1640174652226,
-    "meta": 1640260427374,
-    "relativePath": "Script\\Controller\\SoundController.js"
   },
   "802cc89c-1375-475f-8e2b-25ab614170da": {
     "asset": 1640174652231,
@@ -639,24 +619,14 @@
     "meta": 1640260426357,
     "relativePath": "model\\primitives.fbx"
   },
-  "d8da770e-7d41-4ae8-9cb8-a12232ef825d": {
-    "asset": 1640260357239,
-    "meta": 1640260427302,
-    "relativePath": "Script\\Controller\\LosePopupController.js"
-  },
   "d191d954-ffd6-4d11-8985-83430c419a4a": {
     "asset": 1640260357242,
     "meta": 1640260427671,
     "relativePath": "Script\\Unit\\UnitScore.js"
   },
-  "c0f45e55-29e4-4de8-9b5e-ae92735d7977": {
-    "asset": 1640260357241,
-    "meta": 1640260427376,
-    "relativePath": "Script\\Controller\\WinPopupController.js"
-  },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1640262918036,
-    "meta": 1640262918095,
+    "asset": 1640264335370,
+    "meta": 1640264335395,
     "relativePath": "Scene\\MainGame_2048.fire"
   },
   "2b743155-431a-4f68-a905-9022db2acf94": {
@@ -673,5 +643,30 @@
     "asset": 1640262785884,
     "meta": 1640262794080,
     "relativePath": "Script\\Controller\\MainMenuController.js"
+  },
+  "e3dadfbb-de13-43d8-8e22-fb658be2e714": {
+    "asset": 1640263835464,
+    "meta": 1640263835495,
+    "relativePath": "Sound\\game-lose-2.mp3"
+  },
+  "754ca8b3-12f9-4140-ae73-90ee03e23b3a": {
+    "asset": 1640263835467,
+    "meta": 1640263835499,
+    "relativePath": "Sound\\game-win-sound-effect.mp3"
+  },
+  "7ffc13e1-0894-434f-8607-c0418352f0d8": {
+    "asset": 1640264020470,
+    "meta": 1640264021907,
+    "relativePath": "Script\\Controller\\SoundController.js"
+  },
+  "d8da770e-7d41-4ae8-9cb8-a12232ef825d": {
+    "asset": 1640264126789,
+    "meta": 1640264130381,
+    "relativePath": "Script\\Controller\\LosePopupController.js"
+  },
+  "c0f45e55-29e4-4de8-9b5e-ae92735d7977": {
+    "asset": 1640264200917,
+    "meta": 1640264206150,
+    "relativePath": "Script\\Controller\\WinPopupController.js"
   }
 }

@@ -1,82 +1,72 @@
-2021-12-23T11:53:29.742Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-23T11:53:31.120Z - normal: Initializing Asset Database
-2021-12-23T11:53:31.120Z - normal: checking language setting...
-2021-12-23T11:53:31.120Z - normal: Language: en
-2021-12-23T11:53:32.357Z - success: preview server running at http://localhost:7456
-2021-12-23T11:53:32.372Z - success: protocol editor-framework registered
-2021-12-23T11:53:32.372Z - success: protocol app registered
-2021-12-23T11:53:32.372Z - success: protocol theme registered
-2021-12-23T11:53:32.372Z - success: protocol packages registered
-2021-12-23T11:53:32.372Z - success: protocol uuid registerred
-2021-12-23T11:53:32.372Z - success: protocol db registerred
-2021-12-23T11:53:32.372Z - success: protocol thumbnail registerred
-2021-12-23T11:53:32.372Z - success: protocol unpack registerred
-2021-12-23T11:53:32.372Z - success: protocol disable-commonjs registerred
-2021-12-23T11:53:33.308Z - normal: connected!
-2021-12-23T11:53:33.308Z - normal: Check project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
-2021-12-23T11:53:33.308Z - normal: Initializing project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
-2021-12-23T11:53:33.986Z - normal: Initializing Cocos2d
-2021-12-23T11:53:35.497Z - normal: Initializing engine extends
-2021-12-23T11:53:35.544Z - success: alipay-adapter loaded
-2021-12-23T11:53:35.544Z - success: asset-db-debugger loaded
-2021-12-23T11:53:35.560Z - success: baidu-adapter loaded
-2021-12-23T11:53:35.560Z - success: color-picker loaded
-2021-12-23T11:53:35.778Z - success: fb-audience-network loaded
-2021-12-23T11:53:35.932Z - success: fb-live-stream loaded
-2021-12-23T11:53:35.938Z - success: google-play-instant loaded
-2021-12-23T11:53:35.947Z - success: huawei-runtime loaded
-2021-12-23T11:53:36.377Z - success: cpk-publish loaded
-2021-12-23T11:53:36.378Z - success: jsb-adapter loaded
-2021-12-23T11:53:36.398Z - success: oppo-runtime loaded
-2021-12-23T11:53:36.404Z - success: package-manager loaded
-2021-12-23T11:53:36.629Z - success: qqplay-adapter loaded
-2021-12-23T11:53:36.631Z - success: runtime-dev-tools loaded
-2021-12-23T11:53:36.638Z - success: sdkbox loaded
-2021-12-23T11:53:36.643Z - success: tester loaded
-2021-12-23T11:53:36.646Z - success: ui-kit-preview-extra loaded
-2021-12-23T11:53:36.649Z - success: ui-kit-preview loaded
-2021-12-23T11:53:36.651Z - success: ui-kit loaded
-2021-12-23T11:53:36.662Z - success: vivo-runtime loaded
-2021-12-23T11:53:36.663Z - success: weapp-adapter loaded
-2021-12-23T11:53:36.664Z - success: xiaomi-adapter loaded
-2021-12-23T11:53:36.668Z - success: alipay-minigame loaded
-2021-12-23T11:53:36.735Z - success: assets loaded
-2021-12-23T11:53:36.739Z - success: builder loaded
-2021-12-23T11:53:37.260Z - success: cocos-services loaded
-2021-12-23T11:53:37.268Z - success: console loaded
-2021-12-23T11:53:37.326Z - success: fb-instant-games loaded
-2021-12-23T11:53:37.330Z - success: game-window loaded
-2021-12-23T11:53:37.333Z - success: google-instant-games loaded
-2021-12-23T11:53:37.339Z - success: hierarchy loaded
-2021-12-23T11:53:37.344Z - success: inspector loaded
-2021-12-23T11:53:37.346Z - success: keystore loaded
-2021-12-23T11:53:37.358Z - success: node-library loaded
-2021-12-23T11:53:37.361Z - success: package-asset loaded
-2021-12-23T11:53:37.363Z - success: preferences loaded
-2021-12-23T11:53:37.366Z - success: project-exporter loaded
-2021-12-23T11:53:37.369Z - success: project-importer loaded
-2021-12-23T11:53:37.373Z - success: project-settings loaded
-2021-12-23T11:53:37.379Z - success: scene loaded
-2021-12-23T11:53:37.382Z - success: simulator-debugger loaded
-2021-12-23T11:53:37.384Z - success: sprite-editor loaded
-2021-12-23T11:53:37.388Z - success: store loaded
-2021-12-23T11:53:37.396Z - success: timeline loaded
-2021-12-23T11:53:37.403Z - success: xiaomi-runtime loaded
-2021-12-23T11:53:40.461Z - info: Cocos Services load base data!
-2021-12-23T11:53:49.094Z - normal: Loading packages
-2021-12-23T11:53:49.104Z - normal: Watching packages
-2021-12-23T11:53:50.037Z - normal: Run Application
-2021-12-23T11:56:05.577Z - success: oppo-runtime unloaded
-2021-12-23T11:56:05.593Z - success: oppo-runtime loaded
-2021-12-23T12:03:57.395Z - success: huawei-runtime unloaded
-2021-12-23T12:03:57.404Z - success: cpk-publish unloaded
-2021-12-23T12:03:57.411Z - success: vivo-runtime unloaded
-2021-12-23T12:03:57.418Z - success: oppo-runtime unloaded
-2021-12-23T12:03:57.427Z - success: huawei-runtime loaded
-2021-12-23T12:03:57.428Z - success: cpk-publish loaded
-2021-12-23T12:03:57.428Z - success: vivo-runtime loaded
-2021-12-23T12:03:57.428Z - success: oppo-runtime loaded
-2021-12-23T12:34:31.429Z - normal: Start building with options : {
+2021-12-23T12:40:55.743Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-23T12:40:57.073Z - normal: Initializing Asset Database
+2021-12-23T12:40:57.079Z - normal: checking language setting...
+2021-12-23T12:40:57.079Z - normal: Language: en
+2021-12-23T12:40:58.488Z - success: preview server running at http://localhost:7456
+2021-12-23T12:40:58.491Z - success: protocol editor-framework registered
+2021-12-23T12:40:58.491Z - success: protocol app registered
+2021-12-23T12:40:58.491Z - success: protocol theme registered
+2021-12-23T12:40:58.491Z - success: protocol packages registered
+2021-12-23T12:40:58.491Z - success: protocol uuid registerred
+2021-12-23T12:40:58.491Z - success: protocol db registerred
+2021-12-23T12:40:58.491Z - success: protocol thumbnail registerred
+2021-12-23T12:40:58.492Z - success: protocol unpack registerred
+2021-12-23T12:40:58.492Z - success: protocol disable-commonjs registerred
+2021-12-23T12:40:59.496Z - normal: connected!
+2021-12-23T12:40:59.498Z - normal: Check project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
+2021-12-23T12:40:59.500Z - normal: Initializing project C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
+2021-12-23T12:41:00.148Z - normal: Initializing Cocos2d
+2021-12-23T12:41:01.668Z - normal: Initializing engine extends
+2021-12-23T12:41:01.721Z - success: alipay-adapter loaded
+2021-12-23T12:41:01.748Z - success: asset-db-debugger loaded
+2021-12-23T12:41:01.755Z - success: baidu-adapter loaded
+2021-12-23T12:41:01.766Z - success: color-picker loaded
+2021-12-23T12:41:02.103Z - success: fb-audience-network loaded
+2021-12-23T12:41:02.303Z - success: fb-live-stream loaded
+2021-12-23T12:41:02.343Z - success: google-play-instant loaded
+2021-12-23T12:41:02.394Z - success: huawei-runtime loaded
+2021-12-23T12:41:03.452Z - success: cpk-publish loaded
+2021-12-23T12:41:03.463Z - success: jsb-adapter loaded
+2021-12-23T12:41:03.499Z - success: oppo-runtime loaded
+2021-12-23T12:41:03.522Z - success: package-manager loaded
+2021-12-23T12:41:03.832Z - success: qqplay-adapter loaded
+2021-12-23T12:41:03.852Z - success: runtime-dev-tools loaded
+2021-12-23T12:41:03.885Z - success: sdkbox loaded
+2021-12-23T12:41:03.908Z - success: tester loaded
+2021-12-23T12:41:03.926Z - success: ui-kit-preview-extra loaded
+2021-12-23T12:41:03.944Z - success: ui-kit-preview loaded
+2021-12-23T12:41:03.948Z - success: ui-kit loaded
+2021-12-23T12:41:04.001Z - success: vivo-runtime loaded
+2021-12-23T12:41:04.011Z - success: weapp-adapter loaded
+2021-12-23T12:41:04.019Z - success: xiaomi-adapter loaded
+2021-12-23T12:41:04.025Z - success: alipay-minigame loaded
+2021-12-23T12:41:04.112Z - success: assets loaded
+2021-12-23T12:41:04.116Z - success: builder loaded
+2021-12-23T12:41:04.575Z - success: cocos-services loaded
+2021-12-23T12:41:04.583Z - success: console loaded
+2021-12-23T12:41:04.644Z - success: fb-instant-games loaded
+2021-12-23T12:41:04.649Z - success: game-window loaded
+2021-12-23T12:41:04.651Z - success: google-instant-games loaded
+2021-12-23T12:41:04.659Z - success: hierarchy loaded
+2021-12-23T12:41:04.665Z - success: inspector loaded
+2021-12-23T12:41:04.667Z - success: keystore loaded
+2021-12-23T12:41:04.682Z - success: node-library loaded
+2021-12-23T12:41:04.685Z - success: package-asset loaded
+2021-12-23T12:41:04.687Z - success: preferences loaded
+2021-12-23T12:41:04.690Z - success: project-exporter loaded
+2021-12-23T12:41:04.694Z - success: project-importer loaded
+2021-12-23T12:41:04.698Z - success: project-settings loaded
+2021-12-23T12:41:04.703Z - success: scene loaded
+2021-12-23T12:41:04.707Z - success: simulator-debugger loaded
+2021-12-23T12:41:04.709Z - success: sprite-editor loaded
+2021-12-23T12:41:04.714Z - success: store loaded
+2021-12-23T12:41:04.721Z - success: timeline loaded
+2021-12-23T12:41:04.730Z - success: xiaomi-runtime loaded
+2021-12-23T12:41:07.597Z - normal: Loading packages
+2021-12-23T12:41:07.620Z - normal: Watching packages
+2021-12-23T12:41:08.565Z - normal: Run Application
+2021-12-23T12:41:09.010Z - info: Cocos Services load base data!
+2021-12-23T12:42:10.625Z - normal: Start building with options : {
   "actualPlatform": "web-mobile",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -147,18 +137,105 @@
   "projectName": "2048-NguyenBaoQuoc",
   "debugBuildWorker": false
 }
-2021-12-23T12:34:31.433Z - normal: Building C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
-2021-12-23T12:34:31.433Z - normal: Destination C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile
-2021-12-23T12:34:31.667Z - normal: Delete C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\subpackages/**/*,C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\**\*
-2021-12-23T12:34:35.374Z - normal: Start building assets
-2021-12-23T12:34:35.375Z - normal: Start spawn build-worker
-2021-12-23T12:34:36.347Z - normal: Finish spawn build-worker
-2021-12-23T12:34:36.347Z - normal: Start init build-worker
-2021-12-23T12:34:41.614Z - normal: Finish init build-worker
-2021-12-23T12:34:41.614Z - normal: Start build-assets in worker
-2021-12-23T12:34:42.805Z - normal: Finish build-assets in worker
-2021-12-23T12:34:42.818Z - normal: Finish building assets
-2021-12-23T12:34:42.843Z - normal: Start building plugin scripts
-2021-12-23T12:34:42.892Z - normal: Generating main.js from C:\CocosCreator_2.1.3\resources\static\build-templates\shares\main.js
-2021-12-23T12:34:42.971Z - normal: Generating html from C:\CocosCreator_2.1.3\resources\static\build-templates\web-mobile\template\index.html
-2021-12-23T12:34:43.016Z - normal: Built to "C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile" successfully
+2021-12-23T12:42:10.630Z - normal: Building C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
+2021-12-23T12:42:10.630Z - normal: Destination C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile
+2021-12-23T12:42:10.785Z - normal: Delete C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\subpackages/**/*,C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\**\*
+2021-12-23T12:42:13.820Z - normal: Start building assets
+2021-12-23T12:42:13.820Z - normal: Start spawn build-worker
+2021-12-23T12:42:14.835Z - normal: Finish spawn build-worker
+2021-12-23T12:42:14.835Z - normal: Start init build-worker
+2021-12-23T12:42:20.617Z - normal: Finish init build-worker
+2021-12-23T12:42:20.617Z - normal: Start build-assets in worker
+2021-12-23T12:42:21.425Z - normal: Finish build-assets in worker
+2021-12-23T12:42:21.432Z - normal: Finish building assets
+2021-12-23T12:42:21.462Z - normal: Start building plugin scripts
+2021-12-23T12:42:21.485Z - normal: Generating main.js from C:\CocosCreator_2.1.3\resources\static\build-templates\shares\main.js
+2021-12-23T12:42:21.517Z - normal: Generating html from C:\CocosCreator_2.1.3\resources\static\build-templates\web-mobile\template\index.html
+2021-12-23T12:42:21.561Z - normal: Built to "C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile" successfully
+2021-12-23T12:58:25.455Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "C:\\Users\\ken29\\OneDrive\\Desktop\\Quoc_Cocos_HomeWork\\Game_2048\\build",
+  "debug": false,
+  "dest": "C:\\Users\\ken29\\OneDrive\\Desktop\\Quoc_Cocos_HomeWork\\Game_2048\\build\\web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "sourceMaps": false,
+  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "template": "link",
+  "title": "2048-NguyenBaoQuoc",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "5ee52678-e465-45",
+  "zipCompressJs": true,
+  "project": "C:\\Users\\ken29\\OneDrive\\Desktop\\Quoc_Cocos_HomeWork\\Game_2048",
+  "projectName": "2048-NguyenBaoQuoc",
+  "debugBuildWorker": false
+}
+2021-12-23T12:58:25.459Z - normal: Building C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048
+2021-12-23T12:58:25.459Z - normal: Destination C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile
+2021-12-23T12:58:25.461Z - normal: Delete C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\subpackages/**/*,C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile\**\*
+2021-12-23T12:58:28.510Z - normal: Start building assets
+2021-12-23T12:58:28.510Z - normal: Start spawn build-worker
+2021-12-23T12:58:29.454Z - normal: Finish spawn build-worker
+2021-12-23T12:58:29.454Z - normal: Start init build-worker
+2021-12-23T12:58:33.725Z - normal: Finish init build-worker
+2021-12-23T12:58:33.725Z - normal: Start build-assets in worker
+2021-12-23T12:58:34.422Z - normal: Finish build-assets in worker
+2021-12-23T12:58:34.430Z - normal: Finish building assets
+2021-12-23T12:58:34.456Z - normal: Start building plugin scripts
+2021-12-23T12:58:34.474Z - normal: Generating main.js from C:\CocosCreator_2.1.3\resources\static\build-templates\shares\main.js
+2021-12-23T12:58:34.485Z - normal: Generating html from C:\CocosCreator_2.1.3\resources\static\build-templates\web-mobile\template\index.html
+2021-12-23T12:58:34.535Z - normal: Built to "C:\Users\ken29\OneDrive\Desktop\Quoc_Cocos_HomeWork\Game_2048\build\web-mobile" successfully
+2021-12-23T12:58:56.850Z - info: shutdown preview server

@@ -24,6 +24,7 @@ cc.Class({
         this._onPopup = true;
         this._score = score;
         Emiter.instance.emit('canInput', false);
+        Emiter.instance.emit('playSoundWin');
         this._move(0, 0, this.node, 0.6, true);
     },
 
