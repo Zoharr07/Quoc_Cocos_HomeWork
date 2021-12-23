@@ -46,30 +46,32 @@ cc.Class({
         this.menuNode.active = true;
         this.leaderBoardNode.active = false;
         this._backMenuFunc();
+        this._loadPlayerName();
     },
 
     _newGameFunc() {
         Emiter.instance.emit('playSoundClick');
         Emiter.instance.emit('canInput', true);
+        this._savePlayerName();
         Emiter.instance.emit('setPlayerName', this.playerNameInput.string);
-        this._move(-1000, 0, this.menuNode, 1.0, false);
-        this._move(0, 0, this.gamePlayNode, 1.0, true);
+        this._move(-1000, 0, this.menuNode, 0.6, false);
+        this._move(0, 0, this.gamePlayNode, 0.6, true);
     },
 
     _hightScoreFunc() {
         Emiter.instance.emit('playSoundClick');
         Emiter.instance.emit('canInput', false);
-        this._move(1000, 0, this.menuNode, 1.0, false);
-        this._move(0, 0, this.leaderBoardNode, 1.0, true);
+        this._move(1000, 0, this.menuNode, 0.6, false);
+        this._move(0, 0, this.leaderBoardNode, 0.6, true);
     },
 
     _backMenuFunc() {
         Emiter.instance.emit('playSoundClick');
         Emiter.instance.emit('turnOffPopup');
         Emiter.instance.emit('canInput', false);
-        this._move(0, 0, this.menuNode, 1.0, true);
-        this._move(1000, 0, this.gamePlayNode, 1.0, false);
-        this._move(-1000, 0, this.leaderBoardNode, 1.0, false);
+        this._move(0, 0, this.menuNode, 0.6, true);
+        this._move(1000, 0, this.gamePlayNode, 0.6, false);
+        this._move(-1000, 0, this.leaderBoardNode, 0.6, false);
     },
 
     _move(x, y, nodeObj, time, isActive) {
@@ -125,4 +127,15 @@ cc.Class({
         this.soundEffectOffSprite.active = false;
         Emiter.instance.emit('turnEffectSound', true);
     },
+
+    _savePlayerName() {
+        if (this.playerNameInput.string != null) cc.sys.localStorage.setItem('PlayerName', this.playerNameInput.string);
+    },
+
+    _loadPlayerName() {
+        if (cc.sys.localStorage.getItem('PlayerName')) {
+            this.playerNameInput.string = cc.sys.localStorage.getItem('PlayerName');
+        } else this.playerNameInput.string = 'Player';
+    },
+
 });

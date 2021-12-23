@@ -8,6 +8,7 @@ cc.Class({
         playerNameLable: cc.Label,
         _onPopup: false,
         _playerName: '',
+        _score: 0,
     },
 
     onLoad() {
@@ -21,6 +22,7 @@ cc.Class({
     _turnOnPopup(score) {
         if (this._onPopup) return;
         this._onPopup = true;
+        this._score = score;
         Emiter.instance.emit('canInput', false);
         this._move(0, 0, this.node, 0.6, true);
     },
@@ -33,6 +35,7 @@ cc.Class({
     _newGameBtn() {
         this._turnOffPopup();
         Emiter.instance.emit('startGame');
+        this._addPlayerScoreUnit()
     },
 
     _continuePlayFunc() {
@@ -57,5 +60,15 @@ cc.Class({
     _setPlayerName(name) {
         this._playerName = name;
         this.playerNameLable.string = name;
+    },
+
+    _addPlayerScoreUnit() {
+        let unitScore = cc.instantiate(this.scoreUnit);
+        cc.log(this._playerName, this._score);
+        // unitScore.setNameData(this._playerName);
+        //cc.log(unitScore);
+        unitScore.getChildByName('PlayerName').getComponent(cc.Label).string = this._playerName;
+        unitScore.getChildByName('Total Score').getComponent(cc.Label).string = this._score;
+        this.leaderBoardScrollView.content.addChild(unitScore);
     }
 });
