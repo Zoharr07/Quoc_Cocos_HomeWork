@@ -1,161 +1,69 @@
-2021-12-23T03:29:28.383Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-23T03:29:28.427Z - normal: Initializing Asset Database
-2021-12-23T03:29:28.429Z - normal: checking language setting...
-2021-12-23T03:29:28.429Z - normal: Language: en
-2021-12-23T03:29:29.099Z - success: preview server running at http://localhost:7456
-2021-12-23T03:29:29.112Z - success: protocol editor-framework registered
-2021-12-23T03:29:29.112Z - success: protocol app registered
-2021-12-23T03:29:29.112Z - success: protocol theme registered
-2021-12-23T03:29:29.113Z - success: protocol packages registered
-2021-12-23T03:29:29.113Z - success: protocol uuid registerred
-2021-12-23T03:29:29.113Z - success: protocol db registerred
-2021-12-23T03:29:29.113Z - success: protocol thumbnail registerred
-2021-12-23T03:29:29.113Z - success: protocol unpack registerred
-2021-12-23T03:29:29.113Z - success: protocol disable-commonjs registerred
-2021-12-23T03:29:30.009Z - normal: connected!
-2021-12-23T03:29:30.011Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-23T03:29:30.012Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
-2021-12-23T03:29:30.395Z - normal: Initializing Cocos2d
-2021-12-23T03:29:31.090Z - normal: Initializing engine extends
-2021-12-23T03:29:31.139Z - success: alipay-adapter loaded
-2021-12-23T03:29:31.148Z - success: asset-db-debugger loaded
-2021-12-23T03:29:31.150Z - success: baidu-adapter loaded
-2021-12-23T03:29:31.156Z - success: color-picker loaded
-2021-12-23T03:29:31.325Z - success: fb-audience-network loaded
-2021-12-23T03:29:31.382Z - success: fb-live-stream loaded
-2021-12-23T03:29:31.385Z - success: google-play-instant loaded
-2021-12-23T03:29:31.391Z - success: huawei-runtime loaded
-2021-12-23T03:29:31.646Z - success: cpk-publish loaded
-2021-12-23T03:29:31.648Z - success: jsb-adapter loaded
-2021-12-23T03:29:31.654Z - success: oppo-runtime loaded
-2021-12-23T03:29:31.659Z - success: package-manager loaded
-2021-12-23T03:29:31.831Z - success: qqplay-adapter loaded
-2021-12-23T03:29:31.833Z - success: runtime-dev-tools loaded
-2021-12-23T03:29:31.869Z - success: sdkbox loaded
-2021-12-23T03:29:31.875Z - success: tester loaded
-2021-12-23T03:29:31.879Z - success: ui-kit-preview-extra loaded
-2021-12-23T03:29:31.884Z - success: ui-kit-preview loaded
-2021-12-23T03:29:31.886Z - success: ui-kit loaded
-2021-12-23T03:29:31.893Z - success: vivo-runtime loaded
-2021-12-23T03:29:31.894Z - success: weapp-adapter loaded
-2021-12-23T03:29:31.895Z - success: xiaomi-adapter loaded
-2021-12-23T03:29:31.899Z - success: alipay-minigame loaded
-2021-12-23T03:29:31.940Z - success: assets loaded
-2021-12-23T03:29:31.947Z - success: builder loaded
-2021-12-23T03:29:32.251Z - success: cocos-services loaded
-2021-12-23T03:29:32.257Z - success: console loaded
-2021-12-23T03:29:32.286Z - success: fb-instant-games loaded
-2021-12-23T03:29:32.290Z - success: game-window loaded
-2021-12-23T03:29:32.291Z - success: google-instant-games loaded
-2021-12-23T03:29:32.296Z - success: hierarchy loaded
-2021-12-23T03:29:32.301Z - success: inspector loaded
-2021-12-23T03:29:32.303Z - success: keystore loaded
-2021-12-23T03:29:32.319Z - success: node-library loaded
-2021-12-23T03:29:32.324Z - success: package-asset loaded
-2021-12-23T03:29:32.326Z - success: preferences loaded
-2021-12-23T03:29:32.329Z - success: project-exporter loaded
-2021-12-23T03:29:32.335Z - success: project-importer loaded
-2021-12-23T03:29:32.338Z - success: project-settings loaded
-2021-12-23T03:29:32.342Z - success: scene loaded
-2021-12-23T03:29:32.344Z - success: simulator-debugger loaded
-2021-12-23T03:29:32.346Z - success: sprite-editor loaded
-2021-12-23T03:29:32.350Z - success: store loaded
-2021-12-23T03:29:32.358Z - success: timeline loaded
-2021-12-23T03:29:32.363Z - success: xiaomi-runtime loaded
-2021-12-23T03:29:33.418Z - normal: Loading packages
-2021-12-23T03:29:33.424Z - normal: Watching packages
-2021-12-23T03:29:33.509Z - normal: Run Application
-2021-12-23T03:29:34.660Z - info: Cocos Services load base data!
-2021-12-23T03:49:39.400Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:49:39.791Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:49:44.824Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:49:45.873Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:49:47.484Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:49:58.442Z - info: Only the prefab node "ScoreUnit" and its child nodes are saved.
-2021-12-23T03:51:49.346Z - warn: 'ScoreUnit._name' hides inherited property 'cc.Object._name'. To make the current property override that implementation, add the `override: true` attribute please.
-2021-12-23T04:04:28.344Z - warn: The Prefab used by component "LosePopupController" is missing. Detailed information:
-Node path: "Canvas/MainNode/LosePopup"
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:05:40.826Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.829Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.829Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.829Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.831Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.834Z - warn: The Asset used by component "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.871Z - warn: The Asset used by component "LosePopupController" is missing. Detailed information:
-Node path: "Canvas/MainNode/LosePopup"
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:05:40.887Z - warn: The Asset used by node "Background" is missing. Detailed information:
-Node path: "ScoreUnit/Background"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.888Z - warn: The Asset used by node "PlayerName" is missing. Detailed information:
-Node path: "ScoreUnit/PlayerName"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.888Z - warn: The Asset used by node "Total Score" is missing. Detailed information:
-Node path: "ScoreUnit/Total Score"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.889Z - warn: The Asset used by node "ScoreUnit" is missing. Detailed information:
-Node path: "ScoreUnit"
-Missing uuid: "f4ddd53d-5967-4f11-b72e-c909cb329176"
-
-2021-12-23T04:05:40.903Z - warn: The Asset used is missing. Detailed information:
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:05:40.904Z - warn: The Asset used is missing. Detailed information:
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:05:40.904Z - warn: The Asset used is missing. Detailed information:
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:05:40.905Z - warn: The Asset used is missing. Detailed information:
-Missing uuid: "767b8168-fd7c-4fc4-a310-ea1e75fc0501"
-
-2021-12-23T04:06:22.389Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:23.509Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:37.129Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:37.951Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:38.387Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:38.719Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:41.249Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:06:42.555Z - failed: Task [sync-prefab] run error, stop running other tasks.
- TypeError: Cannot read property '_uuid' of null
-    at Object._syncPrefab (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:8347)
-    at _queue.s.queue (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.js:1:539)
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
-    at Immediate.process (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2021-12-23T04:16:24.747Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:16:31.115Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:16:31.774Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:16:49.039Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:22:57.913Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:25:29.424Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:28:30.302Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:28:30.810Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:28:32.974Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
-2021-12-23T04:55:00.675Z - info: Only the prefab node "UnitScore" and its child nodes are saved.
+2021-12-23T10:46:09.255Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-23T10:46:09.344Z - normal: Initializing Asset Database
+2021-12-23T10:46:09.348Z - normal: checking language setting...
+2021-12-23T10:46:09.348Z - normal: Language: en
+2021-12-23T10:46:10.512Z - success: preview server running at http://localhost:7456
+2021-12-23T10:46:10.533Z - success: protocol editor-framework registered
+2021-12-23T10:46:10.533Z - success: protocol app registered
+2021-12-23T10:46:10.533Z - success: protocol theme registered
+2021-12-23T10:46:10.533Z - success: protocol packages registered
+2021-12-23T10:46:10.533Z - success: protocol uuid registerred
+2021-12-23T10:46:10.534Z - success: protocol db registerred
+2021-12-23T10:46:10.534Z - success: protocol thumbnail registerred
+2021-12-23T10:46:10.534Z - success: protocol unpack registerred
+2021-12-23T10:46:10.534Z - success: protocol disable-commonjs registerred
+2021-12-23T10:46:11.742Z - normal: connected!
+2021-12-23T10:46:11.743Z - normal: Check project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-23T10:46:11.745Z - normal: Initializing project /Users/fe-baoquoc-fresher/Desktop/Quoc_Cocos_HomeWork/Game_2048
+2021-12-23T10:46:12.331Z - normal: Initializing Cocos2d
+2021-12-23T10:46:13.437Z - normal: Initializing engine extends
+2021-12-23T10:46:13.487Z - success: alipay-adapter loaded
+2021-12-23T10:46:13.494Z - success: asset-db-debugger loaded
+2021-12-23T10:46:13.497Z - success: baidu-adapter loaded
+2021-12-23T10:46:13.499Z - success: color-picker loaded
+2021-12-23T10:46:13.704Z - success: fb-audience-network loaded
+2021-12-23T10:46:13.794Z - success: fb-live-stream loaded
+2021-12-23T10:46:13.800Z - success: google-play-instant loaded
+2021-12-23T10:46:13.813Z - success: huawei-runtime loaded
+2021-12-23T10:46:14.170Z - success: cpk-publish loaded
+2021-12-23T10:46:14.172Z - success: jsb-adapter loaded
+2021-12-23T10:46:14.181Z - success: oppo-runtime loaded
+2021-12-23T10:46:14.189Z - success: package-manager loaded
+2021-12-23T10:46:14.397Z - success: qqplay-adapter loaded
+2021-12-23T10:46:14.401Z - success: runtime-dev-tools loaded
+2021-12-23T10:46:14.448Z - success: sdkbox loaded
+2021-12-23T10:46:14.455Z - success: tester loaded
+2021-12-23T10:46:14.461Z - success: ui-kit-preview-extra loaded
+2021-12-23T10:46:14.468Z - success: ui-kit-preview loaded
+2021-12-23T10:46:14.473Z - success: ui-kit loaded
+2021-12-23T10:46:14.483Z - success: vivo-runtime loaded
+2021-12-23T10:46:14.485Z - success: weapp-adapter loaded
+2021-12-23T10:46:14.487Z - success: xiaomi-adapter loaded
+2021-12-23T10:46:14.493Z - success: alipay-minigame loaded
+2021-12-23T10:46:14.555Z - success: assets loaded
+2021-12-23T10:46:14.561Z - success: builder loaded
+2021-12-23T10:46:14.985Z - success: cocos-services loaded
+2021-12-23T10:46:14.995Z - success: console loaded
+2021-12-23T10:46:15.044Z - success: fb-instant-games loaded
+2021-12-23T10:46:15.051Z - success: game-window loaded
+2021-12-23T10:46:15.053Z - success: google-instant-games loaded
+2021-12-23T10:46:15.062Z - success: hierarchy loaded
+2021-12-23T10:46:15.069Z - success: inspector loaded
+2021-12-23T10:46:15.072Z - success: keystore loaded
+2021-12-23T10:46:15.080Z - success: node-library loaded
+2021-12-23T10:46:15.083Z - success: package-asset loaded
+2021-12-23T10:46:15.086Z - success: preferences loaded
+2021-12-23T10:46:15.091Z - success: project-exporter loaded
+2021-12-23T10:46:15.099Z - success: project-importer loaded
+2021-12-23T10:46:15.105Z - success: project-settings loaded
+2021-12-23T10:46:15.112Z - success: scene loaded
+2021-12-23T10:46:15.115Z - success: simulator-debugger loaded
+2021-12-23T10:46:15.117Z - success: sprite-editor loaded
+2021-12-23T10:46:15.125Z - success: store loaded
+2021-12-23T10:46:15.136Z - success: timeline loaded
+2021-12-23T10:46:15.143Z - success: xiaomi-runtime loaded
+2021-12-23T10:46:16.886Z - normal: Loading packages
+2021-12-23T10:46:16.893Z - normal: Watching packages
+2021-12-23T10:46:17.040Z - normal: Run Application
+2021-12-23T10:46:24.046Z - info: Cocos Services load base data!
+2021-12-23T10:55:36.732Z - info: shutdown preview server

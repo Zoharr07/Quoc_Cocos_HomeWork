@@ -27,6 +27,10 @@ cc.Class({
         Emiter.instance.addEvent('moveDown', this._moveDown.bind(this));
         Emiter.instance.addEvent('moveLeft', this._moveLeft.bind(this));
         Emiter.instance.addEvent('moveRight', this._moveRight.bind(this));
+        this._init();
+    },
+
+    _init() {
         this.instanceBackgroundUnit();
         this._instanceBoardArray();
         this._clearBoardGame();

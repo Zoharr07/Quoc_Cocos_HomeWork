@@ -12,8 +12,6 @@ cc.Class({
         scoreLable: cc.Label,
         playerNameLable: cc.Label,
         backGameplayBtn: cc.Button,
-        scoreUnit: cc.Prefab,
-        leaderBoardScrollView: cc.ScrollView,
         _onPopup: false,
         _playerName: '',
         _score: 0
@@ -31,8 +29,8 @@ cc.Class({
         Emiter.instance.emit('canInput', false);
         this.scoreLable.string = score;
         this._score = score;
+        Emiter.instance.emit('addScoreData', this._playerName, this._score);
         this._move(0, 0, this.node, 0.6, true);
-        this._addPlayerScoreUnit();
     },
     _turnOffPopup: function _turnOffPopup() {
         this._move(0, 1600, this.node, 0.6, false);
@@ -52,16 +50,6 @@ cc.Class({
     _setPlayerName: function _setPlayerName(name) {
         this._playerName = name;
         this.playerNameLable.string = name;
-    },
-    _addPlayerScoreUnit: function _addPlayerScoreUnit() {
-        var unitScore = cc.instantiate(this.scoreUnit);
-        cc.log(this._playerName, this._score);
-        // unitScore.setNameData(this._playerName);
-        //cc.log(unitScore);
-        unitScore.getChildByName('PlayerName').getComponent(cc.Label).string = this._playerName;
-        unitScore.getChildByName('Total Score').getComponent(cc.Label).string = this._score;
-        this.leaderBoardScrollView.content.addChild(unitScore);
-        Emiter.instance.emit('addScoreData', unitScore);
     }
 });
 

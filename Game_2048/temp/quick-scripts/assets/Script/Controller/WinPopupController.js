@@ -38,7 +38,7 @@ cc.Class({
     _newGameBtn: function _newGameBtn() {
         this._turnOffPopup();
         Emiter.instance.emit('startGame');
-        this._addPlayerScoreUnit();
+        Emiter.instance.emit('addScoreData', this._playerName, this._score);
     },
     _continuePlayFunc: function _continuePlayFunc() {
         this._turnOffPopup();
@@ -55,15 +55,6 @@ cc.Class({
     _setPlayerName: function _setPlayerName(name) {
         this._playerName = name;
         this.playerNameLable.string = name;
-    },
-    _addPlayerScoreUnit: function _addPlayerScoreUnit() {
-        var unitScore = cc.instantiate(this.scoreUnit);
-        cc.log(this._playerName, this._score);
-        // unitScore.setNameData(this._playerName);
-        //cc.log(unitScore);
-        unitScore.getChildByName('PlayerName').getComponent(cc.Label).string = this._playerName;
-        unitScore.getChildByName('Total Score').getComponent(cc.Label).string = this._score;
-        this.leaderBoardScrollView.content.addChild(unitScore);
     }
 });
 

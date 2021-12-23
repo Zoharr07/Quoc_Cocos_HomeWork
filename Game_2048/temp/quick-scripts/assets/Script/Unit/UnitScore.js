@@ -13,16 +13,12 @@ cc.Class({
         _totalScore: 0
     },
 
-    onLoad: function onLoad() {
-        this.node.setNameData = this._setNameData.bind(this);
-    },
-    _setScoreData: function _setScoreData(score) {
-        this._totalScore = score;
-        this.totalScoreLable.string = score;
-    },
-    _setNameData: function _setNameData(name) {
+    onLoad: function onLoad() {},
+    setScoreData: function setScoreData(name, score) {
         this._namePlayer = name;
         this.playerNameLable.string = name;
+        this._totalScore = score;
+        this.totalScoreLable.string = score;
     }
 });
 
